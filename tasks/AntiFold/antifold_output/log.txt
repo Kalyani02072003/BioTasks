@@ -1,0 +1,10 @@
+[2025-03-03 16:45:19,052] Running inverse folding on PDB/CIFs ...
+[2025-03-03 16:45:19,053] WARNING: Heavy/light chain(s) not specified for 6y1l_imgt. Assuming 1st chain heavy, 2nd chain light.
+[2025-03-03 16:45:19,053] WARNING: Specify manually with e.g. --heavy_chain H --light_chain L
+[2025-03-03 16:45:19,081] 6y1l_imgt: assuming heavy_chain H, light_chain L
+[2025-03-03 16:45:19,085] Downloading AntiFold model weights from https://opig.stats.ox.ac.uk/data/downloads/AntiFold/models/model.pt to /home/kalyani/miniconda3/envs/antifold_cpu/lib/python3.10/site-packages/models/model.pt
+[2025-03-03 16:48:45,135] Loaded model to cpu.
+[2025-03-03 16:48:45,151] Reading in (1) PDBs from DataFrame
+[2025-03-03 16:48:45,309] Predicting batch 1/1: PDBs 1-1 out of 1 total
+[2025-03-03 16:48:51,287] Saving 1 CSVs to antifold_output
+[2025-03-03 16:48:51,295] Writing 6y1l_imgt_HL per-residue log probs CSV to antifold_output/6y1l_imgt_HL.csv
