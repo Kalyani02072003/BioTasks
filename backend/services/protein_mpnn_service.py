@@ -1,24 +1,41 @@
 import subprocess
 import os
+import uuid
 
-PROTEINMPNN_SCRIPT = os.path.join(os.getcwd(), "tasks", "proteinmpnn", "predict.py")
+PROTEINMPNN_SCRIPT = os.path.join(os.getcwd(), "tasks", "ProteinMPNN", "proteinmpnn", "predict.py")
+OUTPUT_FOLDER = os.path.join(os.getcwd(), "proteinmpnn_output")  # Output folder
+
+# Ensure the output directory exists
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 def run_proteinmpnn(params):
-    command = [
-        "docker", "run",
-        "-v", f"{os.getcwd()}/uploads:/workspace",
-        "-v", f"{os.getcwd()}/outputs:/outputs",
-        "--workdir", "/workspace",
-        "ghcr.io/peptoneltd/proteinmpnn_ddg:1.0.0_base_cpu",
-        "python3", "/app/proteinmpnn_ddg/predict.py",
-        "--pdb_path", params["pdb_file"],
-        "--chains", params["chain"],
-        "--outpath", f"/outputs/{params['pdb_file']}_predictions.csv"
-    ]
+    """Runs ProteinMPNN in the background and returns a task ID."""
+    pdb_filename = os.path.basename(params["pdb_file"])
 
-    try:
-        process = subprocess.run(command, check=True, capture_output=True, text=True)
-        return {"message": "ProteinMPNN executed", "stdout": process.stdout}
+    # Generate unique task ID
+    task_id = str(uuid.uuid4())
+    log_path = os.path.join(OUTPUT_FOLDER, f"{task_id}.log")  # Log file
+    output_path = os.path.join(OUTPUT_FOLDER, f"{pdb_filename}_predictions.csv")  # Prediction output file
 
-    except subprocess.CalledProcessError as e:
-        return {"error": "ProteinMPNN failed", "details": str(e)}
+    command = f"""
+    docker run \
+    -v {os.getcwd()}/uploads:/workspace \
+    -v {OUTPUT_FOLDER}:/outputs \
+    --workdir /workspace \
+    ghcr.io/peptoneltd/proteinmpnn_ddg:1.0.0_base_cpu \
+    python3 /app/proteinmpnn_ddg/predict.py \
+    --pdb_path /workspace/{pdb_filename} \
+    --chains {params["chain"]} \
+    --outpath /outputs/{pdb_filename}_predictions.csv \
+    > {log_path} 2>&1 &
+    """
+
+    # Run ProteinMPNN in the background
+    subprocess.Popen(command, shell=True, executable="/bin/bash")
+
+    return {
+        "message": "ProteinMPNN started",
+        "task_id": task_id,
+        "log_file": log_path,
+        "output_file": output_path
+    }
