@@ -6,7 +6,9 @@ tasks_bp = Blueprint("tasks", __name__)
 def list_tasks():
     return jsonify({
         "available_tasks": [
-            "/v1/api/antifold/predict",
-            "/v1/api/proteinmpnn/ddg"
+            {"task": "AntiFold Prediction", "endpoint": "/v1/api/antifold/predict"},
+            {"task": "Check AntiFold Status", "endpoint": "/v1/api/antifold/check_status/<task_id>"},
+            {"task": "ProteinMPNN ddG Prediction", "endpoint": "/v1/api/proteinmpnn/ddg"},
+            {"task": "Check ProteinMPNN Status", "endpoint": "/v1/api/proteinmpnn/check_status/<task_id>"}
         ]
     })
