@@ -1,7 +1,7 @@
 from flask import Flask
-from routes.antifold import antifold_bp
-from routes.protein_mpnn import proteinmpnn_bp
-from routes.tasks import tasks_bp
+from backend.routes.antifold import antifold_bp
+from backend.routes.protein_mpnn import proteinmpnn_bp
+from backend.routes.tasks import tasks_bp
 
 app = Flask(__name__)
 
