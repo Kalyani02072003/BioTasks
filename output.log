@@ -47,3 +47,10 @@ nohup: ignoring input
  * Debugger PIN: 127-771-107
 152.59.195.103 - - [12/Mar/2025 11:38:52] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
 152.59.195.103 - - [12/Mar/2025 11:42:39] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+152.59.195.103 - - [12/Mar/2025 11:53:59] "[31m[1mPOST /v1/api/proteinmpnn/ddg HTTP/1.1[0m" 400 -
+152.59.195.103 - - [12/Mar/2025 11:54:19] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
+152.59.195.103 - - [12/Mar/2025 12:05:53] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
+152.59.195.103 - - [12/Mar/2025 12:09:29] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
+152.59.195.103 - - [12/Mar/2025 12:16:30] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
+152.59.195.103 - - [12/Mar/2025 12:31:06] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
+152.59.195.103 - - [12/Mar/2025 12:34:03] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
