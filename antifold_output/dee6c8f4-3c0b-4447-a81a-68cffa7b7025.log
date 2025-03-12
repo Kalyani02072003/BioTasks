@@ -1,0 +1,22 @@
+/home/texsols/miniconda3/envs/antifold_cpu/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+[2025-03-12 11:39:06,258] Running inverse folding on PDB/CIFs ...
+[2025-03-12 11:39:06,259] Will sample 10 sequences from 1 PDBs at temperature(s) [0.2] and regions: ['CDR1,CDR2,CDR3']
+[2025-03-12 11:39:06,259] Downloading AntiFold model weights from https://opig.stats.ox.ac.uk/data/downloads/AntiFold/models/model.pt to /home/texsols/miniconda3/envs/antifold_cpu/lib/python3.9/site-packages/models/model.pt
+[2025-03-12 11:39:41,888] Loaded model to cpu.
+[2025-03-12 11:39:41,905] Reading in (1) PDBs from DataFrame
+[2025-03-12 11:39:42,155] Predicting batch 1/1: PDBs 1-1 out of 1 total
+[2025-03-12 11:39:59,634] Saving 1 CSVs to antifold_output
+[2025-03-12 11:39:59,642] Writing 8ee8_imgt_CD per-residue log probs CSV to antifold_output/8ee8_imgt_CD.csv
+[2025-03-12 11:39:59,699] 8ee8_imgt_CD: , score=0.9257, global_score=0.9257, regions=['CDR1,CDR2,CDR3'], model_name=AntiFold, seed=42
+[2025-03-12 11:39:59,727] 8ee8_imgt_CD__1: T=0.20, sample=1, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-03-12 11:39:59,749] 8ee8_imgt_CD__2: T=0.20, sample=2, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-03-12 11:39:59,778] 8ee8_imgt_CD__3: T=0.20, sample=3, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-03-12 11:39:59,808] 8ee8_imgt_CD__4: T=0.20, sample=4, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-03-12 11:39:59,836] 8ee8_imgt_CD__5: T=0.20, sample=5, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-03-12 11:39:59,865] 8ee8_imgt_CD__6: T=0.20, sample=6, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-03-12 11:39:59,893] 8ee8_imgt_CD__7: T=0.20, sample=7, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-03-12 11:39:59,921] 8ee8_imgt_CD__8: T=0.20, sample=8, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-03-12 11:39:59,948] 8ee8_imgt_CD__9: T=0.20, sample=9, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-03-12 11:39:59,971] 8ee8_imgt_CD__10: T=0.20, sample=10, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-03-12 11:39:59,980] Saving to antifold_output/8ee8_imgt_CD.fasta

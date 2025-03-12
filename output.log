@@ -1,0 +1,49 @@
+nohup: ignoring input
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Serving Flask app 'backend.app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.5:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Debugger is active!
+ * Debugger PIN: 127-771-107
+127.0.0.1 - - [12/Mar/2025 10:47:17] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+127.0.0.1 - - [12/Mar/2025 10:47:34] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+152.59.195.103 - - [12/Mar/2025 10:47:46] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+152.59.195.103 - - [12/Mar/2025 10:47:58] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+152.59.195.103 - - [12/Mar/2025 10:53:06] "[31m[1mPOST /v1/api/antifold/predict HTTP/1.1[0m" 400 -
+152.59.195.103 - - [12/Mar/2025 10:53:28] "[31m[1mPOST /v1/api/antifold/predict HTTP/1.1[0m" 400 -
+59.29.190.69 - - [12/Mar/2025 10:54:58] "[33mGET / HTTP/1.0[0m" 404 -
+152.59.195.103 - - [12/Mar/2025 10:57:45] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+152.59.195.103 - - [12/Mar/2025 10:59:15] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+152.59.195.103 - - [12/Mar/2025 10:59:59] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+/bin/bash: line 2: /home/texsols/miniconda3/etc/profile.d/conda.sh: No such file or directory
+152.59.195.103 - - [12/Mar/2025 11:08:23] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+ * Detected change in '/home/texsols/BioTasks/backend/services/antifold_service.py', reloading
+ * Restarting with stat
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Debugger is active!
+ * Debugger PIN: 127-771-107
+ * Detected change in '/home/texsols/BioTasks/backend/services/antifold_service.py', reloading
+ * Restarting with stat
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Debugger is active!
+ * Debugger PIN: 127-771-107
+ * Detected change in '/home/texsols/BioTasks/backend/services/antifold_service.py', reloading
+ * Restarting with stat
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Debugger is active!
+ * Debugger PIN: 127-771-107
+152.59.195.103 - - [12/Mar/2025 11:16:33] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+152.59.195.103 - - [12/Mar/2025 11:24:01] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+ * Detected change in '/home/texsols/BioTasks/tasks/AntiFold/antifold/esm_util_custom.py', reloading
+ * Restarting with stat
+ * Tip: There are .env files present. Install python-dotenv to use them.
+ * Debugger is active!
+ * Debugger PIN: 127-771-107
+152.59.195.103 - - [12/Mar/2025 11:38:52] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+152.59.195.103 - - [12/Mar/2025 11:42:39] "GET /v1/api/tasks/ HTTP/1.1" 200 -
