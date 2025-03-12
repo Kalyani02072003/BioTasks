@@ -2,7 +2,7 @@ import os
 import subprocess
 import uuid
 
-ANTIFOLD_SCRIPT = os.path.abspath("/home/kalyani/Kalyani/Internship/BioTasks/tasks/AntiFold/antifold/main.py")
+ANTIFOLD_SCRIPT = os.path.abspath("/home/texsols/BioTasks/tasks/AntiFold/antifold/main.py")
 OUTPUT_FOLDER = "antifold_output"
 CONDA_ENV_NAME = "antifold_cpu"
 
