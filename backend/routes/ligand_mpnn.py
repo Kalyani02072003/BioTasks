@@ -13,29 +13,30 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 def design():
     """Starts LigandMPNN and returns a task ID."""
     pdb_file = request.files.get("pdb_file")
-    designed_chains = request.form.get("designed_chains")
+    chains_to_design = request.form.get("chains_to_design")
     fixed_residues = request.form.get("fixed_residues", "")
-    residues_to_design = request.form.get("residues_to_design", "")
+    residues_to_design = request.form.get("residues_to_design", "")  # Ensure default value
     temperature = request.form.get("temperature", 0.1, type=float)
-    num_sequences = request.form.get("num_sequences", 8, type=int)
+    number_of_batches = request.form.get("number_of_batches", 8, type=int)  # Ensure correct key
 
-    if not pdb_file or not designed_chains:
-        return jsonify({"error": "PDB file and Designed Chains are required."}), 400
+    if not pdb_file or not chains_to_design:
+        return jsonify({"error": "PDB file and Chains to Design are required."}), 400
 
     filepath = os.path.join(UPLOAD_FOLDER, pdb_file.filename)
     pdb_file.save(filepath)
 
     data = {
         "pdb_file": filepath,
-        "designed_chains": designed_chains,
+        "chains_to_design": chains_to_design,
         "fixed_residues": fixed_residues,
-        "residues_to_design": residues_to_design,
+        "residues_to_design": residues_to_design,  # Ensure default value
         "temperature": temperature,
-        "num_sequences": num_sequences
+        "number_of_batches": number_of_batches  # Updated key
     }
 
     result = run_ligandmpnn(data)
     return jsonify(result)
+
 
 @ligandmpnn_bp.route("/check_status/<task_id>", methods=["GET"])
 def check_status(task_id):
