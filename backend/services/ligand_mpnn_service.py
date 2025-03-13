@@ -1,42 +1,52 @@
+
+
 import os
 import subprocess
 import uuid
 
-LIGANDMPNN_SCRIPT = os.path.abspath("/home/kalyani/Kalyani/Internship/BioTasks/tasks/LigandMPNN/ligandmpnn/run.py")
+LIGANDMPNN_SCRIPT = "/home/kalyani/Kalyani/Internship/BioTasks/tasks/LigandMPNN/run.py"
+MODEL_CHECKPOINT = "/home/kalyani/Kalyani/Internship/BioTasks/tasks/LigandMPNN/model_params/proteinmpnn_v_48_020.pt"
+WORKING_DIR = "/home/kalyani/Kalyani/Internship/BioTasks/tasks/LigandMPNN"
 OUTPUT_FOLDER = "ligandmpnn_output"
-CONDA_ENV_NAME = "ligandmpnn_cpu"
+CONDA_ENV = "ligandmpnn_env"
 
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 def run_ligandmpnn(params):
     """Runs LigandMPNN in the background and returns a task ID."""
-    pdb_file = params["pdb_file"]
-    designed_chains = params["designed_chains"]
-    fixed_residues = params["fixed_residues"]
-    residues_to_design = params["residues_to_design"]
-    temperature = params["temperature"]
-    num_sequences = params["num_sequences"]
-
+    
+    # Ensure absolute paths for inputs
+    pdb_filename = os.path.basename(params["pdb_file"])
+    input_pdb_path = os.path.abspath(params["pdb_file"])
+    output_folder = os.path.abspath(OUTPUT_FOLDER)
+    
+    # Generate unique task ID
     task_id = str(uuid.uuid4())
-    output_log = os.path.join(OUTPUT_FOLDER, f"{task_id}.log")
-
-    # Prepare the command
+    log_path = os.path.join(output_folder, f"{task_id}.log")
+    
+    # Construct command ensuring the correct working directory
     command = f"""
-    source ~/miniconda3/etc/profile.d/conda.sh && conda activate {CONDA_ENV_NAME} &&
+    source ~/miniconda3/etc/profile.d/conda.sh &&
+    conda activate {CONDA_ENV} &&
+    cd {WORKING_DIR} &&
     python3 {LIGANDMPNN_SCRIPT} \
-        --pdb_path {pdb_file} \
-        --designed_chains "{designed_chains}" \
-        --fixed_residues "{fixed_residues}" \
-        --residues_to_design "{residues_to_design}" \
-        --temperature {temperature} \
-        --num_sequences {num_sequences} \
-        > {output_log} 2>&1 &
+        --pdb_path "{input_pdb_path}" \
+        --checkpoint_path "{MODEL_CHECKPOINT}" \
+        --out_folder "{output_folder}" \
+        --chains_to_design {params["chains_to_design"]} \
+        {f'--redesigned_residues {params.get("residues_to_design")}' if params.get("residues_to_design") else ""} \
+        --temperature {params["temperature"]} \
+        --number_of_batches {params["number_of_batches"]} \
+        > {log_path} 2>&1 &
     """
 
+    
+    # Run LigandMPNN in the background
     subprocess.Popen(command, shell=True, executable="/bin/bash")
 
     return {
         "message": "LigandMPNN started",
         "task_id": task_id,
-        "output_log": output_log
+        "log_file": log_path,
+        "output_folder": output_folder
     }
