@@ -1,137 +1,154 @@
-BioTasks API Documentation
-==========================
+# BioTasks API
 
-Overview
---------
+## Overview
+The BioTasks API provides endpoints for running various protein design and prediction tasks, including **AntiFold**, **LigandMPNN**, and **ProteinMPNN**. Users can submit PDB files and request different types of predictions.
 
-This API provides endpoints for running various protein design and prediction tasks, including **AntiFold**, **LigandMPNN**, and **ProteinMPNN**. 
-Users can submit PDB files and request different types of predictions.
+## Base URL
+```
+http://your-server-ip/v1/api
+```
 
-Base URL
---------
-`   http://your-server-ip/v1/api   `
+## API Endpoints
 
-1\. **AntiFold Prediction**
----------------------------
+### AntiFold Prediction
+- **POST `/antifold/predict`**: Starts AntiFold to predict protein structures
+- **GET `/antifold/check_status/<task_id>`**: Check if AntiFold has finished running
 
-### **1.1 Predict Protein Structure**
+### LigandMPNN Protein Design
+- **POST `/ligandmpnn/design`**: Starts LigandMPNN for protein design
+- **GET `/ligandmpnn/check_status/<task_id>`**: Check if LigandMPNN has finished running
 
-**Endpoint:**POST /antifold/predict
+### ProteinMPNN ddG Prediction
+- **POST `/proteinmpnn/ddg`**: Starts ProteinMPNN to predict ddG changes for mutations
+- **GET `/proteinmpnn/check_status/<task_id>`**: Check if ProteinMPNN has finished running
 
-**Description:**Starts AntiFold to predict protein structures.
+### List Available Tasks
+- **GET `/tasks/`**: Returns a list of available tasks in the API
 
-**Form Data Parameters:**
+## Detailed Documentation
 
-ParameterTypeRequiredDescriptiontask\_typestringNoType of prediction taskheavy\_chainstringNoHeavy chain specificationlight\_chainstringNoLight chain specificationpdb\_filefileYesPDB file for the prediction
+### 1. AntiFold Prediction
 
-**Example Request (Postman - Form Data):**
-`   {    "task_type": "folding",    "heavy_chain": "A",    "light_chain": "B",    "pdb_file": "example.pdb"  }   `
-
-**Example Response:**
-`   {    "task_id": "123e4567-e89b-12d3-a456-426614174000",    "message": "AntiFold started"  }   `
-
-### **1.2 Check Prediction Status**
-
-**Endpoint:**GET /antifold/check\_status/
-
-**Description:**Check if AntiFold has finished running.
-
-**Example Request:**
-`   GET /antifold/check_status/123e4567-e89b-12d3-a456-426614174000   `
-
-**Example Response:**
-`   {    "task_id": "123e4567-e89b-12d3-a456-426614174000",    "logs": [      "AntiFold process started...",      "Processing PDB file...",      "Prediction completed successfully."    ]  }   `
-
-2\. **LigandMPNN Protein Design**
----------------------------------
-
-### **2.1 Design Protein with LigandMPNN**
-
-**Endpoint:**POST /ligandmpnn/design
-
-**Description:**Starts LigandMPNN for protein design.
+#### 1.1 Predict Protein Structure
+**Endpoint:** `POST /antifold/predict`
 
 **Form Data Parameters:**
-
-ParameterTypeRequiredDescriptionpdb\_filefileYesPDB file for designchains\_to\_designstringYesChains to be designedfixed\_residuesstringNoFixed residuesresidues\_to\_designstringNoResidues to redesigntemperaturefloatNoTemperature setting (default 0.1)number\_of\_batchesintNoNumber of batches (default 8)
-
-**Example Request (Postman - Form Data):**
-`   {    "pdb_file": "protein_structure.pdb",    "chains_to_design": "A",    "fixed_residues": "",    "residues_to_design": "A1,A2,A3",    "temperature": 0.2,    "number_of_batches": 5  }   `
-
-**Example Response:**
-`   {    "message": "LigandMPNN started",    "task_id": "123e4567-e89b-12d3-a456-426614174000",    "log_file": "ligandmpnn_output/123e4567-e89b-12d3-a456-426614174000.log",    "output_folder": "ligandmpnn_output"  }   `
-
-### **2.2 Check LigandMPNN Status**
-
-**Endpoint:**GET /ligandmpnn/check\_status/
-
-**Description:**Check if LigandMPNN has finished running.
-
-**Example Request:**
-`   GET /ligandmpnn/check_status/123e4567-e89b-12d3-a456-426614174000   `
+| Parameter       | Type   | Required | Description                     |
+|----------------|--------|----------|---------------------------------|
+| `task_type`    | string | No       | Type of prediction task        |
+| `heavy_chain`  | string | No       | Heavy chain specification      |
+| `light_chain`  | string | No       | Light chain specification      |
+| `pdb_file`     | file   | Yes      | PDB file for the prediction    |
 
 **Example Response:**
-`   {    "task_id": "123e4567-e89b-12d3-a456-426614174000",    "logs": [      "Designing protein from this path: /uploads/example.pdb",      "Residues redesigned: ['A1', 'A2', 'A3']",      "Design completed successfully."    ]  }   `
+```json
+{
+  "task_id": "123e4567-e89b-12d3-a456-426614174000",
+  "message": "AntiFold started"
+}
+```
 
-3\. **ProteinMPNN ddG Prediction**
-----------------------------------
+#### 1.2 Check Prediction Status
+**Endpoint:** `GET /antifold/check_status/<task_id>`
 
-### **3.1 Run ProteinMPNN ddG Prediction**
+**Example Response:**
+```json
+{
+  "task_id": "123e4567-e89b-12d3-a456-426614174000",
+  "logs": [
+    "AntiFold process started...",
+    "Processing PDB file...",
+    "Prediction completed successfully."
+  ]
+}
+```
 
-**Endpoint:**POST /proteinmpnn/ddg
+### 2. LigandMPNN Protein Design
 
-**Description:**Starts ProteinMPNN to predict ddG changes for mutations.
+#### 2.1 Design Protein with LigandMPNN
+**Endpoint:** `POST /ligandmpnn/design`
 
 **Form Data Parameters:**
-
-ParameterTypeRequiredDescriptionpdb\_filefileYesPDB file for ddG predictionchainstringNoChain to be analyzed (default "A")
-
-**Example Request (Postman - Form Data):**
-`   {    "pdb_file": "protein_structure.pdb",    "chain": "A"  }   `
-
-**Example Response:**
-`   {    "message": "ProteinMPNN started",    "task_id": "987e6543-e89b-12d3-a456-426614174000",    "log_file": "proteinmpnn_output/987e6543-e89b-12d3-a456-426614174000.log",    "output_folder": "proteinmpnn_output"  }   `
-
-### **3.2 Check ProteinMPNN Status**
-
-**Endpoint:**GET /proteinmpnn/check\_status/
-
-**Description:**Check if ProteinMPNN has finished running.
-
-**Example Request:**
-`   GET /proteinmpnn/check_status/987e6543-e89b-12d3-a456-426614174000   `
+| Parameter            | Type   | Required | Description                      |
+|----------------------|--------|----------|----------------------------------|
+| `pdb_file`          | file   | Yes      | PDB file for design             |
+| `chains_to_design`  | string | Yes      | Chains to be designed           |
+| `fixed_residues`    | string | No       | Fixed residues                   |
+| `residues_to_design` | string | No      | Residues to redesign            |
+| `temperature`       | float  | No       | Temperature setting (default 0.1) |
+| `number_of_batches` | int    | No       | Number of batches (default 8)    |
 
 **Example Response:**
-`   {    "task_id": "987e6543-e89b-12d3-a456-426614174000",    "logs": [      "Processing PDB file...",      "Running ProteinMPNN model...",      "ddG predictions completed."    ]  }   `
+```json
+{
+  "message": "LigandMPNN started",
+  "task_id": "123e4567-e89b-12d3-a456-426614174000",
+  "log_file": "ligandmpnn_output/123e4567-e89b-12d3-a456-426614174000.log",
+  "output_folder": "ligandmpnn_output"
+}
+```
 
-4\. **List Available Tasks**
-----------------------------
-
-### **4.1 Get Available Tasks**
-
-**Endpoint:**GET /tasks/
-
-**Description:**Returns a list of available tasks in the API.
-
-**Example Request:**
-`   GET /tasks/   `
+#### 2.2 Check LigandMPNN Status
+**Endpoint:** `GET /ligandmpnn/check_status/<task_id>`
 
 **Example Response:**
-`   {    "available_tasks": [      {"task": "AntiFold Prediction", "endpoint": "/v1/api/antifold/predict"},      {"task": "Check AntiFold Status", "endpoint": "/v1/api/antifold/check_status/"},      {"task": "ProteinMPNN ddG Prediction", "endpoint": "/v1/api/proteinmpnn/ddg"},      {"task": "Check ProteinMPNN Status", "endpoint": "/v1/api/proteinmpnn/check_status/"}    ]  }   `
+```json
+{
+  "task_id": "123e4567-e89b-12d3-a456-426614174000",
+  "logs": [
+    "Designing protein from this path: /uploads/example.pdb",
+    "Residues redesigned: ['A1', 'A2', 'A3']",
+    "Design completed successfully."
+  ]
+}
+```
 
-Error Handling
---------------
+### 3. ProteinMPNN ddG Prediction
 
-Error CodeMeaningPossible Causes400Bad RequestMissing required parameters404Not FoundTask ID does not exist500Internal Server ErrorUnexpected backend failure
+#### 3.1 Run ProteinMPNN ddG Prediction
+**Endpoint:** `POST /proteinmpnn/ddg`
 
-Notes
------
+**Form Data Parameters:**
+| Parameter  | Type   | Required | Description                  |
+|------------|--------|----------|------------------------------|
+| `pdb_file` | file   | Yes      | PDB file for ddG prediction |
+| `chain`    | string | No       | Chain to be analyzed (default "A") |
 
-*   Make sure to send **PDB files** as **multipart/form-data** in Postman.
-    
-*   Some parameters have **default values**, so they are optional unless explicitly needed.
-    
-*   The API is **asynchronous**, so after submitting a task, check its status using the /check\_status/ endpoint.
-    
+**Example Response:**
+```json
+{
+  "message": "ProteinMPNN started",
+  "task_id": "987e6543-e89b-12d3-a456-426614174000",
+  "log_file": "proteinmpnn_output/987e6543-e89b-12d3-a456-426614174000.log",
+  "output_folder": "proteinmpnn_output"
+}
+```
 
-This **Markdown** file is ready to use for **GitHub documentation, Postman, or API ReadMe files**. 🚀 Let me know if you need any refinements!
+#### 3.2 Check ProteinMPNN Status
+**Endpoint:** `GET /proteinmpnn/check_status/<task_id>`
+
+**Example Response:**
+```json
+{
+  "task_id": "987e6543-e89b-12d3-a456-426614174000",
+  "logs": [
+    "Processing PDB file...",
+    "Running ProteinMPNN model...",
+    "ddG predictions completed."
+  ]
+}
+```
+
+## Error Handling
+| Error Code | Meaning | Possible Causes |
+|------------|---------|----------------|
+| 400        | Bad Request | Missing required parameters |
+| 404        | Not Found | Task ID does not exist |
+| 500        | Internal Server Error | Unexpected backend failure |
+
+## Usage Notes
+- Send PDB files as **multipart/form-data** when using tools like Postman
+- Optional parameters have default values that will be used if not explicitly provided
+- The API is asynchronous - after submitting a task, check its status using the corresponding status endpoint
+- All task IDs should be retained for checking status and retrieving results
+
