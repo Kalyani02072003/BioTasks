@@ -1,0 +1,4 @@
+/home/texsols/miniconda3/envs/antifold_cpu/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+[2025-03-12 15:47:20,800] Running inverse folding on PDB/CIFs ...
+[2025-03-12 15:47:20,825] Will sample 10 sequences from 1 PDBs at temperature(s) [0.2] and regions: ['CDR1,CDR2,CDR3']
