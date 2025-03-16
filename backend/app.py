@@ -1,9 +1,11 @@
 from flask import Flask
+from flask_cors import CORS
 from backend.routes.antifold import antifold_bp
 from backend.routes.protein_mpnn import proteinmpnn_bp
 from backend.routes.tasks import tasks_bp
 from backend.routes.ligand_mpnn import ligandmpnn_bp
 app = Flask(__name__)
+CORS(app)
 
 # Register blueprints
 app.register_blueprint(antifold_bp, url_prefix="/v1/api/antifold")

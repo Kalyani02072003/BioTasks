@@ -4,9 +4,9 @@ import os
 import subprocess
 import uuid
 
-LIGANDMPNN_SCRIPT = "/home/kalyani/Kalyani/Internship/BioTasks/tasks/LigandMPNN/run.py"
-MODEL_CHECKPOINT = "/home/kalyani/Kalyani/Internship/BioTasks/tasks/LigandMPNN/model_params/proteinmpnn_v_48_020.pt"
-WORKING_DIR = "/home/kalyani/Kalyani/Internship/BioTasks/tasks/LigandMPNN"
+LIGANDMPNN_SCRIPT = os.path.abspath("/home/texsols/BioTasks/tasks/LigandMPNN/run.py")
+MODEL_CHECKPOINT = os.path.abspath( "/home/texsols/BioTasks/tasks/LigandMPNN/model_params/proteinmpnn_v_48_020.pt")
+WORKING_DIR = os.path.abspath("/home/texsols/BioTasks/tasks/LigandMPNN")
 OUTPUT_FOLDER = "ligandmpnn_output"
 CONDA_ENV = "ligandmpnn_env"
 
