@@ -1,3 +1,4 @@
+import os
 from azure.identity import ClientSecretCredential
 from azure.storage.blob import BlobServiceClient
 from dotenv import load_dotenv
