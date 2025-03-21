@@ -10,389 +10,222 @@ nohup: ignoring input
  * Restarting with stat
  * Tip: There are .env files present. Install python-dotenv to use them.
  * Debugger is active!
- * Debugger PIN: 127-771-107
-127.0.0.1 - - [12/Mar/2025 10:47:17] "GET /v1/api/tasks/ HTTP/1.1" 200 -
-127.0.0.1 - - [12/Mar/2025 10:47:34] "GET /v1/api/tasks/ HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 10:47:46] "GET /v1/api/tasks/ HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 10:47:58] "GET /v1/api/tasks/ HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 10:53:06] "[31m[1mPOST /v1/api/antifold/predict HTTP/1.1[0m" 400 -
-152.59.195.103 - - [12/Mar/2025 10:53:28] "[31m[1mPOST /v1/api/antifold/predict HTTP/1.1[0m" 400 -
-59.29.190.69 - - [12/Mar/2025 10:54:58] "[33mGET / HTTP/1.0[0m" 404 -
-152.59.195.103 - - [12/Mar/2025 10:57:45] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 10:59:15] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 10:59:59] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
-/bin/bash: line 2: /home/texsols/miniconda3/etc/profile.d/conda.sh: No such file or directory
-152.59.195.103 - - [12/Mar/2025 11:08:23] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
- * Detected change in '/home/texsols/BioTasks/backend/services/antifold_service.py', reloading
- * Restarting with stat
- * Tip: There are .env files present. Install python-dotenv to use them.
- * Debugger is active!
- * Debugger PIN: 127-771-107
- * Detected change in '/home/texsols/BioTasks/backend/services/antifold_service.py', reloading
- * Restarting with stat
- * Tip: There are .env files present. Install python-dotenv to use them.
- * Debugger is active!
- * Debugger PIN: 127-771-107
- * Detected change in '/home/texsols/BioTasks/backend/services/antifold_service.py', reloading
- * Restarting with stat
- * Tip: There are .env files present. Install python-dotenv to use them.
- * Debugger is active!
- * Debugger PIN: 127-771-107
-152.59.195.103 - - [12/Mar/2025 11:16:33] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 11:24:01] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
- * Detected change in '/home/texsols/BioTasks/tasks/AntiFold/antifold/esm_util_custom.py', reloading
- * Restarting with stat
- * Tip: There are .env files present. Install python-dotenv to use them.
- * Debugger is active!
- * Debugger PIN: 127-771-107
-152.59.195.103 - - [12/Mar/2025 11:38:52] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 11:42:39] "GET /v1/api/tasks/ HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 11:53:59] "[31m[1mPOST /v1/api/proteinmpnn/ddg HTTP/1.1[0m" 400 -
-152.59.195.103 - - [12/Mar/2025 11:54:19] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 12:05:53] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 12:09:29] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 12:16:30] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 12:31:06] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 12:34:03] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 15:46:29] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 15:46:45] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
-/bin/bash: line 3: 23555 Killed                  python3 /home/texsols/BioTasks/tasks/AntiFold/antifold/main.py --num_seq_per_target 10 --sampling_temp 0.2 --regions "CDR1,CDR2,CDR3" --pdb_file uploads/8ee8_imgt.pdb --heavy_chain C --light_chain D > antifold_output/52bd0d6d-348c-4e9d-be1d-f589d07b6bf9.log 2>&1
-152.59.195.103 - - [12/Mar/2025 15:54:20] "GET /v1/api/tasks/ HTTP/1.1" 200 -
-54.86.50.139 - - [12/Mar/2025 16:05:58] "GET /v1/api/tasks/ HTTP/1.1" 200 -
-152.59.195.103 - - [12/Mar/2025 16:06:27] "GET /v1/api/tasks/ HTTP/1.1" 200 -
-54.86.50.139 - - [12/Mar/2025 16:08:16] "[31m[1mPOST /v1/api/proteinmpnn/ddg HTTP/1.1[0m" 400 -
-111.113.88.162 - - [12/Mar/2025 16:40:27] "[33mGET / HTTP/1.1[0m" 404 -
-61.52.80.162 - - [12/Mar/2025 16:41:16] "[33mGET / HTTP/1.1[0m" 404 -
-206.168.34.194 - - [12/Mar/2025 16:44:35] "[33mGET / HTTP/1.1[0m" 404 -
-206.168.34.194 - - [12/Mar/2025 16:44:43] "[33mGET / HTTP/1.1[0m" 404 -
-206.168.34.194 - - [12/Mar/2025 16:44:45] code 505, message Invalid HTTP version (2.0)
-206.168.34.194 - - [12/Mar/2025 16:44:45] "[35m[1mPRI * HTTP/2.0[0m" 505 -
-206.168.34.194 - - [12/Mar/2025 16:44:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-206.168.34.194 - - [12/Mar/2025 16:44:56] code 400, message Bad request version ('À\x14À')
-206.168.34.194 - - [12/Mar/2025 16:44:56] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03Èvl\x1d9ÖHc®\x96@I\x95\x88\x9dî\x85SÿìE&(¥¾85õm\x97\\` M/Hh\x15k®úË,\x039Nö0]\x88N¿h´v\x0bìûç\x03ÑGyÄb\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
-109.236.61.95 - - [12/Mar/2025 17:09:53] code 400, message Bad request version ('}')
-109.236.61.95 - - [12/Mar/2025 17:09:53] "[31m[1mÿ\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00ñ\x03%\x00\x00\x00{ "Ret" : 100, "SessionID" : "0x0" }[0m" 400 -
-140.136.221.11 - - [12/Mar/2025 19:55:16] "[33mGET / HTTP/1.0[0m" 404 -
-45.82.79.18 - - [12/Mar/2025 22:07:49] code 400, message Bad request syntax ('\x00í\x00\x00\x01\x00\x00\x00\x01<\x01,\x00\x00\x80\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00³\x00:\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00(DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=non-abc-existent-ser-vice-123-a-a-bc-asdf)(CID=(PROGRAM=sqlplus)(HOST=__jdbc__)(USER=)))(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=10)))')
-45.82.79.18 - - [12/Mar/2025 22:07:49] "[31m[1m\x00í\x00\x00\x01\x00\x00\x00\x01<\x01,\x00\x00\x80\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00³\x00:\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00(DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=non-abc-existent-ser-vice-123-a-a-bc-asdf)(CID=(PROGRAM=sqlplus)(HOST=__jdbc__)(USER=)))(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=10)))[0m" 400 -
-45.82.79.18 - - [12/Mar/2025 22:07:49] code 400, message Bad request syntax ('\x00í\x00\x00\x01\x00\x00\x00\x01<\x01,\x00\x00\x80\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00³\x00:\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00(DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=non-abc-existent-ser-vice-123-a-a-bc-asdf)(CID=(PROGRAM=sqlplus)(HOST=__jdbc__)(USER=)))(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=10)))')
-45.82.79.18 - - [12/Mar/2025 22:07:49] "[31m[1m\x00í\x00\x00\x01\x00\x00\x00\x01<\x01,\x00\x00\x80\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00³\x00:\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00(DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=non-abc-existent-ser-vice-123-a-a-bc-asdf)(CID=(PROGRAM=sqlplus)(HOST=__jdbc__)(USER=)))(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=10)))[0m" 400 -
-40.74.242.10 - - [12/Mar/2025 22:15:18] "[33mGET / HTTP/1.0[0m" 404 -
-47.236.78.136 - - [12/Mar/2025 22:53:20] code 400, message Bad request syntax ('{\x01\x00\x1613911391139À¨\x01\x01\x13\x90{')
-47.236.78.136 - - [12/Mar/2025 22:53:20] "[31m[1m{\x01\x00\x1613911391139À¨\x01\x01\x13\x90{[0m" 400 -
-47.236.78.136 - - [12/Mar/2025 22:53:20] "[33mGET / HTTP/1.1[0m" 404 -
-47.236.78.136 - - [12/Mar/2025 22:53:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-47.236.78.136 - - [12/Mar/2025 22:53:21] "[33mGET / HTTP/1.1[0m" 404 -
-47.236.78.136 - - [12/Mar/2025 22:53:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-205.210.31.102 - - [13/Mar/2025 00:34:39] "[33mGET / HTTP/1.0[0m" 404 -
-35.203.210.156 - - [13/Mar/2025 00:35:18] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03k|î\x80')
-35.203.210.156 - - [13/Mar/2025 00:35:18] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03k|î\x80[0m" 400 -
-35.203.210.156 - - [13/Mar/2025 00:35:19] code 400, message Bad request version ('À(À$À\x14À')
-35.203.210.156 - - [13/Mar/2025 00:35:19] "[31m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x90ãuluª'áI\x8d)\x85_¤Èªyt\x8aþD3¿¬6èTéj\x09\x9d@\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À[0m" 400 -
-147.185.132.96 - - [13/Mar/2025 02:43:21] "[33mGET / HTTP/1.1[0m" 404 -
-205.210.31.6 - - [13/Mar/2025 03:22:11] "[33mGET / HTTP/1.0[0m" 404 -
-64.62.197.158 - - [13/Mar/2025 03:35:08] "[33mGET / HTTP/1.1[0m" 404 -
-64.62.197.156 - - [13/Mar/2025 03:35:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-194.0.234.34 - - [13/Mar/2025 05:48:55] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
-194.0.234.34 - - [13/Mar/2025 05:48:55] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
-198.235.24.136 - - [13/Mar/2025 06:11:38] "[33mGET / HTTP/1.1[0m" 404 -
-146.190.61.130 - - [13/Mar/2025 06:52:49] "[33mGET / HTTP/1.1[0m" 404 -
-146.190.61.130 - - [13/Mar/2025 06:52:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-194.0.234.34 - - [13/Mar/2025 07:37:49] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
-194.0.234.34 - - [13/Mar/2025 07:37:49] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
-206.168.34.199 - - [13/Mar/2025 08:36:19] code 400, message Bad request version ('À\x14À')
-206.168.34.199 - - [13/Mar/2025 08:36:19] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03AHç\x93\x08\x06Û\x00ôîäÛRèàÏ\x8d°Gý\x10\x12A\x01\x0b\x1ci\x9e°UYÙ uò\x99\x04\x153Î\x14ñ\x9b\\®\x11¬F\x97\x8f\x84áèðõ][\x10¯±\x1d(\x95¹¤\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
-206.168.34.199 - - [13/Mar/2025 08:37:04] code 400, message Bad request syntax ('ZG\x00\x00\x00\x05\x00+\x0e\x01\x00')
-206.168.34.199 - - [13/Mar/2025 08:37:04] "[31m[1mZG\x00\x00\x00\x05\x00+\x0e\x01\x00[0m" 400 -
-122.116.55.232 - - [13/Mar/2025 13:33:41] "[33mGET / HTTP/1.0[0m" 404 -
-87.236.176.66 - - [13/Mar/2025 15:40:00] "[33mGET / HTTP/1.1[0m" 404 -
-194.0.234.53 - - [13/Mar/2025 17:20:54] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
-194.0.234.53 - - [13/Mar/2025 17:20:54] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
-18.188.48.190 - - [13/Mar/2025 17:27:28] code 400, message Bad request version ('À\x14À')
-18.188.48.190 - - [13/Mar/2025 17:27:28] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ë\x08Â\x100äÄ=Á\x1eh\x89q¯²\x0dÆeÞ\\b\x12U¢lvR\x8aö\x09A\x08\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
-18.188.48.190 - - [13/Mar/2025 17:27:28] code 400, message Bad request version ('À\x14À')
-18.188.48.190 - - [13/Mar/2025 17:27:28] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ë&´\x0d0¿4º'¨^»èÜ\x83Ô&\x82R\x9c\x1f´Ï8å\x90_ùqv-³\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
-18.188.48.190 - - [13/Mar/2025 17:27:29] "[33mGET / HTTP/1.1[0m" 404 -
-18.188.48.190 - - [13/Mar/2025 17:27:34] code 400, message Bad request syntax ('SSH-2.0-Go')
-18.188.48.190 - - [13/Mar/2025 17:27:34] "[31m[1mSSH-2.0-Go[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:09] "[33mGET / HTTP/1.0[0m" 404 -
-139.144.52.241 - - [13/Mar/2025 18:00:09] code 400, message Bad request version ('RTSP/1.0')
-139.144.52.241 - - [13/Mar/2025 18:00:09] "[31m[1mOPTIONS / RTSP/1.0[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:15] code 400, message Bad HTTP/0.9 request type ('\x00')
-139.144.52.241 - - [13/Mar/2025 18:00:15] "[31m[1m\x00\x1e\x00\x06\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x07version\x04bind\x00\x00\x10\x00\x03[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:20] code 400, message Bad request version ('0.12\x00')
-139.144.52.241 - - [13/Mar/2025 18:00:20] "[31m[1m\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:25] code 400, message Bad request version ('GetClassName\x00\x00\x00\x02\x04\x00\x00\x00\x00\x01\x00')
-139.144.52.241 - - [13/Mar/2025 18:00:25] "[31m[1m\x00\x00\x00\x1f\x00\x00\x00\x00\x00\x00\x00\x0cGetClassName\x00\x00\x00\x02\x04\x00\x00\x00\x00\x01\x00[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:25] "[33mOPTIONS / HTTP/1.0[0m" 404 -
-139.144.52.241 - - [13/Mar/2025 18:00:30] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
-139.144.52.241 - - [13/Mar/2025 18:00:30] "[31m[1m\x80\x00\x00(rþ\x1d\x13\x00\x00\x00\x00\x00\x00\x00\x02\x00\x01\x86 \x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:30] code 400, message Bad request syntax ('HELP')
-139.144.52.241 - - [13/Mar/2025 18:00:30] "[31m[1mHELP[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:30] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
-139.144.52.241 - - [13/Mar/2025 18:00:30] "[31m[1m\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:30] code 400, message Bad request version ('\x00/\x00')
-139.144.52.241 - - [13/Mar/2025 18:00:30] "[31m[1m\x16\x03\x00\x00i\x01\x00\x00e\x03\x03U\x1c§ärandom1random2random3random4\x00\x00\x0c\x00/\x00[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:31] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
-139.144.52.241 - - [13/Mar/2025 18:00:31] "[31m[1m\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:36] code 400, message Bad HTTP/0.9 request type ('l\x00')
-139.144.52.241 - - [13/Mar/2025 18:00:36] "[31m[1ml\x00\x0b\x00\x00\x00\x00\x00\x00\x00\x00\x00[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:36] code 400, message Bad request version ('SIP/2.0')
-139.144.52.241 - - [13/Mar/2025 18:00:36] "[31m[1mOPTIONS sip:nm SIP/2.0[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:41] code 400, message Bad HTTP/0.9 request type ('AMQP\x00\x00')
-139.144.52.241 - - [13/Mar/2025 18:00:41] "[31m[1mAMQP\x00\x00\x09\x01[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:41] "[33mGET /devicedesc.xml HTTP/1.1[0m" 404 -
-139.144.52.241 - - [13/Mar/2025 18:00:41] code 400, message Bad request version ('\x00/\x00')
-139.144.52.241 - - [13/Mar/2025 18:00:41] "[31m[1m\x16\x03\x00\x00i\x01\x00\x00e\x03\x03U\x1c§ärandom1random2random3random4\x00\x00\x0c\x00/\x00[0m" 400 -
-139.144.52.241 - - [13/Mar/2025 18:00:46] "[33mGET / HTTP/1.1[0m" 404 -
-139.144.52.241 - - [13/Mar/2025 18:00:52] code 400, message Bad request syntax ('\x0e\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00bbbb0100000001')
-139.144.52.241 - - [13/Mar/2025 18:00:52] "[31m[1m\x0e\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00bbbb0100000001[0m" 400 -
-167.94.146.54 - - [13/Mar/2025 18:35:34] code 400, message Bad request version ('À\x14À')
-167.94.146.54 - - [13/Mar/2025 18:35:34] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03²f6êkÂz¤\x00yà)¨\x80ûDÞ$BJ;Oðÿ\x83\x8b\x95xc\x0dÉ_ \x9aYà(B9k¥Ù\x9a÷>F3Cäå\x80,Gó\x87Û±¦\x08µ'\x13åpX\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
-167.94.146.54 - - [13/Mar/2025 18:35:37] "[33mGET / HTTP/1.1[0m" 404 -
-167.94.146.54 - - [13/Mar/2025 18:35:42] "[33mGET / HTTP/1.1[0m" 404 -
-167.94.146.54 - - [13/Mar/2025 18:35:42] code 505, message Invalid HTTP version (2.0)
-167.94.146.54 - - [13/Mar/2025 18:35:42] "[35m[1mPRI * HTTP/2.0[0m" 505 -
-167.94.146.54 - - [13/Mar/2025 18:35:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-167.94.146.54 - - [13/Mar/2025 18:35:49] code 400, message Bad request syntax ('\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03\x88&½ÉÃ6\x1b|VTÇÅ÷')
-167.94.146.54 - - [13/Mar/2025 18:35:49] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03\x88&½ÉÃ6\x1b|VTÇÅ÷[0m" 400 -
-198.235.24.237 - - [13/Mar/2025 19:11:39] "[33mGET / HTTP/1.1[0m" 404 -
-198.235.24.5 - - [13/Mar/2025 22:14:09] "[33mGET / HTTP/1.1[0m" 404 -
-162.216.150.193 - - [13/Mar/2025 22:39:39] code 400, message Bad request version ('\x98´ÿáÛ')
-162.216.150.193 - - [13/Mar/2025 22:39:39] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03tÅ\x0d\x05\x7f\x1f\x98´ÿáÛ[0m" 400 -
-162.216.150.193 - - [13/Mar/2025 22:39:39] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03So°ÇÔ7\x14alÿ\x97ø\x15,ô½ÑfIÜß'E\x01\x8fý.¸å»§/\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À")
-162.216.150.193 - - [13/Mar/2025 22:39:39] "[31m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03So°ÇÔ7\x14alÿ\x97ø\x15,ô½ÑfIÜß'E\x01\x8fý.¸å»§/\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À[0m" 400 -
-147.185.132.93 - - [13/Mar/2025 23:46:00] "[33mGET / HTTP/1.0[0m" 404 -
-205.210.31.20 - - [14/Mar/2025 03:42:34] "[33mGET / HTTP/1.0[0m" 404 -
-109.236.61.95 - - [14/Mar/2025 04:20:20] code 400, message Bad request version ('}')
-109.236.61.95 - - [14/Mar/2025 04:20:20] "[31m[1mÿ\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00ñ\x03%\x00\x00\x00{ "Ret" : 100, "SessionID" : "0x0" }[0m" 400 -
-199.45.155.110 - - [14/Mar/2025 04:31:22] code 400, message Bad request version ('À\x14À')
-199.45.155.110 - - [14/Mar/2025 04:31:22] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03¤\x82ÑÉ\x1a®\x01ÐQ\x12wC}0à\x89\x94HÅ¦\x89\x95Îl.\x199'·Ll\x89 *ÕT\x17\x0en\x8e>ÉL#Ë$\x0bË\x9f\x83®ò¤\x98-P\x92\x18Ózëÿ\x18»½\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
-199.45.155.110 - - [14/Mar/2025 04:31:26] "[33mGET / HTTP/1.1[0m" 404 -
-199.45.155.110 - - [14/Mar/2025 04:31:30] "[33mGET / HTTP/1.1[0m" 404 -
-199.45.155.110 - - [14/Mar/2025 04:31:31] code 505, message Invalid HTTP version (2.0)
-199.45.155.110 - - [14/Mar/2025 04:31:31] "[35m[1mPRI * HTTP/2.0[0m" 505 -
-199.45.155.110 - - [14/Mar/2025 04:31:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-199.45.155.110 - - [14/Mar/2025 04:31:34] code 400, message Bad request version ('\x9du\x9fR\x03¹\x9cÎBx')
-199.45.155.110 - - [14/Mar/2025 04:31:34] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03zyÌm\x96\x1e\x06\x8aÞÌi<PàÙU\\¦r\x8cÏ]Z\x1f²ëã Î\x1b\x9a\x00 \x9du\x9fR\x03¹\x9cÎBx[0m" 400 -
-64.62.156.101 - - [14/Mar/2025 05:30:31] "[33mGET / HTTP/1.1[0m" 404 -
-64.62.156.96 - - [14/Mar/2025 05:30:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-128.199.34.135 - - [14/Mar/2025 05:57:03] code 400, message Bad request version ('À\x14À')
-128.199.34.135 - - [14/Mar/2025 05:57:03] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03GFÝßüñî.\x83¬l?E\x9düd \x02Æ\x85\x83ßòô\x0cH$ãá5ªû\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
-128.199.34.135 - - [14/Mar/2025 05:57:04] code 400, message Bad request version ('À\x14À')
-128.199.34.135 - - [14/Mar/2025 05:57:04] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x94ÒÇ\x1c\x1bÂk\x8bp\x0d\x1bÊ.7NÈvÙ%\x8aõHm\x99àw:úO¶L2\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
-128.199.34.135 - - [14/Mar/2025 05:57:04] "[33mGET / HTTP/1.1[0m" 404 -
-80.82.70.133 - - [14/Mar/2025 06:15:46] code 400, message Bad request version ("¯nãY»bhlÿ(=':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À")
-80.82.70.133 - - [14/Mar/2025 06:15:46] "[31m[1m\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\x09T\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À[0m" 400 -
-94.102.49.155 - - [14/Mar/2025 06:16:04] code 400, message Bad request version ('À\x14À')
-94.102.49.155 - - [14/Mar/2025 06:16:04] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03¥ýf\x96Ýx+\x958\x94\x0efJ¸í²\x9fùkQ¦ÐG\x9baÃ\x05\x19\x8f\x85j\x1c hæþ\x19ëVåÔ5\x17¶Uâ|\x90\x81hh3p\x8a\x968O\x1fd"\x1e³üEv\x00&À/À0À+À,Ì¨Ì©À\x13À\x09À\x14À[0m" 400 -
-94.102.49.155 - - [14/Mar/2025 06:16:04] "[33mGET /v2/_catalog HTTP/1.1[0m" 404 -
-147.45.112.101 - - [14/Mar/2025 07:06:01] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
-147.45.112.101 - - [14/Mar/2025 07:06:01] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
-206.168.34.36 - - [14/Mar/2025 08:30:48] "[33mGET / HTTP/1.1[0m" 404 -
-206.168.34.36 - - [14/Mar/2025 08:30:58] "[33mGET / HTTP/1.1[0m" 404 -
-206.168.34.36 - - [14/Mar/2025 08:31:00] code 505, message Invalid HTTP version (2.0)
-206.168.34.36 - - [14/Mar/2025 08:31:00] "[35m[1mPRI * HTTP/2.0[0m" 505 -
-206.168.34.36 - - [14/Mar/2025 08:31:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-206.168.34.36 - - [14/Mar/2025 08:31:07] code 400, message Bad request version ('À\x14À')
-206.168.34.36 - - [14/Mar/2025 08:31:07] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03ÚwHkÒÂ\x03?J?bÖ{cDê-Õ\x93N%\x06Ø52\x93\x1emERõz 1\x84\x06¸ôò;¸Qùéj]I>{¼¢µ\x00wGZÿ\x96P\x05·º´\x93?\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
-206.168.34.201 - - [14/Mar/2025 12:17:30] code 400, message Bad request version ('À\x14À')
-206.168.34.201 - - [14/Mar/2025 12:17:30] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ªÄ|ídP±ë%\x93\x92\x91õô\x8bè\x8däa\x0cmRr¡\x09P4­è;GG ÅmUn\x1dÛ ¹Öý¯já\x9b\x96¢\x8eÝë3\x8a\x83\x00\x1aCF®7\x82é,z\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
-206.168.34.201 - - [14/Mar/2025 12:17:33] "[33mGET / HTTP/1.1[0m" 404 -
-206.168.34.201 - - [14/Mar/2025 12:17:39] "[33mGET / HTTP/1.1[0m" 404 -
-206.168.34.201 - - [14/Mar/2025 12:17:40] code 505, message Invalid HTTP version (2.0)
-206.168.34.201 - - [14/Mar/2025 12:17:40] "[35m[1mPRI * HTTP/2.0[0m" 505 -
-206.168.34.201 - - [14/Mar/2025 12:17:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-206.168.34.201 - - [14/Mar/2025 12:17:47] code 400, message Bad request version ('À\x14À')
-206.168.34.201 - - [14/Mar/2025 12:17:47] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03t\x1dÙ¬x~Î\x0e\x17á\x90$ÊFç\x84\x98¸\x02\x84²\x81Ê\x00Ò´5xµ ¿Ë !òYF½H¯\x19L\x83\x1aYÍ\x10¨bF\x90\x0e\x97\x80ÆoÒ3k÷$MØ\\k\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
- * Detected change in '/home/texsols/BioTasks/backend/app.py', reloading
- * Restarting with stat
- * Tip: There are .env files present. Install python-dotenv to use them.
- * Debugger is active!
- * Debugger PIN: 127-771-107
-42.105.201.200 - - [14/Mar/2025 13:13:39] "[31m[1mPOST /v1/api/ligandmpnn/design?pdb_File&chains_to_desgin&temperature&number_of_batches HTTP/1.1[0m" 400 -
-42.105.201.200 - - [14/Mar/2025 13:14:17] "POST /v1/api/ligandmpnn/design?pdb_File&chains_to_desgin&temperature&number_of_batches HTTP/1.1" 200 -
-
-EnvironmentNameNotFound: Could not find conda environment: ligandmpnn_env
-You can list all discoverable environments with `conda info --envs`.
-
-
-152.59.197.69 - - [14/Mar/2025 15:15:11] "POST /v1/api/ligandmpnn/design?pdb_File&chains_to_desgin&temperature&number_of_batches HTTP/1.1" 200 -
-/bin/bash: line 4: cd: /home/kalyani/Kalyani/Internship/BioTasks/tasks/LigandMPNN: No such file or directory
- * Detected change in '/home/texsols/BioTasks/backend/services/ligand_mpnn_service.py', reloading
- * Restarting with stat
- * Tip: There are .env files present. Install python-dotenv to use them.
- * Debugger is active!
- * Debugger PIN: 127-771-107
- * Detected change in '/home/texsols/BioTasks/backend/services/ligand_mpnn_service.py', reloading
- * Restarting with stat
- * Tip: There are .env files present. Install python-dotenv to use them.
- * Debugger is active!
- * Debugger PIN: 127-771-107
- * Detected change in '/home/texsols/BioTasks/backend/services/ligand_mpnn_service.py', reloading
- * Restarting with stat
- * Tip: There are .env files present. Install python-dotenv to use them.
- * Debugger is active!
- * Debugger PIN: 127-771-107
-152.59.197.69 - - [14/Mar/2025 15:19:54] "POST /v1/api/ligandmpnn/design?pdb_File&chains_to_desgin&temperature&number_of_batches HTTP/1.1" 200 -
-167.94.145.107 - - [14/Mar/2025 17:00:48] code 400, message Bad request version ('À\x14À')
-167.94.145.107 - - [14/Mar/2025 17:00:48] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Ú'¬Kgr"ÃÊÀ«oøR²90\x1bk¢%\x9d\x0d¤Í\x12s[:\x0f~\x8f Dµtç[Ï\x86íd\x172éYÍº­Î\x81p¢±f­sÚçr\x98 \x04\x08ì\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
-167.94.145.107 - - [14/Mar/2025 17:00:52] "[33mGET / HTTP/1.1[0m" 404 -
-167.94.145.107 - - [14/Mar/2025 17:00:56] "[33mGET / HTTP/1.1[0m" 404 -
-167.94.145.107 - - [14/Mar/2025 17:00:57] code 505, message Invalid HTTP version (2.0)
-167.94.145.107 - - [14/Mar/2025 17:00:57] "[35m[1mPRI * HTTP/2.0[0m" 505 -
-167.94.145.107 - - [14/Mar/2025 17:01:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-167.94.145.107 - - [14/Mar/2025 17:01:01] code 400, message Bad request version ('À\x14À')
-167.94.145.107 - - [14/Mar/2025 17:01:01] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03!\x1cgÇfS\x03 \x11½£Ëj\x0c@\x9c]°\x81\x9d\x90\x7f'\x1f¦æ\x8a?(S¦3  \x8b\x99\x9dØ\x15\x9fß»Ì\x17®Y\x88gwkõ\x11Å\x9e»H¥hÔ\x1d\x12ç\x07\x95ç\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
-220.133.178.138 - - [14/Mar/2025 19:07:08] "[33mGET / HTTP/1.0[0m" 404 -
-205.210.31.27 - - [14/Mar/2025 22:02:57] "[33mGET / HTTP/1.1[0m" 404 -
-88.214.25.122 - - [14/Mar/2025 22:15:00] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
-88.214.25.122 - - [14/Mar/2025 22:15:00] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
-20.84.112.65 - - [14/Mar/2025 22:30:45] "[33mGET / HTTP/1.0[0m" 404 -
-162.216.149.7 - - [15/Mar/2025 01:23:33] code 400, message Bad request version ('À\x13À')
-162.216.149.7 - - [15/Mar/2025 01:23:33] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Åe2½UÌ½²:\x8d\x800\x92V\x9b\x0fk`Çëh:ñ1ª+øC\x94¯>Ü \x82±=5qé\x1c_1@¨Ê¨5åLË\x13£pßóý=çõ.*9\x0f\x98a\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
-162.216.149.7 - - [15/Mar/2025 01:23:33] code 400, message Bad request version ('À(À$À\x14À')
-162.216.149.7 - - [15/Mar/2025 01:23:33] "[31m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03ô|\x90\x8bÕJ²Q\x92D\x9d;<Ë\x19R9\x93·ó½\x85\x18\x1d}\x9fö×\x9bÀêM\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À[0m" 400 -
-147.185.132.21 - - [15/Mar/2025 04:16:12] "[33mGET / HTTP/1.0[0m" 404 -
-103.186.68.16 - - [15/Mar/2025 06:26:35] code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s')
-103.186.68.16 - - [15/Mar/2025 06:26:35] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03?Â\x04sX½ÕC\x9b\x10 \x06"÷v\x06Ì\x99W\x19dw(ÁI<7R\x9f\x9d.õ .ú<7¾ø&¨n\x9f}ç\x19)ÉÙÏ\x0cÝÓJïÙynX\x965ïÙ&1\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s[0m" 400 -
-103.186.68.16 - - [15/Mar/2025 06:26:36] code 400, message Bad request version ('îÊ}\x941B\x14¼^½åÒ\x17Æ\x00')
-103.186.68.16 - - [15/Mar/2025 06:26:36] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03\x8d\x95\\~q\x18ÆV\x0e)\x9eó`^\x8b\x1b¦r\x0c\x88$\x11¥%^nÓ3\x08£¬Ý ùWæ²%FÃ\x93ÀÏ\x85o\x84 Eë\x97\x09îÊ}\x941B\x14¼^½åÒ\x17Æ\x00 [0m" 400 -
-103.186.68.16 - - [15/Mar/2025 06:26:38] "GET /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.16 - - [15/Mar/2025 06:26:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-54.86.50.139 - - [15/Mar/2025 06:39:32] "GET /v1/api/tasks/ HTTP/1.1" 200 -
-54.86.50.139 - - [15/Mar/2025 06:43:40] "[31m[1mGET /v1/api/antifold/predict HTTP/1.1[0m" 405 -
-54.86.50.139 - - [15/Mar/2025 06:43:46] "[31m[1mPOST /v1/api/antifold/predict HTTP/1.1[0m" 400 -
-54.86.50.139 - - [15/Mar/2025 06:43:54] "[31m[1mGET /v1/api/antifold/predict HTTP/1.1[0m" 405 -
-54.86.50.139 - - [15/Mar/2025 06:43:58] "GET /v1/api/tasks/ HTTP/1.1" 200 -
-54.86.50.139 - - [15/Mar/2025 06:47:57] "[31m[1mPOST /v1/api/proteinmpnn/ddg HTTP/1.1[0m" 400 -
-103.186.68.16 - - [15/Mar/2025 06:55:40] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.16 - - [15/Mar/2025 06:55:49] "GET /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.143 - - [15/Mar/2025 07:38:10] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.143 - - [15/Mar/2025 07:38:10] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-205.210.31.213 - - [15/Mar/2025 08:01:25] "[33mGET / HTTP/1.1[0m" 404 -
-103.186.41.143 - - [15/Mar/2025 08:21:42] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.143 - - [15/Mar/2025 08:21:42] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.143 - - [15/Mar/2025 08:21:52] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.143 - - [15/Mar/2025 08:22:33] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.143 - - [15/Mar/2025 08:22:33] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.143 - - [15/Mar/2025 08:22:39] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.143 - - [15/Mar/2025 08:22:39] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.143 - - [15/Mar/2025 08:23:03] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.143 - - [15/Mar/2025 08:23:03] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.143 - - [15/Mar/2025 08:44:39] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.143 - - [15/Mar/2025 09:20:50] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.131 - - [15/Mar/2025 09:28:12] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.131 - - [15/Mar/2025 09:28:12] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.131 - - [15/Mar/2025 09:29:45] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.131 - - [15/Mar/2025 09:29:45] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.131 - - [15/Mar/2025 09:29:52] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.131 - - [15/Mar/2025 09:29:53] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.131 - - [15/Mar/2025 09:30:39] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.41.131 - - [15/Mar/2025 09:30:39] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-205.210.31.6 - - [15/Mar/2025 10:01:02] "[33mGET / HTTP/1.0[0m" 404 -
-103.186.68.19 - - [15/Mar/2025 10:03:16] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [15/Mar/2025 10:03:22] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [15/Mar/2025 10:03:30] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [15/Mar/2025 10:04:00] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [15/Mar/2025 10:04:04] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [15/Mar/2025 10:10:27] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [15/Mar/2025 10:10:33] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-82.66.52.244 - - [15/Mar/2025 10:29:28] "[33mGET / HTTP/1.0[0m" 404 -
-185.142.236.35 - - [15/Mar/2025 10:30:44] "[33mGET / HTTP/1.1[0m" 404 -
-185.142.236.35 - - [15/Mar/2025 10:30:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-103.186.68.19 - - [15/Mar/2025 10:39:45] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-115.231.78.14 - - [15/Mar/2025 10:57:14] "[33mGET / HTTP/1.1[0m" 404 -
-115.231.78.14 - - [15/Mar/2025 10:57:14] "[33mGET / HTTP/1.1[0m" 404 -
-115.231.78.14 - - [15/Mar/2025 10:57:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-115.231.78.14 - - [15/Mar/2025 10:57:15] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
-64.62.156.62 - - [15/Mar/2025 11:48:12] "[33mGET / HTTP/1.1[0m" 404 -
-64.62.156.59 - - [15/Mar/2025 11:48:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-35.203.211.138 - - [15/Mar/2025 16:13:29] code 400, message Bad request version ('À\x13À')
-35.203.211.138 - - [15/Mar/2025 16:13:29] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Û5åÔ`%<êÇ½A\x0e\x9e7\x1bîº.\x1c\x04KÈ)ìÚ\x94+¤3±¦\x8c ã° ~Ü»\x0d7\x13ó\x98\x16G=ÿÅ\x86±+5EM\x85¶Ï³9\x89áî7\x0b\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
-35.203.211.138 - - [15/Mar/2025 16:13:30] code 400, message Bad request version ('À(À$À\x14À')
-35.203.211.138 - - [15/Mar/2025 16:13:30] "[31m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x88âPÇ}`XÃ~Þ?ZW\x08¬§R\x8c.bâ¸?*\x1cÍl@iIy[\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À[0m" 400 -
-198.235.24.95 - - [15/Mar/2025 18:30:03] "[33mGET / HTTP/1.1[0m" 404 -
-198.235.24.101 - - [15/Mar/2025 18:45:30] "[33mGET / HTTP/1.0[0m" 404 -
-162.216.150.129 - - [15/Mar/2025 18:47:08] code 400, message Bad request version ('À\x13À')
-162.216.150.129 - - [15/Mar/2025 18:47:08] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x030ÒÁ\x91üû\x08þE\x06"{K\x98{\x1cDÿ\x00Á»:\x8c\x98Êu"«\x0cfým ñélò:\x89±Ù°\x97Ì\x9dËñ|\x91Zçl*Ð×ÒC×IÊí\x12\x87\x15Ä\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
-162.216.150.129 - - [15/Mar/2025 18:47:08] code 400, message Bad request version ('À(À$À\x14À')
-162.216.150.129 - - [15/Mar/2025 18:47:08] "[31m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x18ÝU\x8a|ñ~\x18\x0b¤\x98{ä=ò;\x8bk\x80¥\x10"3\x12\x8ek\x1d\x1d°\x92)E\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À[0m" 400 -
-91.238.181.92 - - [15/Mar/2025 19:30:42] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
-91.238.181.92 - - [15/Mar/2025 19:30:42] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
-206.168.34.208 - - [15/Mar/2025 19:34:54] code 400, message Bad request version ('\x00ÿÿ\x7f\x08\x00\x00\x01\x00\x003\x00:\x00\x00\x08\x00AA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00(DESCRIPTION=(CONNECT_DATA=(CID=(PROGRAM=zgrab2))))')
-206.168.34.208 - - [15/Mar/2025 19:34:54] "[31m[1m\x00m\x00\x00\x01\x00\x00\x00\x018\x01,\x0cA \x00ÿÿ\x7f\x08\x00\x00\x01\x00\x003\x00:\x00\x00\x08\x00AA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00(DESCRIPTION=(CONNECT_DATA=(CID=(PROGRAM=zgrab2))))[0m" 400 -
-123.178.210.239 - - [15/Mar/2025 20:02:05] "[33mGET / HTTP/1.1[0m" 404 -
-180.136.235.131 - - [15/Mar/2025 20:02:38] "[33mGET / HTTP/1.1[0m" 404 -
-198.235.24.23 - - [15/Mar/2025 21:27:27] "[33mGET / HTTP/1.0[0m" 404 -
-71.6.135.131 - - [16/Mar/2025 01:51:14] "[33mGET / HTTP/1.1[0m" 404 -
-71.6.135.131 - - [16/Mar/2025 01:51:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-18.236.107.236 - - [16/Mar/2025 04:25:56] "[33mGET / HTTP/1.1[0m" 404 -
-64.62.197.75 - - [16/Mar/2025 05:33:37] "[33mGET / HTTP/1.1[0m" 404 -
-64.62.197.67 - - [16/Mar/2025 05:33:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-103.186.68.19 - - [16/Mar/2025 06:30:59] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 06:33:21] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 06:44:56] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 06:45:03] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 06:50:54] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-198.235.24.29 - - [16/Mar/2025 06:53:18] "[33mGET / HTTP/1.1[0m" 404 -
-103.186.68.19 - - [16/Mar/2025 06:54:08] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 06:54:28] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 06:54:28] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 06:56:16] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 06:57:30] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 07:01:26] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 07:01:26] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 07:04:58] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 07:05:44] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 07:07:31] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 07:08:13] "[33mOPTIONS /v1/api/proxy/tasks HTTP/1.1[0m" 404 -
-103.186.68.19 - - [16/Mar/2025 07:08:19] "[33mOPTIONS /v1/api/proxy/tasks HTTP/1.1[0m" 404 -
-103.186.68.19 - - [16/Mar/2025 07:08:59] "[33mOPTIONS /v1/api/proxy/task HTTP/1.1[0m" 404 -
-103.186.68.19 - - [16/Mar/2025 07:12:49] "[33mOPTIONS /v1/api/proxy/task HTTP/1.1[0m" 404 -
-54.86.50.139 - - [16/Mar/2025 07:13:09] "GET /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 07:14:08] "[33mOPTIONS /v1/api/proxy/task HTTP/1.1[0m" 404 -
-103.186.68.19 - - [16/Mar/2025 07:14:48] "[33mOPTIONS /v1/api/proxy/task HTTP/1.1[0m" 404 -
-103.186.68.19 - - [16/Mar/2025 07:15:35] "[33mOPTIONS /v1/api/proxy/task HTTP/1.1[0m" 404 -
-167.94.138.207 - - [16/Mar/2025 07:45:49] "[33mGET / HTTP/1.1[0m" 404 -
-167.94.138.207 - - [16/Mar/2025 07:45:51] code 505, message Invalid HTTP version (2.0)
-167.94.138.207 - - [16/Mar/2025 07:45:51] "[35m[1mPRI * HTTP/2.0[0m" 505 -
-167.94.138.207 - - [16/Mar/2025 07:46:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-167.94.138.207 - - [16/Mar/2025 07:46:15] code 400, message Bad request version ('À\x14À')
-167.94.138.207 - - [16/Mar/2025 07:46:15] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03¹\x9fY\x81È\x9bþ7Jµ\x93Ïj\x1emÏÀ%æ®kè\x09\x9dZýç\x94}×>7 \x19­0É ¤ÓO=QÊ·ânëriî\x99tcOª\x07È\x815,²\x03Íª\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
-18.97.5.63 - - [16/Mar/2025 07:57:12] code 400, message Bad request version ("7|2\x8aÛ\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
-18.97.5.63 - - [16/Mar/2025 07:57:12] "[31m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x83ÖIH\x1bÂj\x96I\x88CD¡µN\x93#ñzÞ>\x8b³µA>oBÁ\x1f¶\x05 \x98=ÀÄ¢¦8\x99\x8f4\x8eC>PojmØg¿\x11îé~Âî 7|2\x8aÛ\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À­À®À¬À$À(À#À'À[0m" 400 -
-18.97.5.63 - - [16/Mar/2025 07:57:13] "[33mGET / HTTP/1.1[0m" 404 -
-87.236.176.173 - - [16/Mar/2025 08:41:12] "[33mGET / HTTP/1.1[0m" 404 -
-185.243.96.117 - - [16/Mar/2025 09:02:28] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
-185.243.96.117 - - [16/Mar/2025 09:02:28] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
-35.187.15.214 - - [16/Mar/2025 09:10:10] "[33mGET / HTTP/1.1[0m" 404 -
-58.141.235.235 - - [16/Mar/2025 11:48:08] "[33mGET / HTTP/1.0[0m" 404 -
-165.22.239.203 - - [16/Mar/2025 13:12:33] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x10ÒÎ\x87îræ²<\x01ªÔÕ×³~rÞº\x8b\x89¨!»\x04vÐO\x14mÃ|\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
-165.22.239.203 - - [16/Mar/2025 13:12:33] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x10ÒÎ\x87îræ²<\x01ªÔÕ×³~rÞº\x8b\x89¨!»\x04vÐO\x14mÃ|\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
-165.22.239.203 - - [16/Mar/2025 13:12:34] code 400, message Bad request version ('À\x14À')
-165.22.239.203 - - [16/Mar/2025 13:12:34] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Y.\x82è\x18G\x05/\x0c,}]\x96YP\x03\x99#\x8a­³\\ëP\x17¿&^¦\x0c\x80\x90\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
-165.22.239.203 - - [16/Mar/2025 13:12:34] "[33mGET / HTTP/1.1[0m" 404 -
-185.243.96.117 - - [16/Mar/2025 13:35:02] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
-185.243.96.117 - - [16/Mar/2025 13:35:02] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
-103.186.68.19 - - [16/Mar/2025 16:14:51] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 16:18:19] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 16:18:19] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-194.165.16.164 - - [16/Mar/2025 16:19:17] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
-194.165.16.164 - - [16/Mar/2025 16:19:17] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
-103.186.68.19 - - [16/Mar/2025 16:20:57] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 16:20:57] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 16:21:20] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 16:21:21] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 16:25:01] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 16:25:01] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 16:34:03] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
-103.186.68.19 - - [16/Mar/2025 16:34:03] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
- * Detected change in '/home/texsols/BioTasks/backend/app.py', reloading
+ * Debugger PIN: 132-093-139
+42.105.130.169 - - [16/Mar/2025 17:31:40] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+54.86.50.139 - - [16/Mar/2025 17:32:35] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+54.86.50.139 - - [16/Mar/2025 17:33:36] "[31m[1mPOST /v1/api/antifold/predict HTTP/1.1[0m" 400 -
+54.86.50.139 - - [16/Mar/2025 17:33:50] "[31m[1mPOST /v1/api/proteinmpnn/ddg HTTP/1.1[0m" 400 -
+54.86.50.139 - - [16/Mar/2025 17:36:22] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+54.86.50.139 - - [16/Mar/2025 17:37:10] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+54.86.50.139 - - [16/Mar/2025 17:37:23] "[33mGET /488bf84a-43e5-48a8-a11f-4d0b1ef0ba11.log HTTP/1.1[0m" 404 -
+103.186.68.19 - - [16/Mar/2025 17:37:29] "[33mGET /488bf84a-43e5-48a8-a11f-4d0b1ef0ba11.log HTTP/1.1[0m" 404 -
+54.86.50.139 - - [16/Mar/2025 17:38:19] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+54.86.50.139 - - [16/Mar/2025 17:39:10] "[33mGET /44600c6b-f2e3-4967-96f7-9003b2cae8b2.log HTTP/1.1[0m" 404 -
+54.86.50.139 - - [16/Mar/2025 17:39:47] "[33mGET /ntifold_output/44600c6b-f2e3-4967-96f7-9003b2cae8b2.log HTTP/1.1[0m" 404 -
+54.86.50.139 - - [16/Mar/2025 17:39:54] "[33mGET /antifold_output/44600c6b-f2e3-4967-96f7-9003b2cae8b2.log HTTP/1.1[0m" 404 -
+54.86.50.139 - - [16/Mar/2025 17:43:00] "[31m[1mPOST /v1/api/antifold/check_status/44600c6b-f2e3-4967-96f7-9003b2cae8b2 HTTP/1.1[0m" 405 -
+54.86.50.139 - - [16/Mar/2025 17:43:06] "GET /v1/api/antifold/check_status/44600c6b-f2e3-4967-96f7-9003b2cae8b2 HTTP/1.1" 200 -
+54.86.50.139 - - [16/Mar/2025 17:43:22] "[33mGET /8ee8_imgt_CD.fasta/n HTTP/1.1[0m" 404 -
+54.86.50.139 - - [16/Mar/2025 17:50:45] "GET /v1/api/antifold/check_status/44600c6b-f2e3-4967-96f7-9003b2cae8b2 HTTP/1.1" 200 -
+54.86.50.139 - - [16/Mar/2025 17:52:58] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:11:55] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:11:55] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:13:08] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:13:09] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:13:16] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:13:17] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:13:39] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:13:39] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:13:55] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:13:55] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:14:07] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:14:08] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:14:13] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:14:14] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:14:38] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:14:38] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:14:52] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:14:53] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:15:05] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:15:06] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:15:58] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:15:58] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:18:08] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:18:08] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+54.86.50.139 - - [16/Mar/2025 18:21:03] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+198.235.24.25 - - [16/Mar/2025 18:24:58] "[33mGET / HTTP/1.1[0m" 404 -
+54.86.50.139 - - [16/Mar/2025 18:34:40] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:35:07] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:35:07] "OPTIONS /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:35:08] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 18:35:08] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+159.203.189.122 - - [16/Mar/2025 18:52:12] code 400, message Bad request version ('À\x14À')
+159.203.189.122 - - [16/Mar/2025 18:52:12] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03jà\x08o&\x85a`7\x9d\x12¿½\x03¥(\x88\x833\x9düê¥áv\x10\x07­\x82\x99)`\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+159.203.189.122 - - [16/Mar/2025 18:52:12] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¢½Å¦j>Tp\x8aÈ)9z/:cÉ\x1aÃÿÈ\x86)ü«\x01³tç\x01\x12«\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+159.203.189.122 - - [16/Mar/2025 18:52:12] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¢½Å¦j>Tp\x8aÈ)9z/:cÉ\x1aÃÿÈ\x86)ü«\x01³tç\x01\x12«\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+159.203.189.122 - - [16/Mar/2025 18:52:12] "[33mGET / HTTP/1.1[0m" 404 -
+103.186.68.19 - - [16/Mar/2025 19:30:36] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:30:37] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:31:01] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:31:03] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:32:51] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:32:52] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:33:03] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:33:04] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:34:59] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:34:59] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:34:59] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+/bin/bash: line 3: 70410 Killed                  python3 /home/texsols/BioTasks/tasks/AntiFold/antifold/main.py --num_seq_per_target 10 --sampling_temp 0.2 --regions "CDR1,CDR2,CDR3" --pdb_file uploads/8ee8_imgt.pdb --heavy_chain C --light_chain D > antifold_output/0e4345fd-d77c-4901-831d-05a06c6fd765.log 2>&1
+103.186.68.19 - - [16/Mar/2025 19:35:01] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:35:43] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+/bin/bash: line 3: 70420 Killed                  python3 /home/texsols/BioTasks/tasks/AntiFold/antifold/main.py --num_seq_per_target 10 --sampling_temp 0.2 --regions "CDR1,CDR2,CDR3" --pdb_file uploads/8ee8_imgt.pdb --heavy_chain C --light_chain D > antifold_output/8add2f71-3ab6-47b6-a716-08745b9014b2.log 2>&1
+103.186.68.19 - - [16/Mar/2025 19:35:55] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:35:58] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:36:47] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:39:59] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:52:59] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:53:13] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:55:43] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 19:59:30] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+103.186.68.19 - - [16/Mar/2025 20:00:41] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+/bin/bash: line 3: 70438 Killed                  python3 /home/texsols/BioTasks/tasks/AntiFold/antifold/main.py --num_seq_per_target 10 --sampling_temp 0.2 --regions "CDR1,CDR2,CDR3" --pdb_file uploads/8ee8_imgt.pdb --heavy_chain C --light_chain D > antifold_output/4437e280-a09b-42a4-8f08-d8fecd5a64ab.log 2>&1
+103.186.68.19 - - [16/Mar/2025 20:05:00] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+205.210.31.19 - - [16/Mar/2025 20:12:04] "[33mGET / HTTP/1.0[0m" 404 -
+206.168.34.221 - - [16/Mar/2025 21:37:25] code 400, message Bad request version ('À\x14À')
+206.168.34.221 - - [16/Mar/2025 21:37:25] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x07\x19ûvvmº¾ÿ\x89É\x16g/Ê\x8f¼-AÈxÖ»­\x06Ð±%e\x02;$ à\x12ç\x8eUßäXÎÅ~Éy#E\x9f&èö\x1a¼Î\x024\x04SZÔí\x06\x82Ø\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+206.168.34.221 - - [16/Mar/2025 21:37:29] "[33mGET / HTTP/1.1[0m" 404 -
+206.168.34.221 - - [16/Mar/2025 21:37:40] "[33mGET / HTTP/1.1[0m" 404 -
+206.168.34.221 - - [16/Mar/2025 21:37:42] code 505, message Invalid HTTP version (2.0)
+206.168.34.221 - - [16/Mar/2025 21:37:42] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+206.168.34.221 - - [16/Mar/2025 21:37:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+206.168.34.221 - - [16/Mar/2025 21:37:51] code 400, message Bad request version ('Õ/\x8dö\x84kTl\x00®\x90þ')
+206.168.34.221 - - [16/Mar/2025 21:37:51] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03³\x95\x92K¤¹\x98N!Ð§(mYíBB'Þi¨\x19\x8eâ¨§#¦\x04#C( ¥o¯`\x0er\x1eÕ/\x8dö\x84kTl\x00®\x90þ[0m" 400 -
+167.94.146.55 - - [16/Mar/2025 21:54:15] code 400, message Bad request version ('o¬Y¼5~')
+167.94.146.55 - - [16/Mar/2025 21:54:15] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03½ë©\x9a\x09tÆAºH\x80>dÅU&J^\x1d\x1fo¬Y¼5~[0m" 400 -
+167.94.146.55 - - [16/Mar/2025 21:54:19] "[33mGET / HTTP/1.1[0m" 404 -
+167.94.146.55 - - [16/Mar/2025 21:54:25] "[33mGET / HTTP/1.1[0m" 404 -
+167.94.146.55 - - [16/Mar/2025 21:54:26] code 505, message Invalid HTTP version (2.0)
+167.94.146.55 - - [16/Mar/2025 21:54:26] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+167.94.146.55 - - [16/Mar/2025 21:54:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+167.94.146.55 - - [16/Mar/2025 21:54:31] code 400, message Bad request version ('À\x14À')
+167.94.146.55 - - [16/Mar/2025 21:54:31] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03A\x96\x85ÑW%1\x9ci.\\x\x99Í\x90\x18Ãi\x167k\x82~\x08Lâéö\x1cÆlú Â"ç\x0f\x06úÚ¡\x03@\x9a ÃY,\x9dÏ´¸G\x7f¢jåûÿ£ï\x93Ì\\\x19\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+40.76.115.56 - - [16/Mar/2025 22:28:46] "[33mGET / HTTP/1.0[0m" 404 -
+147.185.133.112 - - [16/Mar/2025 22:38:14] code 400, message Bad request version ('À\x13À')
+147.185.133.112 - - [16/Mar/2025 22:38:14] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Eß_âî¥2Åí1{é\x07\x8f\x19¸®#©\x95¯0\x14Cõ\x17»\x99\x1f©ìï \x19ùEWF&çiÏ\x8c\x90R\x91Ç\x92XX\x89Ô\x9d(¡;\x89¡ò\x0e\\ºJ/Ó\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+147.185.133.112 - - [16/Mar/2025 22:38:15] code 400, message Bad request version ('À(À$À\x14À')
+147.185.133.112 - - [16/Mar/2025 22:38:15] "[31m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x1e\x04k.tÚ\x06tõÀáÿúÕeq¤#\x14ù-½O_`w|\x80^É9j\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À[0m" 400 -
+20.150.200.12 - - [17/Mar/2025 02:08:57] "[33mGET /v2/ HTTP/1.1[0m" 404 -
+64.62.197.194 - - [17/Mar/2025 05:08:05] "[33mGET / HTTP/1.1[0m" 404 -
+64.62.197.185 - - [17/Mar/2025 05:08:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+198.235.24.193 - - [17/Mar/2025 05:14:49] "[33mGET / HTTP/1.1[0m" 404 -
+34.140.35.166 - - [17/Mar/2025 05:31:44] "[33mGET / HTTP/1.1[0m" 404 -
+122.166.69.81 - - [17/Mar/2025 05:34:46] "OPTIONS /v1/api/antifold/predict HTTP/1.1" 200 -
+122.166.69.81 - - [17/Mar/2025 05:34:47] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+/bin/bash: line 3: 75166 Killed                  python3 /home/texsols/BioTasks/tasks/AntiFold/antifold/main.py --num_seq_per_target 10 --sampling_temp 0.2 --regions "CDR1,CDR2,CDR3" --pdb_file uploads/8ee8_imgt.pdb --heavy_chain C --light_chain D > antifold_output/61b767e5-ebec-49d8-9a4b-f6ce8cf2afd7.log 2>&1
+154.212.141.190 - - [17/Mar/2025 06:02:01] "[33mGET / HTTP/1.1[0m" 404 -
+118.26.37.95 - - [17/Mar/2025 06:02:01] "[33mGET / HTTP/1.1[0m" 404 -
+118.26.37.95 - - [17/Mar/2025 06:02:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+198.235.24.173 - - [17/Mar/2025 06:38:10] "[33mGET / HTTP/1.0[0m" 404 -
+14.177.239.146 - - [17/Mar/2025 07:58:32] "[33mGET / HTTP/1.0[0m" 404 -
+67.167.139.0 - - [17/Mar/2025 10:32:09] "[33mGET / HTTP/1.0[0m" 404 -
+91.238.181.93 - - [17/Mar/2025 14:59:40] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+91.238.181.93 - - [17/Mar/2025 14:59:40] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
+64.226.66.121 - - [17/Mar/2025 15:06:07] "[33mGET / HTTP/1.0[0m" 404 -
+207.154.215.124 - - [17/Mar/2025 15:06:08] code 400, message Bad request version ('À\x13À')
+207.154.215.124 - - [17/Mar/2025 15:06:08] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03½\x08$\x8fº\x7f\x81\\¦\x91¦Ò:N\x02\x08¶\x84äY\x901Å\x9a°øI\x96X4R© L´e;Ä\x07y\x86\x14Ltâ±;ñR\x9e3I¿OÉ6fçòh3'o\x0c}\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+165.227.131.127 - - [17/Mar/2025 15:06:08] "[33mGET /cgi-bin/authLogin.cgi HTTP/1.1[0m" 404 -
+164.92.129.70 - - [17/Mar/2025 15:06:08] "[33mGET /v2/_catalog HTTP/1.1[0m" 404 -
+164.92.129.70 - - [17/Mar/2025 15:06:08] "[33mGET / HTTP/1.1[0m" 404 -
+161.35.212.68 - - [17/Mar/2025 15:06:08] "[33mGET /query?q=SHOW+DIAGNOSTICS HTTP/1.1[0m" 404 -
+165.227.131.127 - - [17/Mar/2025 15:06:08] "[33mGET /solr/admin/info/system HTTP/1.1[0m" 404 -
+207.154.215.124 - - [17/Mar/2025 15:06:08] code 400, message Bad request version ('À\x13À')
+207.154.215.124 - - [17/Mar/2025 15:06:08] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ZK\x98*\x91Þ@\x8bõÍð!Öy¼úBcÉ@\x7f#Ê\x8fÈÍª\x87³¨\x01Ö \x1db\x1dîõ)\x8f\x01{l\x9bè{cZ\x1aþù¤|Íuþ\x1f}\x1a(\x87*Ç'\x8a\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+165.227.131.127 - - [17/Mar/2025 15:06:08] "[33mGET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1[0m" 404 -
+143.198.200.27 - - [17/Mar/2025 15:06:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+164.90.180.190 - - [17/Mar/2025 16:33:07] "[33mGET / HTTP/1.0[0m" 404 -
+164.90.186.181 - - [17/Mar/2025 16:33:07] "[33mGET /solr/admin/info/system HTTP/1.1[0m" 404 -
+164.90.180.173 - - [17/Mar/2025 16:33:08] "[33mGET / HTTP/1.1[0m" 404 -
+164.90.186.181 - - [17/Mar/2025 16:33:08] code 400, message Bad request version ('À\x13À')
+164.90.186.181 - - [17/Mar/2025 16:33:08] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x1d\x94ØTáÌÚ\x7fFÎ8\x91&U\x00Quá?\x0bÙ\x82>\x84n\x0bBWzrÏr µ\x09ù8ÌH_<\x11h\x9bêvF âé¼ìQ\x88\x82ý-\x03ìT\x90³#®\x9f\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+164.90.186.181 - - [17/Mar/2025 16:33:08] "[33mGET /query?q=SHOW+DIAGNOSTICS HTTP/1.1[0m" 404 -
+164.90.235.171 - - [17/Mar/2025 16:33:07] "[33mGET /cgi-bin/authLogin.cgi HTTP/1.1[0m" 404 -
+164.90.186.181 - - [17/Mar/2025 16:33:08] code 400, message Bad request version ('À\x13À')
+164.90.186.181 - - [17/Mar/2025 16:33:08] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Ü³;r2g)\x90îMIVx\x0cT_\x03\x8f(T\x17+¹O¢lÉ\x10\x9bÜ7Ü \x94ìu\x9e\x03\x00\x9eä£Ñ\x1bÊ\x93\x9b\x0b\x8eÒó{óÍ<nÕj<ýd¯pÝ\x8e\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+164.90.186.181 - - [17/Mar/2025 16:33:08] "[33mGET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1[0m" 404 -
+143.198.219.173 - - [17/Mar/2025 16:33:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+164.90.186.181 - - [17/Mar/2025 17:07:05] "[33mGET /v2/_catalog HTTP/1.1[0m" 404 -
+211.198.160.65 - - [17/Mar/2025 17:18:28] "[33mGET / HTTP/1.0[0m" 404 -
+40.74.248.230 - - [17/Mar/2025 22:37:42] "[33mGET / HTTP/1.0[0m" 404 -
+45.79.181.251 - - [17/Mar/2025 23:41:31] code 400, message Bad request syntax ('\x16\x03\x01\x01')
+45.79.181.251 - - [17/Mar/2025 23:41:31] "[31m[1m\x16\x03\x01\x01[0m" 400 -
+45.79.181.251 - - [17/Mar/2025 23:41:31] code 400, message Bad request syntax ('\x16\x03\x01\x01')
+45.79.181.251 - - [17/Mar/2025 23:41:31] "[31m[1m\x16\x03\x01\x01[0m" 400 -
+45.79.115.59 - - [18/Mar/2025 00:03:04] "[33mGET / HTTP/1.1[0m" 404 -
+45.33.80.243 - - [18/Mar/2025 00:03:23] "[33mGET / HTTP/1.1[0m" 404 -
+162.216.150.21 - - [18/Mar/2025 00:17:00] code 400, message Bad request version ('\x0eó\x9e\x18´õ®C~ÎË\x9aëº\x8b5Ý`½Ø·l#|\x8c')
+162.216.150.21 - - [18/Mar/2025 00:17:00] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03)Þú\x12ËÒ\x07\x0b¿GyqY\x83TB\x89W vµ¨Ü\x84µ\x8c%\x19±s\x09÷ \x0eó\x9e\x18´õ®C~ÎË\x9aëº\x8b5Ý`½Ø·l#|\x8c[0m" 400 -
+162.216.150.21 - - [18/Mar/2025 00:17:00] code 400, message Bad request version ('À(À$À\x14À')
+162.216.150.21 - - [18/Mar/2025 00:17:00] "[31m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x87Å\x82U\x14M¾ë\x0f]\x17Þê"ÚPâ\x1b\x0c$\x1fs\x00èV\x14i\x84Z\x0byÍ\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À[0m" 400 -
+161.35.215.74 - - [18/Mar/2025 00:46:38] code 400, message Bad request version ("ð\x00>\x13\x02\x13\x03\x13\x01À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+161.35.215.74 - - [18/Mar/2025 00:46:38] "[31m[1m\x16\x03\x01\x01$\x01\x00\x01 \x03\x03µøeo(¡Õ°½\x8aD\x1a|w\x02¡\x80§p\x8c8¸Mv\x92e¶ïÄÜZã \x9fÀ#OYÁè\x7f®\x8bí\x12v³ëË¿ì\x90aÜ¸è\x13ßô\x06çç]\x1dð\x00>\x13\x02\x13\x03\x13\x01À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ[0m" 400 -
+164.90.186.181 - - [18/Mar/2025 01:06:13] code 400, message Bad request version ('{R')
+164.90.186.181 - - [18/Mar/2025 01:06:13] "[31m[1m\x16\x03\x01\x01$\x01\x00\x01 \x03\x03,ã\x94lóå\x0cÎÍ³S"0ä\x0d»ï<O\x86!)¿f>rÅ\x1bì¨MÜ {R[0m" 400 -
+223.199.190.180 - - [18/Mar/2025 01:09:04] "[33mGET / HTTP/1.1[0m" 404 -
+211.138.170.66 - - [18/Mar/2025 01:09:16] "[33mGET / HTTP/1.1[0m" 404 -
+167.94.138.122 - - [18/Mar/2025 01:47:31] "[33mGET / HTTP/1.1[0m" 404 -
+167.94.138.122 - - [18/Mar/2025 01:47:31] code 505, message Invalid HTTP version (2.0)
+167.94.138.122 - - [18/Mar/2025 01:47:31] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+167.94.138.122 - - [18/Mar/2025 01:47:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+167.94.138.122 - - [18/Mar/2025 01:48:02] code 400, message Bad request version ('À\x14À')
+167.94.138.122 - - [18/Mar/2025 01:48:02] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03Rc?ÍnBO\x11\x90ìñ$7°\x93!~Àæ\x97\x09\\5\x07\x83eF;Ö[.G Äüª{fwBk\x88¤\x00N\x06\x15¯cÃe\x05Ês\x1c\x01\x0dÔéí6%"|È\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+194.50.16.252 - - [18/Mar/2025 01:49:49] code 400, message Bad request version ('À\x13À')
+194.50.16.252 - - [18/Mar/2025 01:49:49] "[31m[1m\x16\x03\x01\x00ò\x01\x00\x00î\x03\x03=ô\x10b\x0cÏÜaI\x88±ª\x02\x1c\x9dÔ\x92SY<¹B4\x1fÙ\x94 ×Ì(uÏ \x0f`ÅãöWtÚã[\x874þÁ¬\x1b\x9cBÛ\x86¶\x0eò\x8d\x12Zæ°Û\x1a\x95X\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+194.50.16.252 - - [18/Mar/2025 01:49:49] "[33mGET / HTTP/1.1[0m" 404 -
+198.235.24.155 - - [18/Mar/2025 04:28:02] "[33mGET / HTTP/1.1[0m" 404 -
+205.210.31.10 - - [18/Mar/2025 05:03:58] "[33mGET / HTTP/1.1[0m" 404 -
+205.210.31.141 - - [18/Mar/2025 06:18:59] "[33mGET / HTTP/1.0[0m" 404 -
+96.126.104.20 - - [18/Mar/2025 06:53:14] code 400, message Bad request version ('À\x13À')
+96.126.104.20 - - [18/Mar/2025 06:53:14] "[31m[1m\x16\x03\x01\x00ò\x01\x00\x00î\x03\x03Êá)u\x1du\x0ee\x94«\x18\x81¶\x97nýwxù4× YX\x88>DÑ*\x03âÆ \x9cAi\x9f\x1eÇcnAt\x8f\x9añW\x89=ß\x0f\x14#\x06°\x1cÀ\x9có<\x1aFx0è\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+96.126.104.20 - - [18/Mar/2025 06:53:15] "[33mGET /signin HTTP/1.1[0m" 404 -
+198.235.24.213 - - [18/Mar/2025 08:03:51] "[33mGET / HTTP/1.0[0m" 404 -
+146.190.255.154 - - [18/Mar/2025 08:51:14] "[33mGET / HTTP/1.1[0m" 404 -
+146.190.255.154 - - [18/Mar/2025 08:51:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+194.50.16.252 - - [18/Mar/2025 10:40:55] "[33mGET /appsettings.json HTTP/1.1[0m" 404 -
+194.50.16.252 - - [18/Mar/2025 10:40:56] "[33mGET /appsettings.Production.json HTTP/1.1[0m" 404 -
+194.50.16.252 - - [18/Mar/2025 10:40:56] "[33mGET /appsettings.Staging.json HTTP/1.1[0m" 404 -
+194.50.16.252 - - [18/Mar/2025 10:40:56] "[33mGET /appsettings.Development.json HTTP/1.1[0m" 404 -
+194.50.16.252 - - [18/Mar/2025 10:40:57] "[33mGET /api/appsettings.json HTTP/1.1[0m" 404 -
+194.50.16.252 - - [18/Mar/2025 10:40:57] "[33mGET /api/appsettings.Production.json HTTP/1.1[0m" 404 -
+147.45.112.183 - - [18/Mar/2025 11:16:31] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+147.45.112.183 - - [18/Mar/2025 11:16:31] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
+199.45.155.111 - - [18/Mar/2025 12:36:43] code 400, message Bad request version ('À\x14À')
+199.45.155.111 - - [18/Mar/2025 12:36:43] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Ìh)\x95HÓ\x00ÎÚ\x1aÐÖ\x1d^CzÁLêÞ&\x0du\x87®\x85´/kÉ¨\x00 ÿî\x88Ü>)S:ÇÕN^µ\x81£×øØä¥\x08\x87nHC]»\x92-¿@»\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+199.45.155.111 - - [18/Mar/2025 12:36:47] "[33mGET / HTTP/1.1[0m" 404 -
+199.45.155.111 - - [18/Mar/2025 12:36:51] "[33mGET / HTTP/1.1[0m" 404 -
+199.45.155.111 - - [18/Mar/2025 12:36:51] code 505, message Invalid HTTP version (2.0)
+199.45.155.111 - - [18/Mar/2025 12:36:51] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+199.45.155.111 - - [18/Mar/2025 12:36:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+199.45.155.111 - - [18/Mar/2025 12:36:55] code 400, message Bad request version ('À\x14À')
+199.45.155.111 - - [18/Mar/2025 12:36:55] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03*¸WÆ\x8bY\x81¶b\x16\x039Ì^?ÛÏ\x8dîN¿è\x15.Ö\x89a\x02\x16´n\x13 \x00º-\x8d\x95\x12%kì\x84r@¾ÜA\x9f~÷\x09\x88ÐÇ\x98Ò)`F2âZ£;\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+64.62.197.100 - - [18/Mar/2025 13:22:51] "[33mGET / HTTP/1.1[0m" 404 -
+64.62.197.98 - - [18/Mar/2025 13:23:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+147.185.132.43 - - [18/Mar/2025 19:23:59] "[33mGET / HTTP/1.0[0m" 404 -
+180.17.35.35 - - [18/Mar/2025 21:44:00] "[33mGET / HTTP/1.0[0m" 404 -
+76.125.149.14 - - [18/Mar/2025 21:58:40] "[33mGET / HTTP/1.0[0m" 404 -
+76.125.149.14 - - [18/Mar/2025 21:58:42] "[33mGET / HTTP/1.0[0m" 404 -
+164.90.209.226 - - [18/Mar/2025 23:27:03] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¯\x88\x94ÚP\x08¡#o\x08þ"f\x87´¯\x8e\x96¯÷\x04ð\x80jÎ6Úú\x0e\x18WN\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+164.90.209.226 - - [18/Mar/2025 23:27:03] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¯\x88\x94ÚP\x08¡#o\x08þ"f\x87´¯\x8e\x96¯÷\x04ð\x80jÎ6Úú\x0e\x18WN\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+164.90.209.226 - - [18/Mar/2025 23:27:04] code 400, message Bad request version ('À\x14À')
+164.90.209.226 - - [18/Mar/2025 23:27:04] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03L¾§tß\x14.h\x1c§^õÏ¸\x91C\x9cNE!é`éz\x15B¥+¥\x8dw\x1e\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+164.90.209.226 - - [18/Mar/2025 23:27:04] "[33mGET / HTTP/1.1[0m" 404 -
+205.210.31.158 - - [19/Mar/2025 01:01:26] "[33mGET / HTTP/1.1[0m" 404 -
+198.235.24.17 - - [19/Mar/2025 01:09:20] "[33mGET / HTTP/1.0[0m" 404 -
+45.156.129.77 - - [19/Mar/2025 01:49:08] "[33mGET / HTTP/1.1[0m" 404 -
+ * Detected change in '/home/texsols/BioTasks/backend/routes/tasks.py', reloading
  * Restarting with stat
 Traceback (most recent call last):
   File "/home/texsols/BioTasks/run.py", line 1, in <module>
     from backend.app import app
   File "/home/texsols/BioTasks/backend/app.py", line 2, in <module>
-    from flask_cors import CORS
-ModuleNotFoundError: No module named 'flask_cors'
+    from backend.database import init_db
+ImportError: cannot import name 'init_db' from 'backend.database' (unknown location)

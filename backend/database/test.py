@@ -9,8 +9,8 @@ load_dotenv()
 
 
 # Azure AD credentials
-tenant_id = "aef164c8-f4a0-4449-a1c4-9a9ed2e4ae03"  # Directory (tenant) ID
-client_id = "9d824c77-1d2d-47d5-97af-8d34fb97170f"  # Application (client) ID
+tenant_id = os.getenv("AZURE_TENANT_ID")
+client_id = os.getenv("AZURE_CLIENT_ID")  # Application (client) ID
 client_secret = os.getenv("AZURE_CLIENT_SECRET")  # Client secret (keep this secure)
 
 # Storage account details
