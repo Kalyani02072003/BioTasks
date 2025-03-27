@@ -4,7 +4,7 @@ from backend.services.protein_mpnn_service import run_proteinmpnn
 
 proteinmpnn_bp = Blueprint("proteinmpnn", __name__)
 UPLOAD_FOLDER = "uploads"
-OUTPUT_FOLDER = "proteinmpnn_output"  # Match AntiFold's logging structure
+OUTPUT_FOLDER = "outputs/proteinmpnn_output"  # Match AntiFold's logging structure
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 

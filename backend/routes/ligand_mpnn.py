@@ -5,7 +5,7 @@ from backend.services.ligand_mpnn_service import run_ligandmpnn
 ligandmpnn_bp = Blueprint("ligandmpnn", __name__)
 
 UPLOAD_FOLDER = "uploads"
-OUTPUT_FOLDER = "ligandmpnn_output"
+OUTPUT_FOLDER = "outputs/ligandmpnn_output"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 

@@ -3,7 +3,7 @@ import subprocess
 import uuid
 
 ANTIFOLD_SCRIPT = os.path.abspath("/home/texsols/BioTasks/tasks/AntiFold/antifold/main.py")
-OUTPUT_FOLDER = "antifold_output"
+OUTPUT_FOLDER = "outputs/antifold_output"
 CONDA_ENV_NAME = "antifold_cpu"
 
 def extract_chain_ids(pdb_file):

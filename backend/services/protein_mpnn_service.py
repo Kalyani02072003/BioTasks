@@ -3,7 +3,7 @@ import os
 import uuid
 
 PROTEINMPNN_SCRIPT = os.path.join(os.getcwd(), "tasks", "ProteinMPNN", "proteinmpnn", "predict.py")
-OUTPUT_FOLDER = os.path.join(os.getcwd(), "proteinmpnn_output")  # Output folder
+OUTPUT_FOLDER = os.path.join(os.getcwd(), "outputs/proteinmpnn_output")  # Output folder
 
 # Ensure the output directory exists
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)

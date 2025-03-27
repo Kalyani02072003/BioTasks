@@ -9,6 +9,7 @@ ROOT_DIR="$HOME/BioTasks"
 ANTIFOLD_DIR="$ROOT_DIR/AntiFold"
 LIGANDMPNN_DIR="$ROOT_DIR/LigandMPNN"
 PROTEINMPNN_DDG_DIR="$ROOT_DIR/proteinmpnn_ddg"
+TS_DIR="$ROOT_DIR/ThompsonSampling"  # Thompson Sampling directory
 
 # Ensure ROOT_DIR exists
 mkdir -p $ROOT_DIR
@@ -29,6 +30,7 @@ cd $ROOT_DIR
 [[ ! -d "AntiFold" ]] && git clone https://github.com/oxpig/AntiFold.git
 [[ ! -d "LigandMPNN" ]] && git clone https://github.com/dauparas/LigandMPNN.git
 [[ ! -d "proteinmpnn_ddg" ]] && git clone https://github.com/PeptoneLtd/proteinmpnn_ddg.git
+[[ ! -d "ThompsonSampling" ]] && git clone https://github.com/PatWalters/TS.git
 
 echo "Repositories cloned successfully."
 
@@ -71,6 +73,20 @@ fi
 # Pull the prebuilt Docker image
 docker pull ghcr.io/peptoneltd/proteinmpnn_ddg:1.0.0_base
 echo "ProteinMPNN-ddG setup complete."
+
+
+echo "=========================="
+echo "Setting up Thompson Sampling..."
+echo "=========================="
+cd $TS_DIR
+conda create --name ts_env python=3.10 -y
+source ~/miniconda3/bin/activate ts_env  # Activate environment
+pip install -U pip
+conda install -c conda-forge rdkit -y
+pip install -r requirements.txt
+
+# Optional: Install OpenEye toolkits for ROCS scoring (if needed)
+echo "Thompson Sampling setup complete."
 
 echo "=========================="
 echo "All installations completed successfully!"

@@ -4,7 +4,7 @@ from backend.services.antifold_service import run_antifold
 
 antifold_bp = Blueprint("antifold", __name__)
 UPLOAD_FOLDER = "uploads"
-OUTPUT_FOLDER = "antifold_output"
+OUTPUT_FOLDER = "outputs/antifold_output"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @antifold_bp.route("/predict", methods=["POST"])
