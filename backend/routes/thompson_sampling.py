@@ -11,11 +11,13 @@ def run_ts():
     """Starts Thompson Sampling and returns a task ID."""
     data = request.get_json()
 
-    # Extract required parameters
-    required_params = ["reaction_smarts", "num_warmup_trials", "num_ts_iterations", "evaluator", "ts_mode", "query_smiles"]
+    required_params = ["reaction_smarts", "num_warmup_trials", "num_ts_iterations", "evaluator", "ts_mode"]
     for param in required_params:
         if param not in data:
             return jsonify({"error": f"Missing required parameter: {param}"}), 400
+
+    if data["evaluator"] not in ["FPEvaluator", "MLClassifierEvaluator", "FredEvaluator", "ROCSEvaluator"]:
+        return jsonify({"error": "Invalid evaluator selected"}), 400
 
     result = run_thompson_sampling(data)
     return jsonify(result)
