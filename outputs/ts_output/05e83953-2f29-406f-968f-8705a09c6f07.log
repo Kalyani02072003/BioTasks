@@ -1,0 +1,27 @@
+/home/texsols/BioTasks/tasks/TS/evaluators.py:19: UserWarning: Openeye packages not available in this environment; do not attempt to use ROCSEvaluator or FredEvaluator
+  warnings.warn(f"Openeye packages not available in this environment; do not attempt to use ROCSEvaluator or "
+Traceback (most recent call last):
+  File "/home/texsols/BioTasks/tasks/TS/ts_main.py", line 120, in <module>
+    main()
+    ~~~~^^
+  File "/home/texsols/BioTasks/tasks/TS/ts_main.py", line 113, in main
+    input_dict = read_input(json_filename)
+  File "/home/texsols/BioTasks/tasks/TS/ts_main.py", line 28, in read_input
+    evaluator = class_(evaluator_arg)
+  File "/home/texsols/BioTasks/tasks/TS/evaluators.py", line 299, in __init__
+    self.cls = joblib.load(input_dict["model_filename"])
+               ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/texsols/miniconda3/envs/ts_env/lib/python3.13/site-packages/joblib/numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+  File "/home/texsols/miniconda3/envs/ts_env/lib/python3.13/site-packages/joblib/numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+  File "/home/texsols/miniconda3/envs/ts_env/lib/python3.13/pickle.py", line 1256, in load
+    dispatch[key[0]](self)
+    ~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/texsols/miniconda3/envs/ts_env/lib/python3.13/pickle.py", line 1581, in load_stack_global
+    self.append(self.find_class(module, name))
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/texsols/miniconda3/envs/ts_env/lib/python3.13/pickle.py", line 1622, in find_class
+    __import__(module, level=0)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'lightgbm'

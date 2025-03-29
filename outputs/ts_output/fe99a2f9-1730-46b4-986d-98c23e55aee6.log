@@ -1,0 +1,14 @@
+/home/texsols/BioTasks/tasks/TS/evaluators.py:18: UserWarning: Openeye packages not available in this environment; do not attempt to use ROCSEvaluator or FredEvaluator
+  warnings.warn(f"Openeye packages not available in this environment; do not attempt to use ROCSEvaluator or "
+Traceback (most recent call last):
+  File "/home/texsols/BioTasks/tasks/TS/ts_main.py", line 120, in <module>
+    main()
+    ~~~~^^
+  File "/home/texsols/BioTasks/tasks/TS/ts_main.py", line 113, in main
+    input_dict = read_input(json_filename)
+  File "/home/texsols/BioTasks/tasks/TS/ts_main.py", line 28, in read_input
+    evaluator = class_(evaluator_arg)
+  File "/home/texsols/BioTasks/tasks/TS/evaluators.py", line 79, in __init__
+    ref_fs = oechem.oemolistream(ref_filename)
+             ^^^^^^
+NameError: name 'oechem' is not defined

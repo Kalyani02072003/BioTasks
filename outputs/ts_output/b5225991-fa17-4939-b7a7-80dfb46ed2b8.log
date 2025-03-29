@@ -1,0 +1,19 @@
+/home/texsols/BioTasks/tasks/TS/evaluators.py:19: UserWarning: Openeye packages not available in this environment; do not attempt to use ROCSEvaluator or FredEvaluator
+  warnings.warn(f"Openeye packages not available in this environment; do not attempt to use ROCSEvaluator or "
+/home/texsols/miniconda3/envs/ts_env/lib/python3.13/site-packages/sklearn/base.py:380: InconsistentVersionWarning: Trying to unpickle estimator LabelEncoder from version 1.3.2 when using version 1.6.1. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/texsols/BioTasks/tasks/TS/ts_main.py", line 120, in <module>
+    main()
+    ~~~~^^
+  File "/home/texsols/BioTasks/tasks/TS/ts_main.py", line 114, in main
+    run_ts(input_dict)
+    ~~~~~~^^^^^^^^^^^^
+  File "/home/texsols/BioTasks/tasks/TS/ts_main.py", line 65, in run_ts
+    ts.set_reaction(reaction_smarts)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/texsols/BioTasks/tasks/TS/thompson_sampling.py", line 109, in set_reaction
+    self.reaction = AllChem.ReactionFromSmarts(rxn_smarts)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+ValueError: ChemicalReactionParserException: multi-step reactions not supported

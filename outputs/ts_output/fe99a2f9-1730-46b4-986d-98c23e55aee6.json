@@ -1,0 +1,16 @@
+{
+    "reagent_file_list": [
+        "/home/texsols/BioTasks/tasks/TS/data/primary_amines_ok.smi",
+        "/home/texsols/BioTasks/tasks/TS/data/carboxylic_acids_ok.smi"
+    ],
+    "reaction_smarts": "N[c:4][c:3]C(O)=O.[#6:1][NH2].[#6:2]C(=O)[OH]>>[C:2]c1n[c:4][c:3]c(=O>",
+    "num_warmup_trials": 10,
+    "num_ts_iterations": 10000,
+    "evaluator_class_name": "ROCSEvaluator",
+    "evaluator_arg": {
+        "query_molfile": "/home/texsols/BioTasks/tasks/TS/data/2chw_lig.sdf"
+    },
+    "ts_mode": "maximize",
+    "log_filename": "/home/texsols/BioTasks/outputs/ts_output/fe99a2f9-1730-46b4-986d-98c23e55aee6.log",
+    "results_filename": "/home/texsols/BioTasks/outputs/ts_output/fe99a2f9-1730-46b4-986d-98c23e55aee6.csv"
+}

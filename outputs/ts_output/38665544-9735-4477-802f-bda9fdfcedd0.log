@@ -1,0 +1,21 @@
+/home/texsols/BioTasks/tasks/TS/evaluators.py:18: UserWarning: Openeye packages not available in this environment; do not attempt to use ROCSEvaluator or FredEvaluator
+  warnings.warn(f"Openeye packages not available in this environment; do not attempt to use ROCSEvaluator or "
+Traceback (most recent call last):
+  File "/home/texsols/BioTasks/tasks/TS/ts_main.py", line 120, in <module>
+    main()
+    ~~~~^^
+  File "/home/texsols/BioTasks/tasks/TS/ts_main.py", line 114, in main
+    run_ts(input_dict)
+    ~~~~~~^^^^^^^^^^^^
+  File "/home/texsols/BioTasks/tasks/TS/ts_main.py", line 64, in run_ts
+    ts.read_reagents(reagent_file_list=reagent_file_list, num_to_select=None)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/texsols/BioTasks/tasks/TS/thompson_sampling.py", line 85, in read_reagents
+    self.reagent_lists = read_reagents(reagent_file_list, num_to_select)
+                         ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/texsols/BioTasks/tasks/TS/ts_utils.py", line 34, in read_reagents
+    reagent_list = create_reagents(filename=reagent_filename, num_to_select=num_to_select)
+  File "/home/texsols/BioTasks/tasks/TS/ts_utils.py", line 14, in create_reagents
+    with open(filename, 'r') as f:
+         ~~~~^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/primary_amines_ok.smi'
