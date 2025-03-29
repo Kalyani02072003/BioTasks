@@ -18,7 +18,7 @@ def run_freewilson(params):
     """Runs Free-Wilson in the background and returns a task ID."""
 
     # Generate unique task ID
-    task_id = params["prefix"] if "prefix" in params else str(uuid.uuid4())  
+    task_id = str(uuid.uuid4())
     output_log = os.path.join(OUTPUT_FOLDER, f"{task_id}.log")
 
     # Ensure all file paths are absolute
