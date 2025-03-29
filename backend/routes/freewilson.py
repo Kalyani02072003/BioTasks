@@ -8,8 +8,8 @@ from backend.services.freewilson_service import run_freewilson
 freewilson_bp = Blueprint("freewilson", __name__)
 
 # Define Directories
-UPLOAD_FOLDER = "uploads"
-OUTPUT_FOLDER = "outputs/freewilson_output"
+UPLOAD_FOLDER = "/home/texsols/BioTasks/uploads"
+OUTPUT_FOLDER = "/home/texsols/BioTasks/outputs/freewilson_output"
 
 # Ensure Directories Exist
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -33,7 +33,7 @@ def run_analysis():
             logging.error("Missing required files: scaffold, SMILES, or activity")
             return jsonify({"error": "Missing required files (scaffold, SMILES, activity)"}), 400
 
-        # Save Uploaded Files
+        # Save Uploaded Files in `uploads/`
         scaffold_path = os.path.join(UPLOAD_FOLDER, scaffold_file.filename)
         input_smiles_path = os.path.join(UPLOAD_FOLDER, input_smiles_file.filename)
         activity_path = os.path.join(UPLOAD_FOLDER, activity_file.filename)
