@@ -2,7 +2,7 @@ import os
 import logging
 import uuid
 from flask import Blueprint, request, jsonify
-from backend.service.freewilson_service import run_freewilson
+from backend.services.freewilson_service import run_freewilson
 
 freewilson_bp = Blueprint("freewilson", __name__)
 UPLOAD_FOLDER = "uploads"
