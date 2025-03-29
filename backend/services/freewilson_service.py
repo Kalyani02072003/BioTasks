@@ -19,18 +19,19 @@ def run_freewilson(params):
     output_log = os.path.join(OUTPUT_FOLDER, f"{task_id}.log")
 
     # Prepare the command
+    smarts = params.get("smarts", "").replace("(", "\(").replace(")", "\)")
     command = f"""
-    source ~/miniconda3/etc/profile.d/conda.sh && conda activate {CONDA_ENV_NAME} &&
-    python3 {FREEWILSON_SCRIPT} all \
-        --scaffold {params['scaffold']} \
-        --in {params['input_smiles']} \
-        --prefix {params['prefix']} \
-        --act {params['activity']} \
-        {'--smarts ' + params['smarts'] if params['smarts'] else ''} \
-        {'--max ' + params['max_spec'] if params['max_spec'] else ''} \
-        {'--log' if params['log'] else ''} \
-        > {output_log} 2>&1 &
+        python3 /home/texsols/BioTasks/tasks/Free-Wilson/free_wilson.py all \
+            --scaffold {params["scaffold_file"]} \
+            --in {params["input_smiles_file"]} \
+            --prefix {params["prefix"]} \
+            --act {params["activity_file"]} \
+            --smarts {smarts} \
+            --max {params["max"]} \
+            --log \
+            > {output_log} 2>&1 &
     """
+
 
     logging.info(f"Starting Free-Wilson with task ID: {task_id}")
     subprocess.Popen(command, shell=True, executable="/bin/bash")
