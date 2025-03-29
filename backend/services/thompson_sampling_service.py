@@ -1,6 +1,7 @@
 import os
 import subprocess
 import uuid
+import json
 
 TS_SCRIPT = os.path.abspath("/home/texsols/BioTasks/tasks/TS/ts_main.py")
 OUTPUT_FOLDER = "outputs/ts_output"
@@ -30,11 +31,15 @@ def run_thompson_sampling(params):
 
 
 
+    
     # Save JSON configuration
     json_path = os.path.join(OUTPUT_FOLDER, f"{task_id}.json")
     with open(json_path, "w") as f:
-        import json
         json.dump(json_config, f, indent=4)
+
+    # Log the JSON input for debugging
+    with open(output_log, "w") as log_file:
+        log_file.write(f"Running Thompson Sampling with JSON config:\n{json.dumps(json_config, indent=4)}\n")
 
     # Prepare the command
     command = f"""
