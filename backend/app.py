@@ -5,7 +5,7 @@ from backend.routes.protein_mpnn import proteinmpnn_bp
 from backend.routes.tasks import tasks_bp
 from backend.routes.ligand_mpnn import ligandmpnn_bp
 from backend.routes.thompson_sampling import ts_bp
-from backend.routes.free_wilson import freewilson_bp
+from backend.routes.freewilson import freewilson_bp
 app = Flask(__name__)
 
 
