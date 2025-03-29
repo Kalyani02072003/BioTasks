@@ -10,6 +10,7 @@ CONDA_ENV_NAME = "freewilson_env"
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
+
 def run_freewilson(params):
     """Runs Free-Wilson in the background and returns a task ID."""
     task_id = params["prefix"] if "prefix" in params else str(uuid.uuid4())  
@@ -19,6 +20,10 @@ def run_freewilson(params):
     scaffold_path = os.path.abspath(params["scaffold"])
     input_smiles_path = os.path.abspath(params["input_smiles"])
     activity_path = os.path.abspath(params["activity"])
+
+    # Properly format --max argument
+    max_spec = params.get("max_spec")
+    max_arg = f'--max "{max_spec}"' if max_spec and "|" in max_spec else ""
 
     # Properly quote the --smarts argument
     smarts_arg = f'--smarts "{params["smarts"]}"' if params["smarts"] else ""
@@ -32,7 +37,7 @@ def run_freewilson(params):
         --act {activity_path} \
         --prefix {task_id} \
         {smarts_arg} \
-        {f'--max {params["max_spec"]}' if params["max_spec"] else ""} \
+        {max_arg} \
         {f'--log' if params["log"] else ""} \
         > {output_log} 2>&1
     """
