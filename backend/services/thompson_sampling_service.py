@@ -18,14 +18,16 @@ def run_thompson_sampling(params):
 
     # Construct the JSON input for Thompson Sampling
     json_config = {
-    "reaction_smarts": params["reaction_smarts"],
-    "num_warmup_trials": params["num_warmup_trials"],
-    "num_ts_iterations": params["num_ts_iterations"],
-    "evaluator_class_name": params["evaluator"],
-    "ts_mode": params["ts_mode"],
-    "evaluator_arg": {"query_smiles": params["query_smiles"]},  # ✅ FIX HERE
-    "results_filename": output_file
-}
+        "reaction_smarts": params["reaction_smarts"],
+        "num_warmup_trials": params["num_warmup_trials"],
+        "num_ts_iterations": params["num_ts_iterations"],
+        "evaluator_class_name": params["evaluator"],
+        "ts_mode": params["ts_mode"],
+        "evaluator_arg": {"query_smiles": params["query_smiles"]},  # ✅ FIXED format
+        "reagent_file_list": params.get("reagent_file_list", []),  # ✅ ADDED DEFAULT EMPTY LIST
+        "results_filename": output_file
+    }
+
 
 
     # Save JSON configuration
