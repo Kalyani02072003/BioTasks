@@ -26,11 +26,12 @@ def run_freewilson(params):
             --in {params["input_smiles_file"]} \
             --prefix {params["prefix"]} \
             --act {params["activity_file"]} \
-            --smarts {smarts} \
+            --smarts "{params['smarts']}" \
             --max {params["max"]} \
             --log \
             > {output_log} 2>&1 &
     """
+
 
 
     logging.info(f"Starting Free-Wilson with task ID: {task_id}")
