@@ -19,7 +19,7 @@ def run_freewilson(params):
     """Runs Free-Wilson, uploads outputs to Azure, and returns task details."""
 
     # Generate a unique task ID
-    task_id = params["prefix"] if "prefix" in params else str(uuid.uuid4())
+    task_id = str(uuid.uuid4())
     task_output_folder = os.path.join(OUTPUT_FOLDER, task_id)
     os.makedirs(task_output_folder, exist_ok=True)  # Ensure directory exists
     output_log = os.path.join(task_output_folder, f"{task_id}.log")

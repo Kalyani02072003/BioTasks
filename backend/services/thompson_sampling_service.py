@@ -1,12 +1,14 @@
 import os
 import subprocess
-import uuid
 import json
+import uuid
+import logging
+from backend.database.azure_upload import upload_task_outputs  # Azure upload function
 
-# Define paths and constants
-TS_SCRIPT = os.path.abspath("/home/texsols/BioTasks/tasks/TS/ts_main.py")
-OUTPUT_FOLDER = os.path.abspath("/home/texsols/BioTasks/outputs/ts_output")
-TS_WORKING_DIR = os.path.abspath("/home/texsols/BioTasks/tasks/TS")
+# Paths and Constants
+TS_SCRIPT = "/home/texsols/BioTasks/tasks/TS/ts_main.py"
+OUTPUT_FOLDER = "/home/texsols/BioTasks/outputs/ts_output"
+TS_WORKING_DIR = "/home/texsols/BioTasks/tasks/TS"
 CONDA_ENV_NAME = "ts_env"
 
 # Default reagent files (absolute paths)
@@ -23,15 +25,22 @@ EVALUATOR_ARGS = {
     "ROCSEvaluator": {"query_molfile": os.path.join(TS_WORKING_DIR, "data/2chw_lig.sdf")}
 }
 
-def run_thompson_sampling(params):
-    """Runs Thompson Sampling with the given parameters and returns a task ID."""
-    task_id = str(uuid.uuid4())
-    output_file = os.path.join(OUTPUT_FOLDER, f"{task_id}.csv")
-    output_log = os.path.join(OUTPUT_FOLDER, f"{task_id}.log")
-    json_path = os.path.join(OUTPUT_FOLDER, f"{task_id}.json")
+# Ensure output directory exists
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
-    # Ensure output directory exists
-    os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+
+def run_thompson_sampling(params):
+    """Runs Thompson Sampling, uploads outputs to Azure, and returns task details."""
+
+    # Generate unique task ID
+    task_id = params["task_id"]
+    task_output_folder = os.path.join(OUTPUT_FOLDER, task_id)
+    os.makedirs(task_output_folder, exist_ok=True)  # Ensure task folder exists
+    output_file = os.path.join(task_output_folder, f"{task_id}.csv")
+    output_log = os.path.join(task_output_folder, f"{task_id}.log")
+    json_path = os.path.join(task_output_folder, f"{task_id}.json")
 
     # Set evaluator args dynamically
     evaluator = params["evaluator"]
@@ -58,15 +67,18 @@ def run_thompson_sampling(params):
     command = f"""
     cd {TS_WORKING_DIR} &&
     source ~/miniconda3/etc/profile.d/conda.sh && conda activate {CONDA_ENV_NAME} &&
-    python3 {TS_SCRIPT} {json_path} > {output_log} 2>&1
+    python3 {TS_SCRIPT} {json_path} > "{output_log}" 2>&1
     """
 
-    # Run in a separate process and return immediately
-    subprocess.Popen(command, shell=True, executable="/bin/bash", cwd=TS_WORKING_DIR)
+    logging.info(f"Executing Thompson Sampling command:\n{command}")
+    subprocess.run(command, shell=True, executable="/bin/bash", cwd=TS_WORKING_DIR)
+
+    # Upload task outputs to Azure
+    azure_result = upload_task_outputs(task_id, task_output_folder)
 
     return {
-        "message": "Thompson Sampling started",
+        "message": "Thompson Sampling processing completed",
         "task_id": task_id,
-        "output_file": output_file,
-        "output_log": output_log
+        "azure_files": azure_result.get("uploaded_files", []),
+        "output_log": azure_result.get("uploaded_files", [])[0] if azure_result.get("uploaded_files") else None
     }
