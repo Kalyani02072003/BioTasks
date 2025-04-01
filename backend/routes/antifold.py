@@ -60,7 +60,6 @@ def predict():
         logging.error(f"Error in predict: {e}", exc_info=True)
         return jsonify({"error": str(e)}), 500
 
-
 @antifold_bp.route("/check_status/<task_id>", methods=["GET"])
 def check_status(task_id):
     """Check if AntiFold has finished running and return Azure storage links."""
@@ -76,7 +75,7 @@ def check_status(task_id):
         with open(log_file, "r") as f:
             logs = f.readlines()
 
-        # Upload task outputs to Azure
+        # Upload task outputs to Azure and get SAS URLs
         azure_result = upload_task_outputs(task_id, task_folder)
 
         return jsonify({
