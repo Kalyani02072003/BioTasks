@@ -1,0 +1,21 @@
+/home/texsols/miniconda3/envs/antifold_cpu/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
+  backends.update(_get_backends("networkx.backends"))
+[2025-04-01 18:59:46,313] Running inverse folding on PDB/CIFs ...
+[2025-04-01 18:59:46,314] Will sample 10 sequences from 1 PDBs at temperature(s) [0.2] and regions: ['CDR1,CDR2,CDR3']
+[2025-04-01 18:59:48,309] Loaded model to cpu.
+[2025-04-01 18:59:48,310] Reading in (1) PDBs from DataFrame
+[2025-04-01 18:59:48,408] Predicting batch 1/1: PDBs 1-1 out of 1 total
+[2025-04-01 18:59:54,194] Saving 1 CSVs to antifold_output
+[2025-04-01 18:59:54,199] Writing 09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD per-residue log probs CSV to antifold_output/09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD.csv
+[2025-04-01 18:59:54,216] 09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD: , score=0.9257, global_score=0.9257, regions=['CDR1,CDR2,CDR3'], model_name=AntiFold, seed=42
+[2025-04-01 18:59:54,228] 09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD__1: T=0.20, sample=1, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:59:54,243] 09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD__2: T=0.20, sample=2, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:59:54,255] 09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD__3: T=0.20, sample=3, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:59:54,267] 09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD__4: T=0.20, sample=4, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:59:54,280] 09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD__5: T=0.20, sample=5, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:59:54,293] 09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD__6: T=0.20, sample=6, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:59:54,305] 09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD__7: T=0.20, sample=7, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:59:54,317] 09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD__8: T=0.20, sample=8, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:59:54,330] 09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD__9: T=0.20, sample=9, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:59:54,342] 09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD__10: T=0.20, sample=10, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:59:54,346] Saving to antifold_output/09f866b6-16d6-4416-ac58-4f029851833c_8ee8_imgt_CD.fasta
