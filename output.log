@@ -1,155 +1,779 @@
 nohup: ignoring input
  * Serving Flask app 'backend.app'
  * Debug mode: on
-WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+2025-03-29 15:23:33,340 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://10.2.0.5:5000
-Press CTRL+C to quit
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 816-118-796
-127.0.0.1 - - [27/Mar/2025 17:20:23] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
- * Detected change in '/home/texsols/BioTasks/backend/services/thompson_sampling_service.py', reloading
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 816-118-796
-205.210.31.196 - - [27/Mar/2025 18:42:43] "GET / HTTP/1.0" 404 -
-35.203.210.60 - - [27/Mar/2025 21:03:00] code 400, message Bad request version ('À\x13À')
-35.203.210.60 - - [27/Mar/2025 21:03:00] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03[IÛ\x8a·t\x96"\x10\x16ê\x14d\x9b\x86õ{á*`3ÈcÇ\x10Ý\x0e5ÜqK\x13 \x97×\x82|\x92Q<àoáz¨¤c'\x8c@\x12\x86Ë\x15,1\x91\x83Þf/\x8f&9\x0f\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À" 400 -
-35.203.210.60 - - [27/Mar/2025 21:03:01] code 400, message Bad request version ('À(À$À\x14À')
-35.203.210.60 - - [27/Mar/2025 21:03:01] "\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x0dFAR\x8düÈ6\x09Iõ´\x942\x0f±:\x04\x01Àr\x1e9­Ú³ÞÑë1Ê2\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À" 400 -
-167.94.146.60 - - [27/Mar/2025 21:05:37] code 400, message Bad request version ('À\x14À')
-167.94.146.60 - - [27/Mar/2025 21:05:37] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03÷B\x0e[I»F\x83P¡»[Þ \x13Uï\x99'\x08Â±\x1cûÀ\x8cÙKEb­Ë <?Ók³g¡Ê¬{´ñµH×Ý=-Ç\x09ý\x18Ì¨ë2\x85N\x0cÕx¢\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" 400 -
-167.94.146.60 - - [27/Mar/2025 21:05:40] "GET / HTTP/1.1" 404 -
-167.94.146.60 - - [27/Mar/2025 21:05:45] "GET / HTTP/1.1" 404 -
-167.94.146.60 - - [27/Mar/2025 21:05:45] code 505, message Invalid HTTP version (2.0)
-167.94.146.60 - - [27/Mar/2025 21:05:45] "PRI * HTTP/2.0" 505 -
-167.94.146.60 - - [27/Mar/2025 21:05:49] "GET /favicon.ico HTTP/1.1" 404 -
-167.94.146.60 - - [27/Mar/2025 21:05:50] code 400, message Bad request version ('À\x14À')
-167.94.146.60 - - [27/Mar/2025 21:05:50] "\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03ûãr¢íÉD×\x8aÎà\x96Ä$\x05yþÈòz\x8a¼Éùl\x09^v\x95¾\x03\x16 \x05&¯ÛË\x85\x16\x1f²(Ä\x1bö\x1eå\x04Õêô}Ï\x066\x1fãÛ\x94­:Â¹\x93\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" 400 -
-40.74.246.221 - - [27/Mar/2025 22:48:21] "GET / HTTP/1.0" 404 -
-206.168.34.89 - - [27/Mar/2025 23:02:07] code 400, message Bad request version ('À\x14À')
-206.168.34.89 - - [27/Mar/2025 23:02:07] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x031çæÜ`\x1f|\x17Ø×Y.8$+ºÑ\x8bÐ\x90ô«×\x08êÂO&*»yÚ Ð34¶?|\x16\x87Ï\x91¤[!]ßÖ\x13%\x05x\x1f\x00\x9e¨T½\x05G®\x9c'(\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" 400 -
-206.168.34.89 - - [27/Mar/2025 23:02:11] "GET / HTTP/1.1" 404 -
-206.168.34.89 - - [27/Mar/2025 23:02:20] "GET / HTTP/1.1" 404 -
-206.168.34.89 - - [27/Mar/2025 23:02:25] code 505, message Invalid HTTP version (2.0)
-206.168.34.89 - - [27/Mar/2025 23:02:25] "PRI * HTTP/2.0" 505 -
-206.168.34.89 - - [27/Mar/2025 23:02:35] "GET /favicon.ico HTTP/1.1" 404 -
-206.168.34.89 - - [27/Mar/2025 23:02:38] code 400, message Bad request version ('À\x14À')
-206.168.34.89 - - [27/Mar/2025 23:02:38] "\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03E¥cÖ\x86· Bð¸$ûæ#ÿ<£\x0f¶-`¸KüÎÊ\x9bo³#\x00, èÌ\x93\x9d`ºè÷À¥Å\x80Ã\x10\x1c~k1\x17ynêMô\x97E!æ0\x9e"Ò\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" 400 -
-146.190.66.68 - - [27/Mar/2025 23:44:20] "GET / HTTP/1.0" 404 -
-80.82.70.133 - - [28/Mar/2025 00:26:53] "GET / HTTP/1.0" 404 -
-205.210.31.196 - - [28/Mar/2025 00:55:38] "GET / HTTP/1.1" 404 -
-94.102.49.155 - - [28/Mar/2025 01:03:58] code 400, message Bad request version ('À\x14À')
-94.102.49.155 - - [28/Mar/2025 01:03:58] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03#ñhu\x02RéO5\x99 GìÅ%\x85f\x00\x14[\x9b>Ù\x89\x86×R°YÞ\x80\x86 4ìn$¡\x0d(\x0e\x88_éì&hÇäOMÆæ\x80õ±Ð\x94CidJ¨E\x0d\x00&À/À0À+À,Ì¨Ì©À\x13À\x09À\x14À" 400 -
-80.82.77.202 - - [28/Mar/2025 01:03:58] code 400, message Bad request version ('À\x13À')
-80.82.77.202 - - [28/Mar/2025 01:03:58] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ò\x16í,\x11\x15\x83X\x99WÌªÐ,,º\x9cR"­\x9c\x93\x84\x7f½áOQÌ\x1f\x94â ¸\x82»\x04Ñ§\x89\x19\x8e\x9aëX\x88Æ£\x80\x12ñ^Q\x0dOËþ$\x1fàÞ\x92VB¾\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À" 400 -
-94.102.49.155 - - [28/Mar/2025 01:03:58] "GET /v2/_catalog HTTP/1.1" 404 -
-80.82.77.202 - - [28/Mar/2025 01:03:58] "GET /aaa9 HTTP/1.1" 404 -
-80.82.77.202 - - [28/Mar/2025 01:03:59] code 400, message Bad request version (']ÈÊ½%q¾\x0e\x98[Q')
-80.82.77.202 - - [28/Mar/2025 01:03:59] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ÖÆ)²\x9fÆ\x0b\x8c\x983\x7f\x15\x1f]ÈÊ½%q¾\x0e\x98[Q" 400 -
-80.82.77.202 - - [28/Mar/2025 01:03:59] "GET /aab9 HTTP/1.1" 404 -
-143.244.169.126 - - [28/Mar/2025 01:09:18] "GET / HTTP/1.1" 404 -
-143.244.169.126 - - [28/Mar/2025 01:09:19] "GET /favicon.ico HTTP/1.1" 404 -
-205.210.31.135 - - [28/Mar/2025 02:13:28] "GET / HTTP/1.0" 404 -
-167.94.145.105 - - [28/Mar/2025 03:40:15] code 400, message Bad request version ('À\x14À')
-167.94.145.105 - - [28/Mar/2025 03:40:15] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Ð\x19\x9c3dÏ\x94\x1dá¨´\x84â\x10B\x82¨Õ¹Ì\x85nËa£²\x91\x1d¨\x0d:\x9d \x01.\x09\x81¾ËúþûPCÈ\x04ê\x8f\x87-»[Û\x8b\x89\x98âfLòÃ´hÔ]\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" 400 -
-167.94.145.105 - - [28/Mar/2025 03:40:19] "GET / HTTP/1.1" 404 -
-167.94.145.105 - - [28/Mar/2025 03:40:24] "GET / HTTP/1.1" 404 -
-167.94.145.105 - - [28/Mar/2025 03:40:24] code 505, message Invalid HTTP version (2.0)
-167.94.145.105 - - [28/Mar/2025 03:40:24] "PRI * HTTP/2.0" 505 -
-167.94.145.105 - - [28/Mar/2025 03:40:28] "GET /favicon.ico HTTP/1.1" 404 -
-167.94.145.105 - - [28/Mar/2025 03:40:29] code 400, message Bad request version ('ýRÑÿ')
-167.94.145.105 - - [28/Mar/2025 03:40:29] "\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03S\x85|öØhÊuT\x85­b\x85Üje\x1eæa\x0c'ò}\x08\x02b'É» -Â (\x98}¥ò¬\x08\x1c·ÕmJ^ÃL.\x85ýRÑÿ" 400 -
-45.79.73.169 - - [28/Mar/2025 05:25:54] "GET / HTTP/1.1" 404 -
-88.214.25.123 - - [28/Mar/2025 06:19:48] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
-88.214.25.123 - - [28/Mar/2025 06:19:48] "\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr" 400 -
-96.126.104.20 - - [28/Mar/2025 06:52:16] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00ò\x01\x00\x00î\x03\x03¡æBb¾³ß\x9202(Û¡û°(\x96ÓFS\x9fqª\x94\x9b\x99é\x88Õ\x10nª')
-96.126.104.20 - - [28/Mar/2025 06:52:16] "\x16\x03\x01\x00ò\x01\x00\x00î\x03\x03¡æBb¾³ß\x9202(Û¡û°(\x96ÓFS\x9fqª\x94\x9b\x99é\x88Õ\x10nª ­äús\x9e\x14±³\x86d=yMÜN¬åÀrbAÇ\x95»" 400 -
-96.126.104.20 - - [28/Mar/2025 06:52:16] "GET /signin HTTP/1.1" 404 -
-65.49.1.32 - - [28/Mar/2025 09:18:22] "GET / HTTP/1.1" 404 -
-65.49.1.34 - - [28/Mar/2025 09:18:35] "GET /favicon.ico HTTP/1.1" 404 -
-198.235.24.143 - - [28/Mar/2025 09:35:41] "GET / HTTP/1.1" 404 -
-68.183.200.191 - - [28/Mar/2025 17:13:37] code 400, message Bad request version ('À\x14À')
-68.183.200.191 - - [28/Mar/2025 17:13:37] "\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Á\x1d\x08|+¦"shî§®Ym"ûpóÐæhÕãV\x03\x0bY3\x9e\x19Ý\x1a\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À" 400 -
-68.183.200.191 - - [28/Mar/2025 17:13:37] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x9fòý')
-68.183.200.191 - - [28/Mar/2025 17:13:37] "\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x9fòý\x1cúÁÄ¿ªØ\x89FÝ6\x01\x91Å*ØÖÕòðÌ\x9cÁwì" 400 -
-68.183.200.191 - - [28/Mar/2025 17:13:37] "GET / HTTP/1.1" 404 -
-162.142.125.212 - - [28/Mar/2025 18:07:27] code 400, message Bad request version ('À\x14À')
-162.142.125.212 - - [28/Mar/2025 18:07:27] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03qS ¡®ñ´Ío¬dk\x99ÍB|\x9bê\x9b/w.ó\\\x90t7\x15\x8e¿3Ö \x04§\x83áÝâ¢ x[CXRç\x10\x12«\x85¤V\x17\x0e\x9bTO\x9er>¹`L#\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À" 400 -
-162.142.125.212 - - [28/Mar/2025 18:07:32] "GET / HTTP/1.1" 404 -
-162.142.125.212 - - [28/Mar/2025 18:07:38] "GET / HTTP/1.1" 404 -
-162.142.125.212 - - [28/Mar/2025 18:07:39] code 505, message Invalid HTTP version (2.0)
-162.142.125.212 - - [28/Mar/2025 18:07:39] "PRI * HTTP/2.0" 505 -
-162.142.125.212 - - [28/Mar/2025 18:07:49] "GET /favicon.ico HTTP/1.1" 404 -
-162.142.125.212 - - [28/Mar/2025 18:07:50] code 400, message Bad request version ('Ý\x8cï\x88{zn\\')
-162.142.125.212 - - [28/Mar/2025 18:07:50] "\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03>ÆUç®\x874R\x81\x961+ÿ6\x7f\x9dQ$\x1eúNvåI{LW\x90hø%\x00 Ý\x8cï\x88{zn\\" 400 -
-162.216.150.148 - - [28/Mar/2025 18:34:04] code 400, message Bad request version ('À\x13À')
-162.216.150.148 - - [28/Mar/2025 18:34:04] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ø\x17\x07fx¦\x0dÄ]AÜª\x12$\x0b;?\x1b·6ÇöaH\x13y2Vó0Ð+ ä\x0cC§x»E\x93r«êÞyU9Õoì:ëQj=ïý\x081PàÇ\x0fè\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À" 400 -
-162.216.150.148 - - [28/Mar/2025 18:34:05] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x80P\x98ü\x05`\x1a¹\x9c°\x19Å\x81"æÚG\x9d¨\x13Ã\x83\x87\x01Ô¿¡\x13\x90>4\x91\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À\'À#À\x13À')
-162.216.150.148 - - [28/Mar/2025 18:34:05] "\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x80P\x98ü\x05`\x1a¹\x9c°\x19Å\x81"æÚG\x9d¨\x13Ã\x83\x87\x01Ô¿¡\x13\x90>4\x91\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À" 400 -
-147.185.132.48 - - [28/Mar/2025 19:27:47] "GET / HTTP/1.1" 404 -
-205.210.31.8 - - [28/Mar/2025 19:55:15] "GET / HTTP/1.0" 404 -
-198.235.24.125 - - [28/Mar/2025 21:14:39] "GET / HTTP/1.0" 404 -
-57.154.241.208 - - [28/Mar/2025 22:25:38] "GET / HTTP/1.0" 404 -
-91.238.181.91 - - [29/Mar/2025 03:48:42] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
-91.238.181.91 - - [29/Mar/2025 03:48:42] "\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr" 400 -
-206.168.34.217 - - [29/Mar/2025 05:26:10] code 400, message Bad request version ('3Þ\x8bßÉP3\x9e\x06\x82\x89Vè>¢Ø\x07Éi\x93\x98\x8cZ')
-206.168.34.217 - - [29/Mar/2025 05:26:10] "\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03a\x1aï=ð\x92\x8bÅ\x85qhh\x115QhzFDÅÒÜ\x8e­·éõÕÈtø\x89 3Þ\x8bßÉP3\x9e\x06\x82\x89Vè>¢Ø\x07Éi\x93\x98\x8cZ" 400 -
-206.168.34.217 - - [29/Mar/2025 05:26:46] code 400, message Bad request syntax ('ZG\x00\x00\x00\x05\x00+\x0e\x01\x00')
-206.168.34.217 - - [29/Mar/2025 05:26:46] "ZG\x00\x00\x00\x05\x00+\x0e\x01\x00" 400 -
-64.62.197.24 - - [29/Mar/2025 06:49:57] "GET / HTTP/1.1" 404 -
-64.62.197.20 - - [29/Mar/2025 06:50:14] "GET /favicon.ico HTTP/1.1" 404 -
-96.126.104.20 - - [29/Mar/2025 06:53:18] code 400, message Bad request version ('À\x13À')
-96.126.104.20 - - [29/Mar/2025 06:53:18] "\x16\x03\x01\x00ò\x01\x00\x00î\x03\x03Ñ¼V7ó\x99Ê\x17ñÑ\x92´þ\x07æÄ\x93H\x9c\x80Rú¨¹µ+à^ÊW{\x17 ½\x82\x9c1õEkÂëí³}¼\x09þë±4ñ§ûQ~º;mÝ\x9b!W°]\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À" 400 -
-96.126.104.20 - - [29/Mar/2025 06:53:18] "GET /signin HTTP/1.1" 404 -
-127.0.0.1 - - [29/Mar/2025 09:12:45] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-127.0.0.1 - - [29/Mar/2025 09:17:38] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
- * Detected change in '/home/texsols/BioTasks/backend/services/thompson_sampling_service.py', reloading
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 816-118-796
-127.0.0.1 - - [29/Mar/2025 09:21:02] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-20.163.14.234 - - [29/Mar/2025 09:21:15] "GET /v2/ HTTP/1.1" 404 -
-45.156.128.103 - - [29/Mar/2025 09:26:06] "GET /api/session/properties HTTP/1.1" 404 -
-152.58.196.205 - - [29/Mar/2025 09:26:19] "POST /v1/api/run_ts HTTP/1.1" 404 -
-45.156.128.103 - - [29/Mar/2025 09:26:23] "GET / HTTP/1.1" 404 -
-45.156.128.102 - - [29/Mar/2025 09:26:43] "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 -
-152.58.196.205 - - [29/Mar/2025 09:27:32] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-205.210.31.21 - - [29/Mar/2025 09:28:05] "GET / HTTP/1.1" 404 -
-127.0.0.1 - - [29/Mar/2025 09:31:00] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
- * Detected change in '/home/texsols/BioTasks/backend/services/thompson_sampling_service.py', reloading
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 816-118-796
-127.0.0.1 - - [29/Mar/2025 09:34:29] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-127.0.0.1 - - [29/Mar/2025 09:35:42] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-127.0.0.1 - - [29/Mar/2025 09:37:37] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-127.0.0.1 - - [29/Mar/2025 09:38:02] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-127.0.0.1 - - [29/Mar/2025 09:38:34] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 400 -
- * Detected change in '/home/texsols/BioTasks/backend/routes/thompson_sampling.py', reloading
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 816-118-796
-127.0.0.1 - - [29/Mar/2025 09:48:11] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
- * Detected change in '/home/texsols/BioTasks/backend/services/thompson_sampling_service.py', reloading
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 816-118-796
-127.0.0.1 - - [29/Mar/2025 10:04:26] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-152.58.196.205 - - [29/Mar/2025 10:08:52] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-152.58.196.205 - - [29/Mar/2025 10:09:54] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-152.58.196.205 - - [29/Mar/2025 10:10:36] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-127.0.0.1 - - [29/Mar/2025 10:12:05] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-152.58.196.205 - - [29/Mar/2025 10:12:54] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-127.0.0.1 - - [29/Mar/2025 10:14:29] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
- * Detected change in '/home/texsols/BioTasks/tasks/TS/evaluators.py', reloading
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 816-118-796
-127.0.0.1 - - [29/Mar/2025 10:16:17] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-127.0.0.1 - - [29/Mar/2025 10:17:09] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
-152.58.196.205 - - [29/Mar/2025 10:18:33] "POST /v1/api/antifold/predict HTTP/1.1" 400 -
-152.58.196.205 - - [29/Mar/2025 10:18:41] "POST /v1/api/antifold/predict HTTP/1.1" 400 -
-152.58.196.205 - - [29/Mar/2025 10:19:08] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+2025-03-29 15:23:33,341 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-29 15:23:33,341 - INFO -  * Restarting with stat
+2025-03-29 15:23:33,561 - WARNING -  * Debugger is active!
+2025-03-29 15:23:33,561 - INFO -  * Debugger PIN: 468-140-023
+2025-03-29 17:06:27,444 - ERROR - 92.255.57.45 - - [29/Mar/2025 17:06:27] code 400, message Bad request version ("¯nãY»bhlÿ(=':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À")
+2025-03-29 17:06:27,445 - INFO - 92.255.57.45 - - [29/Mar/2025 17:06:27] "[31m[1m\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\x09T\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À[0m" 400 -
+2025-03-29 17:06:32,430 - ERROR - 92.255.57.55 - - [29/Mar/2025 17:06:32] code 400, message Bad request version ('À\x13À')
+2025-03-29 17:06:32,430 - INFO - 92.255.57.55 - - [29/Mar/2025 17:06:32] "[31m[1m\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03WS\x86\x85\x11\x90ýµÖü\x85÷\x02­ä#\x12\x12fÙ\x8c\x00åäûø\x99V\x84véL >2r\x9bç·ö\x02\x81\x87Bq2dÃñLn='1©\x08\x03qû1I\x0cGéA\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-03-29 17:06:32,824 - INFO - 92.255.57.55 - - [29/Mar/2025 17:06:32] "[33mGET /v2/_catalog HTTP/1.1[0m" 404 -
+2025-03-29 17:06:36,390 - ERROR - 92.255.57.55 - - [29/Mar/2025 17:06:36] code 400, message Bad request version ('À\x13À')
+2025-03-29 17:06:36,390 - INFO - 92.255.57.55 - - [29/Mar/2025 17:06:36] "[31m[1m\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03ú?\x87\x17Òì\x1eurÒ\x8a\x10¬WÎq\x00\x06î!èOoRO%³\x1fBí\x03F y­q\x11f\\R5u\x8eð\x83 Øï\x0b\x05\x03N\x95\x06Õëã¬W~ØH@\x8b¾\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-03-29 17:06:36,785 - INFO - 92.255.57.55 - - [29/Mar/2025 17:06:36] "[33mGET /v2/_catalog HTTP/1.1[0m" 404 -
+2025-03-29 18:29:22,024 - ERROR - 206.168.34.219 - - [29/Mar/2025 18:29:22] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x7fñ\x9d\x18y£ö:')
+2025-03-29 18:29:22,025 - INFO - 206.168.34.219 - - [29/Mar/2025 18:29:22] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x7fñ\x9d\x18y£ö:\x1cP[0m" 400 -
+2025-03-29 18:29:25,662 - INFO - 206.168.34.219 - - [29/Mar/2025 18:29:25] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-29 18:29:30,193 - INFO - 206.168.34.219 - - [29/Mar/2025 18:29:30] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-29 18:29:31,270 - ERROR - 206.168.34.219 - - [29/Mar/2025 18:29:31] code 505, message Invalid HTTP version (2.0)
+2025-03-29 18:29:31,270 - INFO - 206.168.34.219 - - [29/Mar/2025 18:29:31] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+2025-03-29 18:29:40,659 - INFO - 206.168.34.219 - - [29/Mar/2025 18:29:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-29 18:29:41,799 - ERROR - 206.168.34.219 - - [29/Mar/2025 18:29:41] code 400, message Bad request version ('À\x14À')
+2025-03-29 18:29:41,799 - INFO - 206.168.34.219 - - [29/Mar/2025 18:29:41] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03 ëlEkL\x90\x88\x0135µ_ÓJÖßsí\x88$\x94_Â \x07#ÐIä\x96µ Êõ³ðÄä\x1ehVçU\x91u%ô\x1a¸ÇÑP"p[\x854Z·Ïm«EÀ\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+2025-03-29 18:44:22,642 - ERROR - 76.91.64.191 - - [29/Mar/2025 18:44:22] code 400, message Bad request version ('+\x0f\x97¹Æ¿\x99[\x9dr\x82»9!1,\x99\x95%ì%ÕK\x00"ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+2025-03-29 18:44:22,642 - INFO - 76.91.64.191 - - [29/Mar/2025 18:44:22] "[31m[1m\x16\x03\x00\x02\x00\x01\x00\x01ü\x03\x03úØ7¦\x0bjð÷*]\x11\x15\x1b\x10\x12\x10\x1fà=\x7fX\x17\x8a\x9aE[ø°\x8aØ5t A¨õòpÂFS\x0d+\x0f\x97¹Æ¿\x99[\x9dr\x82»9!1,\x99\x95%ì%ÕK\x00"ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00[0m" 400 -
+2025-03-29 18:44:22,917 - INFO - 76.91.64.191 - - [29/Mar/2025 18:44:22] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-29 18:56:40,136 - INFO - 24.65.94.39 - - [29/Mar/2025 18:56:40] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-29 20:30:17,105 - INFO - 198.235.24.143 - - [29/Mar/2025 20:30:17] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-29 20:35:13,977 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:35:13] code 400, message Bad request version ('À\x13À')
+2025-03-29 20:35:13,977 - INFO - 45.82.78.104 - - [29/Mar/2025 20:35:13] "[31m[1m\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03\x94\x88\x99A\x08ò:\x1bÚSjÿ\x851q6Ê-{÷"Ç²\x8b\x1bb\x0f\x0dºvsg ·\x95\x10'l\x08®jÚã\\÷bò\x99L\x81\x03\x11J¾Z3\x9bÄ\x8fe(\x92Ñ?%\x00\x1aÌ©Ì¨À+À/À,À0À\x09À\x13À[0m" 400 -
+2025-03-29 20:35:21,263 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:35:21] code 400, message Bad request version ('À\x13À')
+2025-03-29 20:35:21,263 - INFO - 45.82.78.104 - - [29/Mar/2025 20:35:21] "[31m[1m\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03\x7f\x0bk|\x87¶\x18L|\x80{\x0eb\x16\x01\x8d_¼\x09Ã\x03\x87$ÀÝ°PÜ?[©\x8e À]ý*Ò\x10­\x84½k-â]\x09ÕT\x19\x01Ü·¤ÎeªöÄw\x9b\x05\x95b\x94\x00\x1aÌ©Ì¨À+À/À,À0À\x09À\x13À[0m" 400 -
+2025-03-29 20:35:29,839 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:35:29] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03ÛaqØv\x8e\\drY\x169\x125')
+2025-03-29 20:35:29,839 - INFO - 45.82.78.104 - - [29/Mar/2025 20:35:29] "[31m[1m\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03ÛaqØv\x8e\\drY\x169\x125\x1cÍÔ¾:ZuÓI¤[0m" 400 -
+2025-03-29 20:35:38,446 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:35:38] code 400, message Bad request version ('À\x13À')
+2025-03-29 20:35:38,447 - INFO - 45.82.78.104 - - [29/Mar/2025 20:35:38] "[31m[1m\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03\x15¬\x0b\x87\x97\x80<Q6Â-°\x0fñ¢E¹\x1b\x81Ö­¶""pb\x0d\x86Å\x07ëk Uöõ!]\x858¼CÑ\x8c"\x94óÇ\\ÅHÑ­ò\x87«h\x81¥/¬Àá8ò\x00\x1aÌ©Ì¨À+À/À,À0À\x09À\x13À[0m" 400 -
+2025-03-29 20:35:45,979 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:35:45] code 400, message Bad request version ('À\x13À')
+2025-03-29 20:35:45,979 - INFO - 45.82.78.104 - - [29/Mar/2025 20:35:45] "[31m[1m\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03º\x1cÿYp\x18ù\x80\x10\x12¿\x0f9ÕªO¼d\x07ñ\x9a\x1e\x8eº R1´òÎ\x83V %\x0cÓU'\x02N\x98ý\x9d\x08ÎÁÂ£\x1b Xõµ;ê=<\x02Û¯©<âëm\x00\x1aÌ©Ì¨À+À/À,À0À\x09À\x13À[0m" 400 -
+2025-03-29 20:35:54,073 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:35:54] code 400, message Bad request version ('0.12\x00')
+2025-03-29 20:35:54,073 - INFO - 45.82.78.104 - - [29/Mar/2025 20:35:54] "[31m[1m\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00[0m" 400 -
+2025-03-29 20:36:00,032 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:36:00] code 400, message Bad request version ('\x06\x08+\x06\x01\x02\x01\x01\x01\x00\x05\x00')
+2025-03-29 20:36:00,032 - INFO - 45.82.78.104 - - [29/Mar/2025 20:36:00] "[31m[1m0)\x02\x01\x00\x04\x06public \x1c\x02\x04ÿÿÿÿ\x02\x01\x00\x02\x01\x000\x0e0\x0c\x06\x08+\x06\x01\x02\x01\x01\x01\x00\x05\x00[0m" 400 -
+2025-03-29 20:36:06,018 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:36:06] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00fþSMB@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+2025-03-29 20:36:06,018 - INFO - 45.82.78.104 - - [29/Mar/2025 20:36:06] "[31m[1m\x00\x00\x00fþSMB@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x1f\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00$\x00\x01\x00\x01\x00\x00\x00\x00\x00\x00\x00\x13333333333333337\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02[0m" 400 -
+2025-03-29 20:36:06,839 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:36:06] code 400, message Bad request syntax ('\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03Þ=\x9dÉ¦\x8b\x08G')
+2025-03-29 20:36:06,839 - INFO - 45.82.78.104 - - [29/Mar/2025 20:36:06] "[31m[1m\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03Þ=\x9dÉ¦\x8b\x08G[0m" 400 -
+2025-03-29 20:36:09,204 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:36:09] code 400, message Bad request version ('SIP/2.0')
+2025-03-29 20:36:09,204 - INFO - 45.82.78.104 - - [29/Mar/2025 20:36:09] "[31m[1mOPTIONS sip:nm SIP/2.0[0m" 400 -
+2025-03-29 20:36:16,087 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:36:16] code 400, message Bad request syntax ('CNXN\x00\x00\x00\x01\x00\x10\x00\x00\x07\x00\x00\x002\x02\x00\x00¼±§±host::\x00')
+2025-03-29 20:36:16,087 - INFO - 45.82.78.104 - - [29/Mar/2025 20:36:16] "[31m[1mCNXN\x00\x00\x00\x01\x00\x10\x00\x00\x07\x00\x00\x002\x02\x00\x00¼±§±host::\x00[0m" 400 -
+2025-03-29 20:36:28,610 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:36:28] code 400, message Bad request syntax ('\x00í\x00\x00\x01\x00\x00\x00\x01<\x01,\x00\x00\x80\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00³\x00:\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00(DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=non-abc-existent-ser-vice-123-a-a-bc-asdf)(CID=(PROGRAM=sqlplus)(HOST=__jdbc__)(USER=)))(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=10)))')
+2025-03-29 20:36:28,610 - INFO - 45.82.78.104 - - [29/Mar/2025 20:36:28] "[31m[1m\x00í\x00\x00\x01\x00\x00\x00\x01<\x01,\x00\x00\x80\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00³\x00:\x00\x00\x04\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00(DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=non-abc-existent-ser-vice-123-a-a-bc-asdf)(CID=(PROGRAM=sqlplus)(HOST=__jdbc__)(USER=)))(ADDRESS=(PROTOCOL=tcp)(HOST=127.0.0.1)(PORT=10)))[0m" 400 -
+2025-03-29 20:36:34,755 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:36:34] code 400, message Bad HTTP/0.9 request type ('\x00')
+2025-03-29 20:36:34,755 - INFO - 45.82.78.104 - - [29/Mar/2025 20:36:34] "[31m[1m\x00\x1e««\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x07version\x04bind\x00\x00\x10\x00\x03[0m" 400 -
+2025-03-29 20:36:35,775 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:36:35] code 400, message Bad request version ('RTSP/1.0')
+2025-03-29 20:36:35,775 - INFO - 45.82.78.104 - - [29/Mar/2025 20:36:35] "[31m[1mOPTIONS rtsp://example.com RTSP/1.0[0m" 400 -
+2025-03-29 20:36:42,994 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:36:42] code 400, message Bad request version ('Ùª<\x13KÐ{\x88\x03\\2!$¢\x81\x867Ïb9JF,Æ\x00\x00\x00\x00')
+2025-03-29 20:36:42,994 - INFO - 45.82.78.104 - - [29/Mar/2025 20:36:42] "[31m[1m\x12\x01\x00X\x00\x00\x01\x00\x00\x00\x1f\x00\x06\x01\x00%\x00\x01\x02\x00&\x00\x01\x03\x00'\x00\x04\x04\x00+\x00\x01\x05\x00,\x00$ÿ\x11\x09\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00ù¸Ë\\\x94k\x89\x1fÙª<\x13KÐ{\x88\x03\\2!$¢\x81\x867Ïb9JF,Æ\x00\x00\x00\x00[0m" 400 -
+2025-03-29 20:36:49,057 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:36:49] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+2025-03-29 20:36:49,058 - INFO - 45.82.78.104 - - [29/Mar/2025 20:36:49] "[31m[1m\x80\x00\x00(rþ\x1d\x13\x00\x00\x00\x00\x00\x00\x00\x02\x00\x01\x86 \x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00[0m" 400 -
+2025-03-29 20:36:49,860 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:36:49] code 400, message Bad request version ('À\x13À')
+2025-03-29 20:36:49,861 - INFO - 45.82.78.104 - - [29/Mar/2025 20:36:49] "[31m[1m\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03üËó98¥³\x1aÑPqDô®\x07aZö±\x83\x1bºéÝõw\x01§ZIëi ø~ø\x8b¨\x96F\x08Z]¦\x82Z\x1e9ù_t½\x9f§ëõ:k\x05\x18Y\x9a/MK\x00\x1aÌ©Ì¨À+À/À,À0À\x09À\x13À[0m" 400 -
+2025-03-29 20:36:56,883 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:36:56] code 400, message Bad request syntax ('\x00\x9c\x00\x01\x1a+<M\x00\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01ÿÿ\x00\x01none\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00Microsoft\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+2025-03-29 20:36:56,883 - INFO - 45.82.78.104 - - [29/Mar/2025 20:36:56] "[31m[1m\x00\x9c\x00\x01\x1a+<M\x00\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01ÿÿ\x00\x01none\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00Microsoft\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00[0m" 400 -
+2025-03-29 20:37:03,489 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:37:03] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00')
+2025-03-29 20:37:03,489 - INFO - 45.82.78.104 - - [29/Mar/2025 20:37:03] "[31m[1m\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x0b\x00\x00\x00[0m" 400 -
+2025-03-29 20:37:14,513 - ERROR - 45.82.78.104 - - [29/Mar/2025 20:37:14] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x05º\x01\x00\x05¶\x03\x03W\x06N,S\x1aûèûF5ñ\x86ãh')
+2025-03-29 20:37:14,513 - INFO - 45.82.78.104 - - [29/Mar/2025 20:37:14] "[31m[1m\x16\x03\x01\x05º\x01\x00\x05¶\x03\x03W\x06N,S\x1aûèûF5ñ\x86ãh 3\x01ð%G\\[0m" 400 -
+2025-03-29 20:37:16,375 - INFO - 45.82.78.104 - - [29/Mar/2025 20:37:16] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-29 20:49:17,040 - ERROR - 147.185.133.113 - - [29/Mar/2025 20:49:17] code 400, message Bad request version ('Ñ?x\x81jì¡Ö')
+2025-03-29 20:49:17,040 - INFO - 147.185.133.113 - - [29/Mar/2025 20:49:17] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03N\x9eQ¨×¶E0,ïR\x1d\x96íìù8\x1f9;`4\x1fDí(ôt:%å\x14 Ï\x9f;²òÏ\x93~òë\x03\x07ïoý'%¸\x8fÜ(\x09Ñ?x\x81jì¡Ö[0m" 400 -
+2025-03-29 20:49:17,380 - ERROR - 147.185.133.113 - - [29/Mar/2025 20:49:17] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x84E"0\x8fíº¢õ\x05\x82\x16Ê\x80yÈ\x87\x17Ö\x05\x00«ýÇ+\x95\x8cÝ$KÌq\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À\'À#À\x13À')
+2025-03-29 20:49:17,380 - INFO - 147.185.133.113 - - [29/Mar/2025 20:49:17] "[31m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03\x84E"0\x8fíº¢õ\x05\x82\x16Ê\x80yÈ\x87\x17Ö\x05\x00«ýÇ+\x95\x8cÝ$KÌq\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À[0m" 400 -
+2025-03-29 21:14:50,733 - ERROR - 199.45.155.67 - - [29/Mar/2025 21:14:50] code 400, message Bad request version ('À\x14À')
+2025-03-29 21:14:50,733 - INFO - 199.45.155.67 - - [29/Mar/2025 21:14:50] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03U~K WÂ\x08ò*Ô\x85\x08g\x1b\x03\x1d\x8d\x09÷wT\x02\x05;2ïf~ðÝQ  \x82c\x1eMæË²K\x04I\x1c\x01×Û\x85\x8eÅÜ%\x99ÝÿÎ\x19Ç\x094æ\x8cW\x7fü\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+2025-03-29 21:14:54,484 - INFO - 199.45.155.67 - - [29/Mar/2025 21:14:54] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-29 21:15:01,005 - INFO - 199.45.155.67 - - [29/Mar/2025 21:15:01] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-29 21:15:01,340 - ERROR - 199.45.155.67 - - [29/Mar/2025 21:15:01] code 505, message Invalid HTTP version (2.0)
+2025-03-29 21:15:01,340 - INFO - 199.45.155.67 - - [29/Mar/2025 21:15:01] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+2025-03-29 21:15:05,087 - INFO - 199.45.155.67 - - [29/Mar/2025 21:15:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-29 21:15:05,534 - ERROR - 199.45.155.67 - - [29/Mar/2025 21:15:05] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03+\x10/\x80\x9dAdÚ\x1a¦q9×')
+2025-03-29 21:15:05,535 - INFO - 199.45.155.67 - - [29/Mar/2025 21:15:05] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03+\x10/\x80\x9dAdÚ\x1a¦q9×\x1e\x84\x91pbâ÷f\x7fä\x9e@¨åVf[0m" 400 -
+2025-03-29 21:40:50,695 - ERROR - 45.79.134.169 - - [29/Mar/2025 21:40:50] code 400, message Bad request version ('À\x13À')
+2025-03-29 21:40:50,696 - INFO - 45.79.134.169 - - [29/Mar/2025 21:40:50] "[31m[1m\x16\x03\x01\x00ä\x01\x00\x00à\x03\x03Ìa\x8f\x936\x17§_Zd;^ÒnW\x9dP\x01zTÖ\x02Îà\x8dÉ¢¾\x93Ñ+; e\x9b81­B\x1f\x8db·´\x13\x8eé\x87Q\x94¥ß2{Y\x96\x10\x1cðVÁP\x99]Ñ\x00\x1cÀ+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-03-29 22:06:59,707 - INFO - 205.210.31.74 - - [29/Mar/2025 22:06:59] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-29 22:26:10,929 - INFO - 92.255.57.61 - - [29/Mar/2025 22:26:10] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-29 22:26:21,608 - ERROR - 92.255.57.55 - - [29/Mar/2025 22:26:21] code 400, message Bad request version ('À\x13À')
+2025-03-29 22:26:21,608 - INFO - 92.255.57.55 - - [29/Mar/2025 22:26:21] "[31m[1m\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03ØÔ!¦àÝ\x15\x8aH÷ \x15¥Õ>\x1aN²f\x13?(©$/Ð\x85ýá$<\x97 ¡0wÔµy£ÓeÆ:Ä\x1aY{\x98\x0dCåÎä\x96\x8b\x02µ!ø¢\x88ÆnÖ\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-03-29 22:26:22,003 - INFO - 92.255.57.55 - - [29/Mar/2025 22:26:22] "[33mGET /aaa9 HTTP/1.1[0m" 404 -
+2025-03-29 22:26:22,402 - ERROR - 92.255.57.55 - - [29/Mar/2025 22:26:22] code 400, message Bad request version (')½±RFUêL')
+2025-03-29 22:26:22,402 - INFO - 92.255.57.55 - - [29/Mar/2025 22:26:22] "[31m[1m\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03«ôÐ1\x9dKå\x15ê(\x04¤,&\x0b\x1c »\x0c)½±RFUêL[0m" 400 -
+2025-03-29 22:26:22,789 - INFO - 92.255.57.55 - - [29/Mar/2025 22:26:22] "[33mGET /aab9 HTTP/1.1[0m" 404 -
+2025-03-29 22:31:13,165 - INFO - 20.84.92.70 - - [29/Mar/2025 22:31:13] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-29 22:57:30,211 - INFO - 198.235.24.241 - - [29/Mar/2025 22:57:30] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-29 23:02:06,233 - ERROR - 92.255.57.55 - - [29/Mar/2025 23:02:06] code 400, message Bad request version ('À\x13À')
+2025-03-29 23:02:06,234 - INFO - 92.255.57.55 - - [29/Mar/2025 23:02:06] "[31m[1m\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03\x16\x7f@\x18cé\x85]\x1dºHÇ6p\x9bÐÌRÛÊ\x98"C\x04±\x94isËÆ£\x9b )¹fÔJD!a\x1f\x966dûÿ«°\x1e\x1aÏÄ$\x03ä\x8c\x89L\x0d|+î´\x81\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-03-29 23:02:06,623 - INFO - 92.255.57.55 - - [29/Mar/2025 23:02:06] "[33mGET /v2/_catalog HTTP/1.1[0m" 404 -
+2025-03-29 23:39:56,592 - INFO - 110.177.181.176 - - [29/Mar/2025 23:39:56] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-29 23:39:56,823 - ERROR - 58.212.237.12 - - [29/Mar/2025 23:39:56] code 400, message Bad request version ('À\x13À')
+2025-03-29 23:39:56,824 - INFO - 58.212.237.12 - - [29/Mar/2025 23:39:56] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03î\x1bôW\x02\x15SF{;\x9c2#="O\x93\x80|\\ Ú\x1c\x8bÐçÕ\x87Ø½üq \x16F ²^¹HÐ9\x887ûñÔt\x1a\x02\x13e1f'W\x88±b^¨eâj±\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-03-29 23:39:57,178 - ERROR - 123.191.144.107 - - [29/Mar/2025 23:39:57] code 400, message Bad request version ('À\x13À')
+2025-03-29 23:39:57,178 - INFO - 123.191.144.107 - - [29/Mar/2025 23:39:57] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03H\x98EÒ\x93ÇS\x82]Tp\x11\x1aa\x89ÜÂÌÇ15²h\x9a8<'\x14jÛLf °æ÷-§[Mr\x1be\x9c\x98/¹\x96@XüÊ\x1b=½\x1dÙ)æ\x1b¦\x172Æi\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-03-29 23:40:05,403 - ERROR - 27.98.228.248 - - [29/Mar/2025 23:40:05] code 400, message Bad request syntax ('{\x01\x00\x1613911111112À¨\x01\x01\x13\x90{')
+2025-03-29 23:40:05,403 - INFO - 27.98.228.248 - - [29/Mar/2025 23:40:05] "[31m[1m{\x01\x00\x1613911111112À¨\x01\x01\x13\x90{[0m" 400 -
+2025-03-29 23:40:05,820 - INFO - 222.94.32.220 - - [29/Mar/2025 23:40:05] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-29 23:40:14,070 - ERROR - 113.128.64.121 - - [29/Mar/2025 23:40:14] code 400, message Bad request syntax ('~\x00\x02\x00\x00\x02\x00\x00\x00\x00\x15\x00\x032~')
+2025-03-29 23:40:14,070 - INFO - 113.128.64.121 - - [29/Mar/2025 23:40:14] "[31m[1m~\x00\x02\x00\x00\x02\x00\x00\x00\x00\x15\x00\x032~[0m" 400 -
+2025-03-29 23:40:22,013 - ERROR - 101.68.6.208 - - [29/Mar/2025 23:40:22] code 400, message Bad request syntax ('ªÖ\x00\x00\x00\x05\x00+\x0e\x01\x00')
+2025-03-29 23:40:22,013 - INFO - 101.68.6.208 - - [29/Mar/2025 23:40:22] "[31m[1mªÖ\x00\x00\x00\x05\x00+\x0e\x01\x00[0m" 400 -
+2025-03-29 23:41:06,540 - INFO - 171.36.6.99 - - [29/Mar/2025 23:41:06] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-30 01:30:30,890 - ERROR - 88.214.25.125 - - [30/Mar/2025 01:30:30] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2025-03-30 01:30:30,891 - INFO - 88.214.25.125 - - [30/Mar/2025 01:30:30] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
+2025-03-30 06:59:57,621 - ERROR - 96.126.104.20 - - [30/Mar/2025 06:59:57] code 400, message Bad request version ('À\x13À')
+2025-03-30 06:59:57,621 - INFO - 96.126.104.20 - - [30/Mar/2025 06:59:57] "[31m[1m\x16\x03\x01\x00ò\x01\x00\x00î\x03\x03^MCìÜ\x97À°`\x8en"k&~¦\x07|ÚçgA\x0frÑ\x0fÓQ\x87\x9e\x05\x8a èä\x1b\x1dä\x02­ir\x97§ÙTé\x05ºq2°\x12Wûò\x13\x89!jÐj§\x98?\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-03-30 06:59:57,766 - INFO - 96.126.104.20 - - [30/Mar/2025 06:59:57] "[33mGET /signin HTTP/1.1[0m" 404 -
+2025-03-30 07:07:57,042 - INFO - 65.49.20.67 - - [30/Mar/2025 07:07:57] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-30 07:08:12,311 - INFO - 65.49.20.67 - - [30/Mar/2025 07:08:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-30 07:13:21,998 - INFO - 205.210.31.128 - - [30/Mar/2025 07:13:21] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-30 13:08:10,294 - INFO - Starting Free-Wilson analysis with task ID: test_run
+2025-03-30 13:08:10,294 - INFO - Executing Free-Wilson command:
+
+    source ~/miniconda3/etc/profile.d/conda.sh &&
+    conda activate freewilson_env &&
+    python3 /home/texsols/BioTasks/tasks/Free-Wilson/free_wilson.py all         --scaffold "/home/texsols/BioTasks/uploads/scaffold.mol"         --in "/home/texsols/BioTasks/uploads/fw_mols.smi"         --act "/home/texsols/BioTasks/uploads/fw_act.csv"         --prefix "/home/texsols/BioTasks/outputs/freewilson_output/9de9d75e-67fc-4bdb-a027-8c0078e8c12d"         --smarts "C[C@H](N)C(=O)O"                  --log         > "/home/texsols/BioTasks/outputs/freewilson_output/9de9d75e-67fc-4bdb-a027-8c0078e8c12d.log" 2>&1 &
+    
+2025-03-30 13:08:10,295 - INFO - 42.105.135.136 - - [30/Mar/2025 13:08:10] "POST /v1/api/freewilson/run_analysis HTTP/1.1" 200 -
+2025-03-30 14:15:55,470 - INFO -  * Detected change in '/home/texsols/BioTasks/backend/services/freewilson_service.py', reloading
+2025-03-30 14:15:55,507 - INFO -  * Restarting with stat
+2025-03-30 14:15:56,580 - WARNING -  * Debugger is active!
+2025-03-30 14:15:56,580 - INFO -  * Debugger PIN: 468-140-023
+2025-03-30 14:18:41,671 - INFO - Starting Free-Wilson analysis with task ID: test_run
+2025-03-30 14:18:41,672 - INFO - Executing Free-Wilson command:
+
+    source ~/miniconda3/etc/profile.d/conda.sh &&
+    conda activate freewilson_env &&
+    python3 /home/texsols/BioTasks/tasks/Free-Wilson/free_wilson.py all         --scaffold "/home/texsols/BioTasks/uploads/scaffold.mol"         --in "/home/texsols/BioTasks/uploads/fw_mols.smi"         --act "/home/texsols/BioTasks/uploads/fw_act.csv"         --prefix "/home/texsols/BioTasks/outputs/freewilson_output/test_run/output"         --smarts "C[C@H](N)C(=O)O"                  --log         > "/home/texsols/BioTasks/outputs/freewilson_output/test_run/test_run.log" 2>&1
+    
+2025-03-30 14:18:43,613 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/test_run/output_rgroup.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1100'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'e2ce8256-0d71-11f0-9064-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-03-30 14:18:43,679 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 30 Mar 2025 14:18:43 GMT'
+    'ETag': '"0x8DD6F95C708D812"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f144dace-301e-0061-297e-a18afe000000'
+    'x-ms-client-request-id': 'e2ce8256-0d71-11f0-9064-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Sun, 30 Mar 2025 14:18:43 GMT'
+2025-03-30 14:18:43,680 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/test_run/output_coefficients.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '260'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'e2d8af10-0d71-11f0-9064-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-03-30 14:18:43,690 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 30 Mar 2025 14:18:43 GMT'
+    'ETag': '"0x8DD6F95C70DB49C"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f144db00-301e-0061-577e-a18afe000000'
+    'x-ms-client-request-id': 'e2d8af10-0d71-11f0-9064-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Sun, 30 Mar 2025 14:18:43 GMT'
+2025-03-30 14:18:43,691 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/test_run/output_vector.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '801'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'e2da630a-0d71-11f0-9064-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-03-30 14:18:43,701 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 30 Mar 2025 14:18:43 GMT'
+    'ETag': '"0x8DD6F95C70F3986"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f144db0b-301e-0061-617e-a18afe000000'
+    'x-ms-client-request-id': 'e2da630a-0d71-11f0-9064-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Sun, 30 Mar 2025 14:18:43 GMT'
+2025-03-30 14:18:43,702 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/test_run/output_lm.pkl'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '648'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'e2dbfcd8-0d71-11f0-9064-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-03-30 14:18:43,711 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 30 Mar 2025 14:18:43 GMT'
+    'ETag': '"0x8DD6F95C710BE69"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f144db16-301e-0061-6c7e-a18afe000000'
+    'x-ms-client-request-id': 'e2dbfcd8-0d71-11f0-9064-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Sun, 30 Mar 2025 14:18:43 GMT'
+2025-03-30 14:18:43,712 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/test_run/test_run.log'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '905'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'e2dd8e36-0d71-11f0-9064-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-03-30 14:18:43,721 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 30 Mar 2025 14:18:43 GMT'
+    'ETag': '"0x8DD6F95C7126A39"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f144db22-301e-0061-777e-a18afe000000'
+    'x-ms-client-request-id': 'e2dd8e36-0d71-11f0-9064-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Sun, 30 Mar 2025 14:18:43 GMT'
+2025-03-30 14:18:43,722 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/test_run/output_not_synthesized.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '668'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'e2df2156-0d71-11f0-9064-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-03-30 14:18:43,734 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 30 Mar 2025 14:18:43 GMT'
+    'ETag': '"0x8DD6F95C7143CE7"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f144db30-301e-0061-047e-a18afe000000'
+    'x-ms-client-request-id': 'e2df2156-0d71-11f0-9064-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Sun, 30 Mar 2025 14:18:43 GMT'
+2025-03-30 14:18:43,735 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/test_run/output_comparison.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '410'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'e2e1070a-0d71-11f0-9064-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-03-30 14:18:43,748 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Sun, 30 Mar 2025 14:18:43 GMT'
+    'ETag': '"0x8DD6F95C7168452"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f144db43-301e-0061-147e-a18afe000000'
+    'x-ms-client-request-id': 'e2e1070a-0d71-11f0-9064-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Sun, 30 Mar 2025 14:18:43 GMT'
+2025-03-30 14:18:43,749 - INFO - 42.105.135.136 - - [30/Mar/2025 14:18:43] "POST /v1/api/freewilson/run_analysis HTTP/1.1" 200 -
+2025-03-30 18:42:25,405 - INFO - 205.210.31.34 - - [30/Mar/2025 18:42:25] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-30 19:16:56,213 - INFO - 159.65.145.145 - - [30/Mar/2025 19:16:56] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-30 19:16:56,672 - INFO - 159.65.145.145 - - [30/Mar/2025 19:16:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-30 19:38:15,128 - INFO - 198.235.24.241 - - [30/Mar/2025 19:38:15] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-30 20:19:16,754 - INFO - 205.210.31.152 - - [30/Mar/2025 20:19:16] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-30 21:48:35,947 - INFO - 198.235.24.166 - - [30/Mar/2025 21:48:35] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-30 21:57:15,472 - ERROR - 194.165.16.163 - - [30/Mar/2025 21:57:15] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2025-03-30 21:57:15,472 - INFO - 194.165.16.163 - - [30/Mar/2025 21:57:15] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
+2025-03-30 23:26:22,334 - INFO - 40.74.254.21 - - [30/Mar/2025 23:26:22] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-30 23:36:37,117 - INFO - 125.229.190.28 - - [30/Mar/2025 23:36:37] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-31 00:56:53,034 - ERROR - 35.203.211.156 - - [31/Mar/2025 00:56:53] code 400, message Bad request version ('À\x13À')
+2025-03-31 00:56:53,034 - INFO - 35.203.211.156 - - [31/Mar/2025 00:56:53] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03o\\¥'\x8b6\x80Ãp´ðø\x92~NU\x1d\x18\x1eø\x8e1*\x9c§½\x97*JõÀ\x01 \x04©V\x08\x15P~?ë\x88¤T>\x18#\x9f\x08â¿|\x9fo+\x1c*/µ\x15¹Õ¥:\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-03-31 00:56:53,317 - ERROR - 35.203.211.156 - - [31/Mar/2025 00:56:53] code 400, message Bad request version ('À(À$À\x14À')
+2025-03-31 00:56:53,317 - INFO - 35.203.211.156 - - [31/Mar/2025 00:56:53] "[31m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03%\x0exÀ#\x8e\\\x0dÉ}7®î× °'\x02\x86\x1b\x0f¯\x12\x05\x15\x02\x15¤¼\x97ï=\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À[0m" 400 -
+2025-03-31 01:37:59,112 - INFO - 1.34.145.215 - - [31/Mar/2025 01:37:59] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-31 01:58:42,006 - INFO - 125.25.53.234 - - [31/Mar/2025 01:58:42] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-31 04:15:49,022 - ERROR - 194.180.49.39 - - [31/Mar/2025 04:15:49] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2025-03-31 04:15:49,022 - INFO - 194.180.49.39 - - [31/Mar/2025 04:15:49] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
+2025-03-31 05:14:40,190 - INFO - 206.168.34.87 - - [31/Mar/2025 05:14:40] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-31 05:14:42,962 - ERROR - 206.168.34.87 - - [31/Mar/2025 05:14:42] code 505, message Invalid HTTP version (2.0)
+2025-03-31 05:14:42,963 - INFO - 206.168.34.87 - - [31/Mar/2025 05:14:42] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+2025-03-31 05:14:50,246 - INFO - 206.168.34.87 - - [31/Mar/2025 05:14:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-31 05:14:54,234 - ERROR - 206.168.34.87 - - [31/Mar/2025 05:14:54] code 400, message Bad request version ('À\x14À')
+2025-03-31 05:14:54,234 - INFO - 206.168.34.87 - - [31/Mar/2025 05:14:54] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03\x0bXZøùë©\x17&úR¨f¨\x1d\x89\x1d\x89\x15ØÆ\x1bñRÍébpQ\x11$Ä º«s%\x97TáéënàãJ°Xkø°Û:s=±-\x97ÅwR]E\x89I\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+2025-03-31 05:55:51,353 - INFO - 125.229.90.37 - - [31/Mar/2025 05:55:51] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-31 06:53:40,171 - ERROR - 96.126.104.20 - - [31/Mar/2025 06:53:40] code 400, message Bad request syntax ('\x16\x03\x01\x00ò\x01\x00\x00î\x03\x03\x9fjÙ¦tBñó~Y°Åû\x13|8')
+2025-03-31 06:53:40,171 - INFO - 96.126.104.20 - - [31/Mar/2025 06:53:40] "[31m[1m\x16\x03\x01\x00ò\x01\x00\x00î\x03\x03\x9fjÙ¦tBñó~Y°Åû\x13|8[0m" 400 -
+2025-03-31 06:53:40,315 - INFO - 96.126.104.20 - - [31/Mar/2025 06:53:40] "[33mGET /signin HTTP/1.1[0m" 404 -
+2025-03-31 07:41:57,134 - ERROR - 167.71.23.86 - - [31/Mar/2025 07:41:57] code 400, message Bad request version ('À\x14À')
+2025-03-31 07:41:57,134 - INFO - 167.71.23.86 - - [31/Mar/2025 07:41:57] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x9e¨ðÄ;»(ª*@·bYØ±\x14\x9ce:s\x0d±îìE¿\x89 ¥»¶g\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+2025-03-31 07:41:57,285 - ERROR - 167.71.23.86 - - [31/Mar/2025 07:41:57] code 400, message Bad request version ('À\x14À')
+2025-03-31 07:41:57,286 - INFO - 167.71.23.86 - - [31/Mar/2025 07:41:57] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03hõ¦h,KN3©:\x84ï\x1d\x8b#å\x073âì_\x8cA\x96ôRá6ù7h\x83\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+2025-03-31 07:41:57,437 - INFO - 167.71.23.86 - - [31/Mar/2025 07:41:57] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-31 11:13:40,073 - ERROR - 128.199.25.117 - - [31/Mar/2025 11:13:40] code 400, message Bad request version ('À\x14À')
+2025-03-31 11:13:40,073 - INFO - 128.199.25.117 - - [31/Mar/2025 11:13:40] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03GT\x81ª±\x88^lpZ\x03ÈQ$R\x0dÐÓ!öú\x1aH÷³÷;\x1e\x88\x04»-\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+2025-03-31 11:13:40,517 - ERROR - 128.199.25.117 - - [31/Mar/2025 11:13:40] code 400, message Bad request version ('À\x14À')
+2025-03-31 11:13:40,517 - INFO - 128.199.25.117 - - [31/Mar/2025 11:13:40] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x037\x18)\x87\x09\x8e©:\x9dß\\\x84£oç¸D\\zhßö\x13³³\x9a\x048ej)J\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+2025-03-31 11:13:40,968 - INFO - 128.199.25.117 - - [31/Mar/2025 11:13:40] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-31 11:18:45,933 - ERROR - 206.168.34.210 - - [31/Mar/2025 11:18:45] code 400, message Bad request version ('À\x14À')
+2025-03-31 11:18:45,933 - INFO - 206.168.34.210 - - [31/Mar/2025 11:18:45] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03 \x1b\x0fû\\ùqõï\x97 é?ÄæåF\x17\x80$"»×Uã\x17!¦án\x0d\x14 <\x01"ÄËáìU\x96\x9b(\\Z\x9e+®\x19\x95|Ø\x80\x0b\x99¦\x96ÊfdÒ\x92ö\x83\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+2025-03-31 11:19:21,789 - ERROR - 206.168.34.210 - - [31/Mar/2025 11:19:21] code 400, message Bad request syntax ('ZG\x00\x00\x00\x05\x00+\x0e\x01\x00')
+2025-03-31 11:19:21,789 - INFO - 206.168.34.210 - - [31/Mar/2025 11:19:21] "[31m[1mZG\x00\x00\x00\x05\x00+\x0e\x01\x00[0m" 400 -
+2025-03-31 11:47:37,749 - ERROR - 167.94.145.102 - - [31/Mar/2025 11:47:37] code 400, message Bad request version ('À\x14À')
+2025-03-31 11:47:37,750 - INFO - 167.94.145.102 - - [31/Mar/2025 11:47:37] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x033\x1aò>\x91;Î#/£Ç\x07O\x9cý£\x09y\x09ý;Õ\x8aâó+ÐxR]BÆ ®r\x12ò·\x81\x97X<-"Ó\x1a~Þ\x87«¦,í\x19\x0b]Ý\x1e2î0±å`è\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+2025-03-31 11:47:41,310 - INFO - 167.94.145.102 - - [31/Mar/2025 11:47:41] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-31 11:47:45,675 - INFO - 167.94.145.102 - - [31/Mar/2025 11:47:45] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-31 11:47:46,356 - ERROR - 167.94.145.102 - - [31/Mar/2025 11:47:46] code 505, message Invalid HTTP version (2.0)
+2025-03-31 11:47:46,356 - INFO - 167.94.145.102 - - [31/Mar/2025 11:47:46] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+2025-03-31 11:47:51,410 - INFO - 167.94.145.102 - - [31/Mar/2025 11:47:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-31 11:47:51,801 - ERROR - 167.94.145.102 - - [31/Mar/2025 11:47:51] code 400, message Bad request version ('À\x14À')
+2025-03-31 11:47:51,801 - INFO - 167.94.145.102 - - [31/Mar/2025 11:47:51] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03t6æ,[\x17¸ Át\x07Kô&\\å¹\x98\x93c4\x91DXÛ »q¦Æ~k \x97»\x981<|g\x0d·4+\x94·Û?ó£!<>·zô7Á\x0c\x87¶\x1bt¯W\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+2025-03-31 13:18:34,375 - INFO - 64.62.197.206 - - [31/Mar/2025 13:18:34] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-31 13:18:47,286 - INFO - 64.62.197.199 - - [31/Mar/2025 13:18:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-31 15:17:28,992 - INFO - 118.163.142.112 - - [31/Mar/2025 15:17:28] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-31 17:15:15,506 - INFO - 122.116.38.41 - - [31/Mar/2025 17:15:15] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-31 17:58:43,589 - ERROR - 92.255.57.61 - - [31/Mar/2025 17:58:43] code 400, message Bad request version ("¯nãY»bhlÿ(=':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À")
+2025-03-31 17:58:43,589 - INFO - 92.255.57.61 - - [31/Mar/2025 17:58:43] "[31m[1m\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\x09T\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À[0m" 400 -
+2025-03-31 17:58:52,281 - ERROR - 92.255.57.55 - - [31/Mar/2025 17:58:52] code 400, message Bad request version ('À\x13À')
+2025-03-31 17:58:52,282 - INFO - 92.255.57.55 - - [31/Mar/2025 17:58:52] "[31m[1m\x16\x03\x01\x05¨\x01\x00\x05¤\x03\x03&\x00\x05\x02zjçS¨\x18ËcÆ¢Yå]\x00\x8f\x92rÄØóÊ\x01\x81Õ\x96\x15GP \x95ÐÕA6ïþ=xÖy¡º©Ä\x7f\x06½\x047Ñ\x16P0 åÌý·\x04<3\x00\x1aÀ+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-03-31 17:58:52,675 - INFO - 92.255.57.55 - - [31/Mar/2025 17:58:52] "[33mGET /v2/_catalog HTTP/1.1[0m" 404 -
+2025-03-31 18:11:20,879 - ERROR - 91.238.181.94 - - [31/Mar/2025 18:11:20] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2025-03-31 18:11:20,880 - INFO - 91.238.181.94 - - [31/Mar/2025 18:11:20] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
+2025-03-31 18:47:31,062 - INFO - 114.26.156.1 - - [31/Mar/2025 18:47:31] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-31 19:09:00,964 - INFO -  * Detected change in '/home/texsols/BioTasks/backend/services/freewilson_service.py', reloading
+2025-03-31 19:09:01,036 - INFO -  * Restarting with stat
+2025-03-31 19:09:01,577 - WARNING -  * Debugger is active!
+2025-03-31 19:09:01,577 - INFO -  * Debugger PIN: 468-140-023
+2025-03-31 19:09:48,219 - ERROR - No PDB file uploaded
+2025-03-31 19:09:48,219 - INFO - 152.59.199.203 - - [31/Mar/2025 19:09:48] "[31m[1mPOST /v1/api/antifold/predict HTTP/1.1[0m" 400 -
+2025-03-31 19:10:17,018 - INFO - Starting AntiFold with task ID: a590e94a-dc74-449e-975c-1001f115c6fe
+2025-03-31 19:10:17,020 - INFO - Executing AntiFold command:
+
+    source ~/miniconda3/etc/profile.d/conda.sh &&
+    conda activate antifold_cpu &&
+    python3 /home/texsols/BioTasks/tasks/AntiFold/antifold/main.py         --num_seq_per_target 10         --sampling_temp 0.2         --regions "CDR1,CDR2,CDR3"         --pdb_file "/home/texsols/BioTasks/uploads/a590e94a-dc74-449e-975c-1001f115c6fe_8ee8_imgt.pdb"         --heavy_chain "C"         --light_chain "D"         > "/home/texsols/BioTasks/outputs/antifold_output/a590e94a-dc74-449e-975c-1001f115c6fe/a590e94a-dc74-449e-975c-1001f115c6fe.log" 2>&1
+    
+2025-03-31 19:10:38,094 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/a590e94a-dc74-449e-975c-1001f115c6fe/a590e94a-dc74-449e-975c-1001f115c6fe.log'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '2744'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'd4a9ec9a-0e63-11f0-b829-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-03-31 19:10:38,125 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 31 Mar 2025 19:10:38 GMT'
+    'ETag': '"0x8DD7087B8E20040"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'aa507472-f01e-000c-6570-a23eb5000000'
+    'x-ms-client-request-id': 'd4a9ec9a-0e63-11f0-b829-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 31 Mar 2025 19:10:37 GMT'
+2025-03-31 19:10:38,126 - INFO - 152.59.199.203 - - [31/Mar/2025 19:10:38] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+2025-03-31 19:10:55,082 - ERROR - No PDB file uploaded
+2025-03-31 19:10:55,083 - INFO - 152.59.199.203 - - [31/Mar/2025 19:10:55] "[31m[1mPOST /v1/api/proteinmpnn/ddg HTTP/1.1[0m" 400 -
+2025-03-31 19:11:13,626 - INFO - Starting ProteinMPNN with task ID: 515d6a95-67a9-4ff2-8463-c00aaa5896b4
+2025-03-31 19:11:13,626 - INFO - Executing ProteinMPNN command:
+
+    docker run     -v /home/texsols/BioTasks/uploads:/workspace     -v /home/texsols/BioTasks/outputs/proteinmpnn_output/515d6a95-67a9-4ff2-8463-c00aaa5896b4:/outputs     --workdir /workspace     ghcr.io/peptoneltd/proteinmpnn_ddg:1.0.0_base_cpu     python3 /app/proteinmpnn_ddg/predict.py     --pdb_path /workspace/515d6a95-67a9-4ff2-8463-c00aaa5896b4_AF-A0A7L5GP87-F1-model_v4.pdb     --chains A     --outpath /outputs/515d6a95-67a9-4ff2-8463-c00aaa5896b4_predictions.csv     > "/home/texsols/BioTasks/outputs/proteinmpnn_output/515d6a95-67a9-4ff2-8463-c00aaa5896b4/515d6a95-67a9-4ff2-8463-c00aaa5896b4.log" 2>&1
+    
+2025-03-31 19:11:42,121 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/515d6a95-67a9-4ff2-8463-c00aaa5896b4/515d6a95-67a9-4ff2-8463-c00aaa5896b4_predictions.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '142428'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'fad394e8-0e63-11f0-a5c8-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-03-31 19:11:42,204 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 31 Mar 2025 19:11:42 GMT'
+    'ETag': '"0x8DD7087DF0F1977"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '20accb4d-101e-0059-4370-a22e3e000000'
+    'x-ms-client-request-id': 'fad394e8-0e63-11f0-a5c8-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 31 Mar 2025 19:11:41 GMT'
+2025-03-31 19:11:42,205 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/515d6a95-67a9-4ff2-8463-c00aaa5896b4/515d6a95-67a9-4ff2-8463-c00aaa5896b4.log'
+Request method: 'PUT'
+Request headers:
+    'x-ms-blob-type': 'REDACTED'
+    'Content-Length': '0'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'fae07eb0-0e63-11f0-a5c8-00224878029e'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-03-31 19:11:42,214 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 31 Mar 2025 19:11:42 GMT'
+    'ETag': '"0x8DD7087DF152D2A"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '20accc11-101e-0059-2370-a22e3e000000'
+    'x-ms-client-request-id': 'fae07eb0-0e63-11f0-a5c8-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 31 Mar 2025 19:11:41 GMT'
+2025-03-31 19:11:42,215 - INFO - 152.59.199.203 - - [31/Mar/2025 19:11:42] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
+2025-03-31 19:11:55,302 - ERROR - PDB file and Chains to Design are required.
+2025-03-31 19:11:55,303 - INFO - 152.59.199.203 - - [31/Mar/2025 19:11:55] "[31m[1mPOST /v1/api/ligandmpnn/design?pdb_File&chains_to_desgin&temperature&number_of_batches HTTP/1.1[0m" 400 -
+2025-03-31 19:12:06,157 - INFO - Starting LigandMPNN with task ID: d506a1b5-0103-4369-8bb6-95f5e0133d41
+2025-03-31 19:12:06,157 - INFO - Executing LigandMPNN command:
+
+    source ~/miniconda3/etc/profile.d/conda.sh &&
+    conda activate ligandmpnn_env &&
+    cd /home/texsols/BioTasks/tasks/LigandMPNN &&
+    python3 /home/texsols/BioTasks/tasks/LigandMPNN/run.py         --pdb_path "/home/texsols/BioTasks/uploads/d506a1b5-0103-4369-8bb6-95f5e0133d41_AF-A0A7L5GP87-F1-model_v4.pdb"         --checkpoint_path "/home/texsols/BioTasks/tasks/LigandMPNN/model_params/proteinmpnn_v_48_020.pt"         --out_folder "/home/texsols/BioTasks/outputs/ligandmpnn_output/d506a1b5-0103-4369-8bb6-95f5e0133d41"         --chains_to_design A                  --temperature 0.1         --number_of_batches 8         > "/home/texsols/BioTasks/outputs/ligandmpnn_output/d506a1b5-0103-4369-8bb6-95f5e0133d41/d506a1b5-0103-4369-8bb6-95f5e0133d41.log" 2>&1
+    
+2025-03-31 19:12:33,343 - INFO - 152.59.199.203 - - [31/Mar/2025 19:12:33] "POST /v1/api/ligandmpnn/design?pdb_File&chains_to_desgin&temperature&number_of_batches HTTP/1.1" 200 -
+2025-03-31 19:14:07,792 - INFO - Starting Thompson Sampling with task ID: 8adb17b5-8c08-45ce-a3e4-724d1f9d7f02
+2025-03-31 19:14:07,793 - INFO - Executing Thompson Sampling command:
+
+    cd /home/texsols/BioTasks/tasks/TS &&
+    source ~/miniconda3/etc/profile.d/conda.sh && conda activate ts_env &&
+    python3 /home/texsols/BioTasks/tasks/TS/ts_main.py /home/texsols/BioTasks/outputs/ts_output/8adb17b5-8c08-45ce-a3e4-724d1f9d7f02/8adb17b5-8c08-45ce-a3e4-724d1f9d7f02.json > "/home/texsols/BioTasks/outputs/ts_output/8adb17b5-8c08-45ce-a3e4-724d1f9d7f02/8adb17b5-8c08-45ce-a3e4-724d1f9d7f02.log" 2>&1
+    
+2025-03-31 19:15:01,524 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/8adb17b5-8c08-45ce-a3e4-724d1f9d7f02/8adb17b5-8c08-45ce-a3e4-724d1f9d7f02.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '141645'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '71ae3abe-0e64-11f0-aace-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-03-31 19:15:01,554 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 31 Mar 2025 19:15:01 GMT'
+    'ETag': '"0x8DD708855E621DB"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '454d00ee-f01e-001c-1271-a2fbdd000000'
+    'x-ms-client-request-id': '71ae3abe-0e64-11f0-aace-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 31 Mar 2025 19:15:00 GMT'
+2025-03-31 19:15:01,555 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/8adb17b5-8c08-45ce-a3e4-724d1f9d7f02/8adb17b5-8c08-45ce-a3e4-724d1f9d7f02.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '779'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '71b2ec62-0e64-11f0-aace-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-03-31 19:15:01,564 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 31 Mar 2025 19:15:01 GMT'
+    'ETag': '"0x8DD708855E7A6C1"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '454d010a-f01e-001c-2c71-a2fbdd000000'
+    'x-ms-client-request-id': '71b2ec62-0e64-11f0-aace-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 31 Mar 2025 19:15:00 GMT'
+2025-03-31 19:15:01,565 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/8adb17b5-8c08-45ce-a3e4-724d1f9d7f02/8adb17b5-8c08-45ce-a3e4-724d1f9d7f02.log'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '33770'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '71b467c2-0e64-11f0-aace-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-03-31 19:15:01,581 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Mon, 31 Mar 2025 19:15:01 GMT'
+    'ETag': '"0x8DD708855EA1507"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '454d011a-f01e-001c-3b71-a2fbdd000000'
+    'x-ms-client-request-id': '71b467c2-0e64-11f0-aace-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Mon, 31 Mar 2025 19:15:00 GMT'
+2025-03-31 19:15:01,582 - INFO - 152.59.199.203 - - [31/Mar/2025 19:15:01] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
+2025-03-31 19:59:46,538 - INFO - 205.210.31.134 - - [31/Mar/2025 19:59:46] "[33mGET / HTTP/1.1[0m" 404 -
+2025-03-31 20:53:57,429 - ERROR - 147.185.133.70 - - [31/Mar/2025 20:53:57] code 400, message Bad request version ('À\x13À')
+2025-03-31 20:53:57,429 - INFO - 147.185.133.70 - - [31/Mar/2025 20:53:57] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03á\x93>\x9aÇÆ\x82¯LKdX=\x16\x14{ptÕ~a\x94\x12%?·>¶\x93\x8f\x89½ C\x19ùs®Ñ\x9dqKÄ@\x02 YPàìM©È}ë\x01B=+)\x8a@¯ü\x89\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-03-31 20:53:57,768 - ERROR - 147.185.133.70 - - [31/Mar/2025 20:53:57] code 400, message Bad request version ('À(À$À\x14À')
+2025-03-31 20:53:57,768 - INFO - 147.185.133.70 - - [31/Mar/2025 20:53:57] "[31m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x030\x86Þ=\x8cA²ÝU¤\x89u*À!(íL2\x1cW¶\x87¸\x10\x80l ´î\x11v\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À[0m" 400 -
+2025-03-31 23:23:54,297 - INFO - 20.121.123.10 - - [31/Mar/2025 23:23:54] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-31 23:37:51,203 - INFO - 205.210.31.107 - - [31/Mar/2025 23:37:51] "[33mGET / HTTP/1.0[0m" 404 -
+2025-03-31 23:57:10,150 - INFO - 61.216.35.127 - - [31/Mar/2025 23:57:10] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-01 00:01:13,748 - INFO - 198.235.24.29 - - [01/Apr/2025 00:01:13] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-01 01:27:14,291 - INFO - 125.229.232.116 - - [01/Apr/2025 01:27:14] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-01 02:39:59,664 - INFO - 114.33.126.178 - - [01/Apr/2025 02:39:59] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-01 04:10:34,289 - INFO - 205.210.31.100 - - [01/Apr/2025 04:10:34] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-01 06:54:06,676 - ERROR - 96.126.104.20 - - [01/Apr/2025 06:54:06] code 400, message Bad request version ('À\x13À')
+2025-04-01 06:54:06,676 - INFO - 96.126.104.20 - - [01/Apr/2025 06:54:06] "[31m[1m\x16\x03\x01\x00ò\x01\x00\x00î\x03\x03c£fª\x067:\x00o\x96î\x9c\x95ç\x1eÂ¾hY\x19F\x0dM<È­©ØÒó\x89Ó 6ÄUIcÙÐ])Ú\x89ÀÃ\x97©Tæ¸5\x07ÏÇZ\x9c\x14U¾X±æ&à\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-04-01 06:54:06,819 - INFO - 96.126.104.20 - - [01/Apr/2025 06:54:06] "[33mGET /signin HTTP/1.1[0m" 404 -
+2025-04-01 07:42:00,569 - INFO - 210.209.220.13 - - [01/Apr/2025 07:42:00] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-01 08:18:32,355 - INFO - 220.135.213.213 - - [01/Apr/2025 08:18:32] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-01 10:00:43,766 - INFO - 74.82.47.5 - - [01/Apr/2025 10:00:43] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-01 10:01:00,224 - INFO - 74.82.47.5 - - [01/Apr/2025 10:01:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-01 11:46:46,882 - INFO - 20.163.16.228 - - [01/Apr/2025 11:46:46] "[33mGET /v2/ HTTP/1.1[0m" 404 -
+2025-04-01 12:23:03,917 - INFO - 157.245.113.193 - - [01/Apr/2025 12:23:03] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-01 12:23:04,080 - INFO - 157.245.113.193 - - [01/Apr/2025 12:23:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-01 12:50:46,547 - INFO - 206.168.34.207 - - [01/Apr/2025 12:50:46] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-01 12:50:57,129 - INFO - 206.168.34.207 - - [01/Apr/2025 12:50:57] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-01 12:51:00,109 - ERROR - 206.168.34.207 - - [01/Apr/2025 12:51:00] code 505, message Invalid HTTP version (2.0)
+2025-04-01 12:51:00,109 - INFO - 206.168.34.207 - - [01/Apr/2025 12:51:00] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+2025-04-01 12:51:15,815 - INFO - 206.168.34.207 - - [01/Apr/2025 12:51:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-01 12:51:19,295 - ERROR - 206.168.34.207 - - [01/Apr/2025 12:51:19] code 400, message Bad request version ('À\x14À')
+2025-04-01 12:51:19,295 - INFO - 206.168.34.207 - - [01/Apr/2025 12:51:19] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03A\x9b,\x88Ç»@\x90õmeK~Ä?ÄF¼ÜäíLè\x18\x08\x98\x99RÅ\x01\x85¹ 3\x14CJ3?U\x86Åeà4\x88û\x90\x0b¢Zñ|\x85\x9f\x80ÚÚAÇ\x94C®\x9dû\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+2025-04-01 12:54:30,663 - INFO - 93.148.25.245 - - [01/Apr/2025 12:54:30] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-01 13:49:32,056 - INFO - 167.94.138.113 - - [01/Apr/2025 13:49:32] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-01 13:49:44,689 - INFO - 167.94.138.113 - - [01/Apr/2025 13:49:44] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-01 13:49:48,955 - ERROR - 167.94.138.113 - - [01/Apr/2025 13:49:48] code 505, message Invalid HTTP version (2.0)
+2025-04-01 13:49:48,955 - INFO - 167.94.138.113 - - [01/Apr/2025 13:49:48] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+2025-04-01 13:50:07,080 - INFO - 167.94.138.113 - - [01/Apr/2025 13:50:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-01 13:50:09,679 - ERROR - 167.94.138.113 - - [01/Apr/2025 13:50:09] code 400, message Bad request version ('À\x14À')
+2025-04-01 13:50:09,679 - INFO - 167.94.138.113 - - [01/Apr/2025 13:50:09] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03ÏÁ±èF\x02ÔMÐp\x8a¯\x1bh½"ãñ\x8bý\x1b$ðâ\x99·\x85ª\x12ì\x88Ú 7L\x0fìÚ7ÿèU§NÁ²³/WÕ\x04'Q3·\x18ßï{8²\x8eT5'\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+2025-04-01 14:51:14,259 - ERROR - 91.238.181.93 - - [01/Apr/2025 14:51:14] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2025-04-01 14:51:14,259 - INFO - 91.238.181.93 - - [01/Apr/2025 14:51:14] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
+2025-04-01 16:00:33,760 - INFO - Starting AntiFold with task ID: c9a79ab3-8aa3-42c0-b6a6-fcd15d5aa56e
+2025-04-01 16:00:33,762 - INFO - Executing AntiFold command:
+
+    source ~/miniconda3/etc/profile.d/conda.sh &&
+    conda activate antifold_cpu &&
+    python3 /home/texsols/BioTasks/tasks/AntiFold/antifold/main.py         --num_seq_per_target 10         --sampling_temp 0.2         --regions "CDR1,CDR2,CDR3"         --pdb_file "/home/texsols/BioTasks/uploads/c9a79ab3-8aa3-42c0-b6a6-fcd15d5aa56e_8ee8_imgt.pdb"         --heavy_chain "C"         --light_chain "D"         > "/home/texsols/BioTasks/outputs/antifold_output/c9a79ab3-8aa3-42c0-b6a6-fcd15d5aa56e/c9a79ab3-8aa3-42c0-b6a6-fcd15d5aa56e.log" 2>&1
+    
+2025-04-01 16:01:16,228 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/c9a79ab3-8aa3-42c0-b6a6-fcd15d5aa56e/c9a79ab3-8aa3-42c0-b6a6-fcd15d5aa56e.log'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '2744'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '8ae08aa6-0f12-11f0-ad3f-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-01 16:01:16,263 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 01 Apr 2025 16:01:16 GMT'
+    'ETag': '"0x8DD71366F19534C"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '44572f68-401e-006b-4d1f-a32e49000000'
+    'x-ms-client-request-id': '8ae08aa6-0f12-11f0-ad3f-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 01 Apr 2025 16:01:15 GMT'
+2025-04-01 16:01:16,266 - INFO - 152.59.197.58 - - [01/Apr/2025 16:01:16] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+2025-04-01 16:01:18,749 - INFO - 54.86.50.139 - - [01/Apr/2025 16:01:18] "GET /v1/api/tasks/ HTTP/1.1" 200 -
+2025-04-01 16:01:37,882 - ERROR - No PDB file uploaded
+2025-04-01 16:01:37,882 - INFO - 54.86.50.139 - - [01/Apr/2025 16:01:37] "[31m[1mPOST /v1/api/proteinmpnn/ddg HTTP/1.1[0m" 400 -
+2025-04-01 16:01:44,787 - ERROR - PDB file and Chains to Design are required.
+2025-04-01 16:01:44,788 - INFO - 54.86.50.139 - - [01/Apr/2025 16:01:44] "[31m[1mPOST /v1/api/ligandmpnn/design?pdb_File&chains_to_desgin&temperature&number_of_batches HTTP/1.1[0m" 400 -
+2025-04-01 16:02:26,334 - INFO - Starting ProteinMPNN with task ID: e7e9dfbc-b565-44ae-b44b-1b822fd236b1
+2025-04-01 16:02:26,335 - INFO - Executing ProteinMPNN command:
+
+    docker run     -v /home/texsols/BioTasks/uploads:/workspace     -v /home/texsols/BioTasks/outputs/proteinmpnn_output/e7e9dfbc-b565-44ae-b44b-1b822fd236b1:/outputs     --workdir /workspace     ghcr.io/peptoneltd/proteinmpnn_ddg:1.0.0_base_cpu     python3 /app/proteinmpnn_ddg/predict.py     --pdb_path /workspace/e7e9dfbc-b565-44ae-b44b-1b822fd236b1_AF-A0A7L5GP87-F1-model_v4.pdb     --chains A     --outpath /outputs/e7e9dfbc-b565-44ae-b44b-1b822fd236b1_predictions.csv     > "/home/texsols/BioTasks/outputs/proteinmpnn_output/e7e9dfbc-b565-44ae-b44b-1b822fd236b1/e7e9dfbc-b565-44ae-b44b-1b822fd236b1.log" 2>&1
+    
+2025-04-01 16:02:56,200 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/e7e9dfbc-b565-44ae-b44b-1b822fd236b1/e7e9dfbc-b565-44ae-b44b-1b822fd236b1.log'
+Request method: 'PUT'
+Request headers:
+    'x-ms-blob-type': 'REDACTED'
+    'Content-Length': '0'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'c676fb7c-0f12-11f0-8c8c-00224878029e'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-01 16:02:56,248 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 01 Apr 2025 16:02:56 GMT'
+    'ETag': '"0x8DD7136AAB1C2D4"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'e3d34d59-c01e-0075-7b1f-a3c291000000'
+    'x-ms-client-request-id': 'c676fb7c-0f12-11f0-8c8c-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 01 Apr 2025 16:02:55 GMT'
+2025-04-01 16:02:56,252 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/e7e9dfbc-b565-44ae-b44b-1b822fd236b1/e7e9dfbc-b565-44ae-b44b-1b822fd236b1_predictions.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '142428'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'c67f025e-0f12-11f0-8c8c-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-01 16:02:56,266 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 01 Apr 2025 16:02:56 GMT'
+    'ETag': '"0x8DD7136AAB47EEE"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'e3d34d75-c01e-0075-141f-a3c291000000'
+    'x-ms-client-request-id': 'c67f025e-0f12-11f0-8c8c-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 01 Apr 2025 16:02:55 GMT'
+2025-04-01 16:02:56,267 - INFO - 54.86.50.139 - - [01/Apr/2025 16:02:56] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
+2025-04-01 16:04:47,436 - INFO - Starting ProteinMPNN with task ID: 6157770f-5a6f-4f3d-9441-d7085f132f77
+2025-04-01 16:04:47,436 - INFO - Executing ProteinMPNN command:
+
+    docker run     -v /home/texsols/BioTasks/uploads:/workspace     -v /home/texsols/BioTasks/outputs/proteinmpnn_output/6157770f-5a6f-4f3d-9441-d7085f132f77:/outputs     --workdir /workspace     ghcr.io/peptoneltd/proteinmpnn_ddg:1.0.0_base_cpu     python3 /app/proteinmpnn_ddg/predict.py     --pdb_path /workspace/6157770f-5a6f-4f3d-9441-d7085f132f77_AF-A0A7L5GP87-F1-model_v4.pdb     --chains A     --outpath /outputs/6157770f-5a6f-4f3d-9441-d7085f132f77_predictions.csv     > "/home/texsols/BioTasks/outputs/proteinmpnn_output/6157770f-5a6f-4f3d-9441-d7085f132f77/6157770f-5a6f-4f3d-9441-d7085f132f77.log" 2>&1
+    
+2025-04-01 16:05:04,988 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/6157770f-5a6f-4f3d-9441-d7085f132f77/6157770f-5a6f-4f3d-9441-d7085f132f77_predictions.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '142428'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '133a7ff6-0f13-11f0-adca-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-01 16:05:05,040 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 01 Apr 2025 16:05:05 GMT'
+    'ETag': '"0x8DD7136F77593E3"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '4d36d1a4-501e-0048-781f-a3b48a000000'
+    'x-ms-client-request-id': '133a7ff6-0f13-11f0-adca-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 01 Apr 2025 16:05:04 GMT'
+2025-04-01 16:05:05,044 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/6157770f-5a6f-4f3d-9441-d7085f132f77/6157770f-5a6f-4f3d-9441-d7085f132f77.log'
+Request method: 'PUT'
+Request headers:
+    'x-ms-blob-type': 'REDACTED'
+    'Content-Length': '0'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '134302d4-0f13-11f0-adca-00224878029e'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-01 16:05:05,054 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 01 Apr 2025 16:05:05 GMT'
+    'ETag': '"0x8DD7136F778022C"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '4d36d1c7-501e-0048-1a1f-a3b48a000000'
+    'x-ms-client-request-id': '134302d4-0f13-11f0-adca-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 01 Apr 2025 16:05:04 GMT'
+2025-04-01 16:05:05,057 - INFO - 54.86.50.139 - - [01/Apr/2025 16:05:05] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
