@@ -5,7 +5,7 @@ import uuid
 from backend.database.azure_upload import upload_task_outputs  # Azure upload function
 
 # Paths and Constants
-ANTIFOLD_SCRIPT = "/home/texsols/BioTasks/antifold/run_antifold.py"  # Path to AntiFold script
+ANTIFOLD_SCRIPT = "/home/texsols/BioTasks/tasks/AntiFold/antifold/main.py"  # Path to AntiFold script
 OUTPUT_FOLDER = "/home/texsols/BioTasks/outputs/antifold_output"
 UPLOAD_FOLDER = "/home/texsols/BioTasks/uploads"
 
