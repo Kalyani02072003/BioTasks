@@ -1,0 +1,6 @@
+[2025-04-01 18:09:17,265] Running inverse folding on PDB/CIFs ...
+[2025-04-01 18:09:19,215] Loaded model to cpu.
+[2025-04-01 18:09:19,217] Reading in (1) PDBs from DataFrame
+[2025-04-01 18:09:19,310] Predicting batch 1/1: PDBs 1-1 out of 1 total
+[2025-04-01 18:09:24,877] Saving 1 CSVs to outputs/test_antifold
+[2025-04-01 18:09:24,882] Writing 6y1l_imgt_HL per-residue log probs CSV to outputs/test_antifold/6y1l_imgt_HL.csv
