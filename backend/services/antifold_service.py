@@ -1,16 +1,16 @@
 import os
 import subprocess
 import logging
-import uuid
 import glob
 import shutil
 from backend.database.azure_upload import upload_task_outputs  # Azure upload function
 
 # Paths and Constants
-ANTIFOLD_SCRIPT = os.path.abspath("/home/texsols/BioTasks/tasks/AntiFold/antifold/main.py")
-OUTPUT_FOLDER = os.path.abspath("/home/texsols/BioTasks/outputs/antifold_output")  # Main output directory
-UPLOAD_FOLDER = os.path.abspath("/home/texsols/BioTasks/uploads")
+ANTIFOLD_SCRIPT = "/home/texsols/BioTasks/tasks/AntiFold/antifold/main.py"
+OUTPUT_FOLDER = "/home/texsols/BioTasks/outputs/antifold_output"  # Main output directory
+UPLOAD_FOLDER = "/home/texsols/BioTasks/uploads"
 CONDA_ENV_NAME = "antifold_cpu"
+ANTIFOLD_WORKING_DIR = "/home/texsols/BioTasks/tasks/AntiFold"
 
 # Ensure output directory exists
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
@@ -37,12 +37,16 @@ def move_antifold_outputs(task_id):
             shutil.move(file_path, correct_path)
             logging.info(f"Moved {file_path} → {correct_path}")
 
+
 def run_antifold(params):
     """Runs AntiFold, moves misplaced output files, and uploads them to Azure."""
+    
     task_id = params["task_id"]
-    task_output_folder = os.path.join(OUTPUT_FOLDER, task_id)  # Task-specific folder path
+    task_output_folder = os.path.join(OUTPUT_FOLDER, task_id)
     os.makedirs(task_output_folder, exist_ok=True)  # Ensure output folder exists
+
     output_log = os.path.join(task_output_folder, f"{task_id}.log")
+    json_path = os.path.join(task_output_folder, f"{task_id}.json")
 
     # Validate chain IDs
     valid_chains = extract_chain_ids(params["pdb_file"])
@@ -53,22 +57,31 @@ def run_antifold(params):
             "message": f"Your PDB file contains: {', '.join(valid_chains)}. Update your request with correct chains."
         }
 
-    # Construct command
+    # Prepare the JSON config file
+    json_config = {
+        "num_seq_per_target": params.get("num_seq_per_target", 10),
+        "sampling_temp": params.get("sampling_temp", 0.2),
+        "regions": params.get("regions", ["CDR1", "CDR2", "CDR3"]),
+        "pdb_file": params["pdb_file"],
+        "heavy_chain": params["heavy_chain"],
+        "light_chain": params["light_chain"],
+        "log_filename": output_log,
+        "results_filename": os.path.join(task_output_folder, f"{task_id}.csv")
+    }
+
+    # Save the config JSON file
+    with open(json_path, "w") as f:
+        json.dump(json_config, f, indent=4)
+
+    # Construct the execution command
     command = f"""
     source ~/miniconda3/etc/profile.d/conda.sh &&
     conda activate {CONDA_ENV_NAME} &&
-    python3 {ANTIFOLD_SCRIPT} \
-        --num_seq_per_target {params.get("num_seq_per_target", 10)} \
-        --sampling_temp {params.get("sampling_temp", 0.2)} \
-        --regions "{','.join(params.get('regions', ['CDR1', 'CDR2', 'CDR3']))}" \
-        --pdb_file "{params['pdb_file']}" \
-        --heavy_chain "{params['heavy_chain']}" \
-        --light_chain "{params['light_chain']}" \
-        > "{output_log}" 2>&1
+    python3 {ANTIFOLD_SCRIPT} --config_file {json_path} > "{output_log}" 2>&1
     """
 
     logging.info(f"Executing AntiFold command:\n{command}")
-    subprocess.run(command, shell=True, executable="/bin/bash")
+    subprocess.run(command, shell=True, executable="/bin/bash", cwd=ANTIFOLD_WORKING_DIR)
 
     move_antifold_outputs(task_id)  # Move the generated outputs to task-specific folder
 
