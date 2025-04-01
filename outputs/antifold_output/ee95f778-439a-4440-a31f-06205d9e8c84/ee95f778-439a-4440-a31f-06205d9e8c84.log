@@ -1,8 +1,0 @@
-/home/texsols/miniconda3/envs/antifold_cpu/lib/python3.9/site-packages/networkx/utils/backends.py:135: RuntimeWarning: networkx backend defined more than once: nx-loopback
-  backends.update(_get_backends("networkx.backends"))
-[2025-04-01 18:36:55,538] Running inverse folding on PDB/CIFs ...
-[2025-04-01 18:36:57,573] Loaded model to cpu.
-[2025-04-01 18:36:57,575] Reading in (1) PDBs from DataFrame
-[2025-04-01 18:36:57,667] Predicting batch 1/1: PDBs 1-1 out of 1 total
-[2025-04-01 18:37:03,452] Saving 1 CSVs to antifold_output
-[2025-04-01 18:37:03,457] Writing ee95f778-439a-4440-a31f-06205d9e8c84_8ee8_imgt_CD per-residue log probs CSV to antifold_output/ee95f778-439a-4440-a31f-06205d9e8c84_8ee8_imgt_CD.csv
