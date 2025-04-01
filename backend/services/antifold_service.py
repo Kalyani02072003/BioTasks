@@ -8,7 +8,7 @@ from backend.database.azure_upload import upload_task_outputs  # Azure upload fu
 
 # Paths and Constants
 ANTIFOLD_SCRIPT = os.path.abspath("/home/texsols/BioTasks/tasks/AntiFold/antifold/main.py")
-OUTPUT_FOLDER = os.path.abspath("/home/texsols/BioTasks/outputs/antifold_output")
+OUTPUT_FOLDER = os.path.abspath("/home/texsols/BioTasks/outputs/antifold_output")  # Main output directory
 UPLOAD_FOLDER = os.path.abspath("/home/texsols/BioTasks/uploads")
 CONDA_ENV_NAME = "antifold_cpu"
 
@@ -27,7 +27,8 @@ def extract_chain_ids(pdb_file):
 
 def move_antifold_outputs(task_id):
     """Moves AntiFold output files (CSV, FASTA, LOG) into the correct task folder."""
-    task_output_folder = os.path.join(OUTPUT_FOLDER, task_id)
+    task_output_folder = os.path.join(OUTPUT_FOLDER, task_id)  # Create task-specific folder
+    os.makedirs(task_output_folder, exist_ok=True)  # Ensure the task folder exists
     misplaced_files = glob.glob(os.path.join(OUTPUT_FOLDER, "*.*"))  # Find all misplaced files
 
     for file_path in misplaced_files:
@@ -39,7 +40,7 @@ def move_antifold_outputs(task_id):
 def run_antifold(params):
     """Runs AntiFold, moves misplaced output files, and uploads them to Azure."""
     task_id = params["task_id"]
-    task_output_folder = os.path.join(OUTPUT_FOLDER, task_id)
+    task_output_folder = os.path.join(OUTPUT_FOLDER, task_id)  # Task-specific folder path
     os.makedirs(task_output_folder, exist_ok=True)  # Ensure output folder exists
     output_log = os.path.join(task_output_folder, f"{task_id}.log")
 
@@ -69,7 +70,7 @@ def run_antifold(params):
     logging.info(f"Executing AntiFold command:\n{command}")
     subprocess.run(command, shell=True, executable="/bin/bash")
 
-    move_antifold_outputs(task_id)
+    move_antifold_outputs(task_id)  # Move the generated outputs to task-specific folder
 
     azure_result = upload_task_outputs(task_id, task_output_folder)
 
