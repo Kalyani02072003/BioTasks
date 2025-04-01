@@ -850,3 +850,41 @@ Response headers:
     'Date': 'Tue, 01 Apr 2025 17:38:50 GMT'
 2025-04-01 17:38:51,269 - INFO - 152.59.197.58 - - [01/Apr/2025 17:38:51] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
 2025-04-01 17:42:21,386 - INFO - 114.35.152.38 - - [01/Apr/2025 17:42:21] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-01 17:45:15,321 - INFO -  * Detected change in '/home/texsols/BioTasks/backend/services/antifold_service.py', reloading
+2025-04-01 17:45:15,420 - INFO -  * Restarting with stat
+2025-04-01 17:45:16,004 - WARNING -  * Debugger is active!
+2025-04-01 17:45:16,004 - INFO -  * Debugger PIN: 468-140-023
+2025-04-01 17:45:52,361 - INFO - Starting AntiFold with task ID: caf3db21-95f7-4d85-b813-fc8a6c04447e
+2025-04-01 17:45:52,363 - INFO - Executing AntiFold command:
+
+    source ~/miniconda3/etc/profile.d/conda.sh &&
+    conda activate antifold_cpu &&
+    python3 /home/texsols/BioTasks/tasks/AntiFold/antifold/main.py         --num_seq_per_target 10         --sampling_temp 0.2         --regions "CDR1,CDR2,CDR3"         --pdb_file "/home/texsols/BioTasks/uploads/caf3db21-95f7-4d85-b813-fc8a6c04447e_8ee8_imgt.pdb"         --heavy_chain "C"         --light_chain "D"         > "/home/texsols/BioTasks/outputs/antifold_output/caf3db21-95f7-4d85-b813-fc8a6c04447e/caf3db21-95f7-4d85-b813-fc8a6c04447e.log" 2>&1
+    
+2025-04-01 17:46:05,950 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/caf3db21-95f7-4d85-b813-fc8a6c04447e/caf3db21-95f7-4d85-b813-fc8a6c04447e.log'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '2744'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '2fd7da10-0f21-11f0-b402-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-01 17:46:05,981 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 01 Apr 2025 17:46:05 GMT'
+    'ETag': '"0x8DD7145140FF0AC"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f816bf4b-801e-0016-022d-a35f6a000000'
+    'x-ms-client-request-id': '2fd7da10-0f21-11f0-b402-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 01 Apr 2025 17:46:05 GMT'
+2025-04-01 17:46:05,982 - INFO - 152.59.197.58 - - [01/Apr/2025 17:46:05] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
