@@ -62,3 +62,4 @@ def move_antifold_outputs(task_id):
             correct_path = os.path.join(task_output_folder, os.path.basename(file_path))
             shutil.move(file_path, correct_path)
             logging.info(f"Moved {file_path} → {correct_path}")
+
