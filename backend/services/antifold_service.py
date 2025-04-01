@@ -25,8 +25,10 @@ def extract_chain_ids(pdb_file):
 
 import glob  # Add this import to find the misplaced FASTA file
 
+import glob  # Import to find misplaced FASTA files
+
 def run_antifold(params):
-    """Runs AntiFold, moves the output files to the correct folder, and uploads outputs to Azure."""
+    """Runs AntiFold, moves misplaced output files, and uploads them to Azure."""
     task_id = params["task_id"]
     task_output_folder = os.path.join(OUTPUT_FOLDER, task_id)
     os.makedirs(task_output_folder, exist_ok=True)  # Ensure output folder exists
@@ -58,13 +60,18 @@ def run_antifold(params):
     logging.info(f"Executing AntiFold command:\n{command}")
     subprocess.run(command, shell=True, executable="/bin/bash")
 
-    # Move the FASTA file to the task-specific folder
-    misplaced_fasta = glob.glob(os.path.join(OUTPUT_FOLDER, "*.fasta"))  # Find misplaced FASTA file
+    # Move misplaced FASTA file to the correct task folder
+    misplaced_fasta = glob.glob(os.path.join(OUTPUT_FOLDER, "*.fasta"))  # Find FASTA files in the main directory
     for fasta_file in misplaced_fasta:
-        if task_id in fasta_file:  # Ensure it belongs to this task
-            correct_fasta_path = os.path.join(task_output_folder, os.path.basename(fasta_file))
-            os.rename(fasta_file, correct_fasta_path)  # Move it
-            logging.info(f"Moved {fasta_file} to {correct_fasta_path}")
+        correct_fasta_path = os.path.join(task_output_folder, os.path.basename(fasta_file))
+        os.rename(fasta_file, correct_fasta_path)  # Move FASTA file
+        logging.info(f"Moved {fasta_file} to {correct_fasta_path}")
+
+    # Move log file to task folder (if not already there)
+    if os.path.exists(output_log):
+        correct_log_path = os.path.join(task_output_folder, f"{task_id}.log")
+        os.rename(output_log, correct_log_path)
+        logging.info(f"Moved log file to {correct_log_path}")
 
     # Upload task outputs to Azure
     azure_result = upload_task_outputs(task_id, task_output_folder)
