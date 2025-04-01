@@ -1,0 +1,19 @@
+[2025-04-01 18:23:07,526] Running inverse folding on PDB/CIFs ...
+[2025-04-01 18:23:07,527] Will sample 10 sequences from 1 PDBs at temperature(s) [0.2] and regions: ['CDR1,CDR2,CDR3']
+[2025-04-01 18:23:09,572] Loaded model to cpu.
+[2025-04-01 18:23:09,574] Reading in (1) PDBs from DataFrame
+[2025-04-01 18:23:09,663] Predicting batch 1/1: PDBs 1-1 out of 1 total
+[2025-04-01 18:23:15,403] Saving 1 CSVs to antifold_output
+[2025-04-01 18:23:15,408] Writing b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD per-residue log probs CSV to antifold_output/b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD.csv
+[2025-04-01 18:23:15,429] b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD: , score=0.9257, global_score=0.9257, regions=['CDR1,CDR2,CDR3'], model_name=AntiFold, seed=42
+[2025-04-01 18:23:15,442] b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD__1: T=0.20, sample=1, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:23:15,455] b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD__2: T=0.20, sample=2, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:23:15,468] b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD__3: T=0.20, sample=3, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:23:15,480] b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD__4: T=0.20, sample=4, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:23:15,493] b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD__5: T=0.20, sample=5, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:23:15,505] b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD__6: T=0.20, sample=6, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:23:15,518] b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD__7: T=0.20, sample=7, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:23:15,531] b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD__8: T=0.20, sample=8, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:23:15,543] b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD__9: T=0.20, sample=9, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:23:15,556] b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD__10: T=0.20, sample=10, score=nan, global_score=0.9257, seq_recovery=1.0000, mutations=0
+[2025-04-01 18:23:15,560] Saving to antifold_output/b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt_CD.fasta
