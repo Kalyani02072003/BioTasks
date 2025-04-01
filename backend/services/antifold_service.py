@@ -39,7 +39,7 @@ def run_antifold(params):
             "message": f"Your PDB file contains: {', '.join(valid_chains)}. Update your request with correct chains."
         }
 
-    # Construct command
+    # Construct the command for AntiFold, adjusting output paths to the task folder
     command = f"""
     source ~/miniconda3/etc/profile.d/conda.sh &&
     conda activate {CONDA_ENV_NAME} &&
@@ -56,6 +56,19 @@ def run_antifold(params):
     logging.info(f"Executing AntiFold command:\n{command}")
     subprocess.run(command, shell=True, executable="/bin/bash")
 
+    # Now that AntiFold is finished, move generated files into task-specific folder
+    # Move CSV, FASTA, and other output files to the task folder
+    output_files = [
+        f"{task_output_folder}/{task_id}_8ee8_imgt_CD.csv",
+        f"{task_output_folder}/{task_id}_8ee8_imgt_CD.fasta"
+    ]
+    
+    # Assuming AntiFold saves these files in a fixed location, adjust paths as needed:
+    for file_path in output_files:
+        if os.path.exists(file_path):
+            os.rename(file_path, os.path.join(task_output_folder, os.path.basename(file_path)))
+            logging.info(f"Moved file: {file_path} to {task_output_folder}")
+
     # Upload task outputs to Azure
     azure_result = upload_task_outputs(task_id, task_output_folder)
 
@@ -65,5 +78,3 @@ def run_antifold(params):
         "azure_files": azure_result.get("uploaded_files", []),
         "output_log": azure_result.get("uploaded_files", [])[0] if azure_result.get("uploaded_files") else None
     }
-
-
