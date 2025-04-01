@@ -1003,3 +1003,114 @@ Response headers:
 2025-04-01 18:20:32,848 - INFO - 162.216.150.53 - - [01/Apr/2025 18:20:32] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Îòñ\x96C\x9b\x87\x98F\\óã\x8eÂ\x80Eªêj\x1eÌ\x17\x98&Ö<ÀJI\x9a\x85ã @7gzÜ\x95c\x85Hw&+:Ýß¶u Ì\x9eæ3½\x8a¤í\x8e\x88í\x13Kµ\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
 2025-04-01 18:20:33,006 - ERROR - 162.216.150.53 - - [01/Apr/2025 18:20:33] code 400, message Bad request version ('À(À$À\x14À')
 2025-04-01 18:20:33,007 - INFO - 162.216.150.53 - - [01/Apr/2025 18:20:33] "[31m[1m\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03:\x1aI\x16m«\x84\x17\x07[ð:\x06C~Þ^Õñ\x11t\x89G;\x16Fh-\x05\x15\x1eÉ\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\x09À(À$À\x14À[0m" 400 -
+2025-04-01 18:22:36,152 - INFO -  * Detected change in '/home/texsols/BioTasks/backend/services/antifold_service.py', reloading
+2025-04-01 18:22:36,224 - INFO -  * Restarting with stat
+2025-04-01 18:22:36,769 - WARNING -  * Debugger is active!
+2025-04-01 18:22:36,769 - INFO -  * Debugger PIN: 468-140-023
+2025-04-01 18:23:02,902 - INFO - Starting AntiFold with task ID: b92b735f-2190-4092-a889-18bf4535ad02
+2025-04-01 18:23:02,903 - INFO - Executing AntiFold command:
+
+    source ~/miniconda3/etc/profile.d/conda.sh &&
+    conda activate antifold_cpu &&
+    python3 /home/texsols/BioTasks/tasks/AntiFold/antifold/main.py         --num_seq_per_target 10         --sampling_temp 0.2         --regions "CDR1,CDR2,CDR3"         --pdb_file "/home/texsols/BioTasks/uploads/b92b735f-2190-4092-a889-18bf4535ad02_8ee8_imgt.pdb"         --heavy_chain "C"         --light_chain "D"         > "/home/texsols/BioTasks/outputs/antifold_output/b92b735f-2190-4092-a889-18bf4535ad02/b92b735f-2190-4092-a889-18bf4535ad02.log" 2>&1
+    
+2025-04-01 18:23:16,327 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/b92b735f-2190-4092-a889-18bf4535ad02/b92b735f-2190-4092-a889-18bf4535ad02.log'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '2744'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '614074ea-0f26-11f0-ad19-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-01 18:23:16,368 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 01 Apr 2025 18:23:16 GMT'
+    'ETag': '"0x8DD714A4579EC29"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '965dea52-a01e-0001-3f33-a3f661000000'
+    'x-ms-client-request-id': '614074ea-0f26-11f0-ad19-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 01 Apr 2025 18:23:15 GMT'
+2025-04-01 18:23:16,369 - INFO - 152.59.197.58 - - [01/Apr/2025 18:23:16] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+2025-04-01 18:27:58,682 - INFO - Starting ProteinMPNN with task ID: c1ee717d-aa2d-41dc-a22e-7915c9e21b0d
+2025-04-01 18:27:58,682 - INFO - Executing ProteinMPNN command:
+
+    docker run     -v /home/texsols/BioTasks/uploads:/workspace     -v /home/texsols/BioTasks/outputs/proteinmpnn_output/c1ee717d-aa2d-41dc-a22e-7915c9e21b0d:/outputs     --workdir /workspace     ghcr.io/peptoneltd/proteinmpnn_ddg:1.0.0_base_cpu     python3 /app/proteinmpnn_ddg/predict.py     --pdb_path /workspace/c1ee717d-aa2d-41dc-a22e-7915c9e21b0d_AF-A0A7L5GP87-F1-model_v4.pdb     --chains A     --outpath /outputs/c1ee717d-aa2d-41dc-a22e-7915c9e21b0d_predictions.csv     > "/home/texsols/BioTasks/outputs/proteinmpnn_output/c1ee717d-aa2d-41dc-a22e-7915c9e21b0d/c1ee717d-aa2d-41dc-a22e-7915c9e21b0d.log" 2>&1
+    
+2025-04-01 18:28:13,760 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/c1ee717d-aa2d-41dc-a22e-7915c9e21b0d/c1ee717d-aa2d-41dc-a22e-7915c9e21b0d_predictions.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '142428'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '12891392-0f27-11f0-9c8b-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-01 18:28:13,793 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 01 Apr 2025 18:28:13 GMT'
+    'ETag': '"0x8DD714AF6C191D9"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'd6e8d842-c01e-0038-2233-a30d7d000000'
+    'x-ms-client-request-id': '12891392-0f27-11f0-9c8b-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 01 Apr 2025 18:28:13 GMT'
+2025-04-01 18:28:13,795 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/c1ee717d-aa2d-41dc-a22e-7915c9e21b0d/c1ee717d-aa2d-41dc-a22e-7915c9e21b0d.log'
+Request method: 'PUT'
+Request headers:
+    'x-ms-blob-type': 'REDACTED'
+    'Content-Length': '0'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '128e8296-0f27-11f0-9c8b-00224878029e'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-01 18:28:13,805 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 01 Apr 2025 18:28:13 GMT'
+    'ETag': '"0x8DD714AF6C33DAF"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'd6e8d866-c01e-0038-4533-a30d7d000000'
+    'x-ms-client-request-id': '128e8296-0f27-11f0-9c8b-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 01 Apr 2025 18:28:13 GMT'
+2025-04-01 18:28:13,806 - INFO - 152.59.197.58 - - [01/Apr/2025 18:28:13] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
+2025-04-01 18:32:14,165 - INFO -  * Detected change in '/home/texsols/BioTasks/backend/services/antifold_service.py', reloading
+2025-04-01 18:32:14,239 - INFO -  * Restarting with stat
+2025-04-01 18:32:14,794 - WARNING -  * Debugger is active!
+2025-04-01 18:32:14,794 - INFO -  * Debugger PIN: 468-140-023
+2025-04-01 18:32:43,787 - INFO - Starting AntiFold with task ID: d06a89fc-183a-411b-99b9-f269050d0029
+2025-04-01 18:32:43,789 - ERROR - Error in predict: name 'json' is not defined
+Traceback (most recent call last):
+  File "/home/texsols/BioTasks/backend/routes/antifold.py", line 55, in predict
+    result = run_antifold(params)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/home/texsols/BioTasks/backend/services/antifold_service.py", line 74, in run_antifold
+    json.dump(json_config, f, indent=4)
+    ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'
+2025-04-01 18:32:43,792 - INFO - 152.59.197.58 - - [01/Apr/2025 18:32:43] "[35m[1mPOST /v1/api/antifold/predict HTTP/1.1[0m" 500 -
