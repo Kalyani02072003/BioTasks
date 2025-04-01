@@ -2,6 +2,8 @@ import os
 import subprocess
 import logging
 import uuid
+import glob
+import shutil
 from backend.database.azure_upload import upload_task_outputs  # Azure upload function
 
 # Paths and Constants
@@ -23,9 +25,16 @@ def extract_chain_ids(pdb_file):
     return list(chains)
 
 
-import glob  # Add this import to find the misplaced FASTA file
+def move_antifold_outputs(task_id):
+    """Moves AntiFold output files (CSV, FASTA, LOG) into the correct task folder."""
+    task_output_folder = os.path.join(OUTPUT_FOLDER, task_id)
+    misplaced_files = glob.glob(os.path.join(OUTPUT_FOLDER, "*.*"))  # Find all misplaced files
 
-import glob  # Import to find misplaced FASTA files
+    for file_path in misplaced_files:
+        if task_id in file_path:  # Ensure it's part of the current task
+            correct_path = os.path.join(task_output_folder, os.path.basename(file_path))
+            shutil.move(file_path, correct_path)
+            logging.info(f"Moved {file_path} → {correct_path}")
 
 def run_antifold(params):
     """Runs AntiFold, moves misplaced output files, and uploads them to Azure."""
@@ -60,20 +69,8 @@ def run_antifold(params):
     logging.info(f"Executing AntiFold command:\n{command}")
     subprocess.run(command, shell=True, executable="/bin/bash")
 
-    # Move misplaced FASTA file to the correct task folder
-    misplaced_fasta = glob.glob(os.path.join(OUTPUT_FOLDER, "*.fasta"))  # Find FASTA files in the main directory
-    for fasta_file in misplaced_fasta:
-        correct_fasta_path = os.path.join(task_output_folder, os.path.basename(fasta_file))
-        os.rename(fasta_file, correct_fasta_path)  # Move FASTA file
-        logging.info(f"Moved {fasta_file} to {correct_fasta_path}")
+    move_antifold_outputs(task_id)
 
-    # Move log file to task folder (if not already there)
-    if os.path.exists(output_log):
-        correct_log_path = os.path.join(task_output_folder, f"{task_id}.log")
-        os.rename(output_log, correct_log_path)
-        logging.info(f"Moved log file to {correct_log_path}")
-
-    # Upload task outputs to Azure
     azure_result = upload_task_outputs(task_id, task_output_folder)
 
     return {
