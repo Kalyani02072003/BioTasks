@@ -11,6 +11,6 @@
         "query_smiles": "COC(=O)[C@@H](O)CC(=O)Nc1nncc2ccccc12"
     },
     "ts_mode": "maximize",
-    "log_filename": "/home/texsols/BioTasks/outputs/ts_output/1c511d62-67ef-4873-806c-25dc62e9de44.log",
-    "results_filename": "/home/texsols/BioTasks/outputs/ts_output/1c511d62-67ef-4873-806c-25dc62e9de44.csv"
+    "log_filename": "/home/texsols/BioTasks/outputs/ts_output/70799d9e-8e80-4527-a116-005e05405bf4/70799d9e-8e80-4527-a116-005e05405bf4.log",
+    "results_filename": "/home/texsols/BioTasks/outputs/ts_output/70799d9e-8e80-4527-a116-005e05405bf4/70799d9e-8e80-4527-a116-005e05405bf4.csv"
 }

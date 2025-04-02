@@ -24,29 +24,20 @@ def extract_chain_ids(pdb_file):
 
 
 def run_antifold(params):
-    """Runs AntiFold, uploads outputs to Azure, and returns task details."""
+    """Runs AntiFold, sets correct --out_dir, uploads outputs to Azure, and returns task details."""
     task_id = params["task_id"]
     task_output_folder = os.path.join(OUTPUT_FOLDER, task_id)
     os.makedirs(task_output_folder, exist_ok=True)  # Ensure output folder exists
+
+    # Define log file
     output_log = os.path.join(task_output_folder, f"{task_id}.log")
 
-    # Validate chain IDs
-    valid_chains = extract_chain_ids(params["pdb_file"])
-    if params["heavy_chain"] not in valid_chains or params["light_chain"] not in valid_chains:
-        return {
-            "error": "Invalid chain ID",
-            "valid_chains": valid_chains,
-            "message": f"Your PDB file contains: {', '.join(valid_chains)}. Update your request with correct chains."
-        }
-
-    # Construct the command for AntiFold, adjusting output paths to the task folder
+    # Construct the command with --out_dir
     command = f"""
     source ~/miniconda3/etc/profile.d/conda.sh &&
     conda activate {CONDA_ENV_NAME} &&
     python3 {ANTIFOLD_SCRIPT} \
-        --num_seq_per_target {params.get("num_seq_per_target", 10)} \
-        --sampling_temp {params.get("sampling_temp", 0.2)} \
-        --regions "{','.join(params.get('regions', ['CDR1', 'CDR2', 'CDR3']))}" \
+        --out_dir "{task_output_folder}" \
         --pdb_file "{params['pdb_file']}" \
         --heavy_chain "{params['heavy_chain']}" \
         --light_chain "{params['light_chain']}" \
@@ -55,19 +46,6 @@ def run_antifold(params):
 
     logging.info(f"Executing AntiFold command:\n{command}")
     subprocess.run(command, shell=True, executable="/bin/bash")
-
-    # Now that AntiFold is finished, move generated files into task-specific folder
-    # Move CSV, FASTA, and other output files to the task folder
-    output_files = [
-        f"{task_output_folder}/{task_id}_8ee8_imgt_CD.csv",
-        f"{task_output_folder}/{task_id}_8ee8_imgt_CD.fasta"
-    ]
-    
-    # Assuming AntiFold saves these files in a fixed location, adjust paths as needed:
-    for file_path in output_files:
-        if os.path.exists(file_path):
-            os.rename(file_path, os.path.join(task_output_folder, os.path.basename(file_path)))
-            logging.info(f"Moved file: {file_path} to {task_output_folder}")
 
     # Upload task outputs to Azure
     azure_result = upload_task_outputs(task_id, task_output_folder)

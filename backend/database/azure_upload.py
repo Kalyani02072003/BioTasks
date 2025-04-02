@@ -30,6 +30,24 @@ def generate_sas_url(blob_service_client, container_name, blob_path, expiry_hour
     )
     return f"https://{blob_service_client.account_name}.blob.core.windows.net/{container_name}/{blob_path}?{sas_token}"
 
+def get_task_type(task_output_folder):
+    """
+    Extracts the task type from the folder path.
+    Example: "outputs/antifold/taskid/outputcontents" → "antifold"
+
+    Args:
+    - task_output_folder (str): Full path to the task output directory.
+
+    Returns:
+    - str: Task type extracted from the path.
+    """
+    parts = task_output_folder.split(os.sep)  # Split using OS-specific separator
+    try:
+        index = parts.index("outputs")  # Find "outputs" directory
+        return parts[index + 1]  # The next folder is the task type (e.g., "antifold")
+    except ValueError:
+        raise ValueError(f"Invalid task_output_folder structure: {task_output_folder}")
+
 def upload_task_outputs(task_id, task_output_folder):
     """
     Uploads all files in the task output folder to Azure Blob Storage and returns SAS URLs.
@@ -45,12 +63,16 @@ def upload_task_outputs(task_id, task_output_folder):
         blob_service_client = BlobServiceClient.from_connection_string(connection_string)
         container_client = blob_service_client.get_container_client(container_name)
 
+        # Determine task type dynamically
+        task_type = get_task_type(task_output_folder)
+        print(f"Detected Task Type: {task_type}")  # Debugging
+
         files = glob.glob(os.path.join(task_output_folder, "*"))
         uploaded_files = []
 
         for file_path in files:
             filename = os.path.basename(file_path)
-            blob_path = f"freewilson/{task_id}/{filename}"  
+            blob_path = f"outputs/{task_type}/{task_id}/{filename}"  # Correct folder structure
             blob_client = container_client.get_blob_client(blob_path)
 
             with open(file_path, "rb") as file:
