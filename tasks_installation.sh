@@ -10,7 +10,8 @@ ANTIFOLD_DIR="$ROOT_DIR/AntiFold"
 LIGANDMPNN_DIR="$ROOT_DIR/LigandMPNN"
 PROTEINMPNN_DDG_DIR="$ROOT_DIR/proteinmpnn_ddg"
 TS_DIR="$ROOT_DIR/ThompsonSampling"
-FREEWILSON_DIR="$ROOT_DIR/Free-Wilson"  # Free-Wilson directory
+FREEWILSON_DIR="$ROOT_DIR/Free-Wilson"
+COLABDOCK_DIR="$ROOT_DIR/ColabDock"  # ColabDock directory
 
 # Ensure ROOT_DIR exists
 mkdir -p $ROOT_DIR
@@ -33,6 +34,7 @@ cd $ROOT_DIR
 [[ ! -d "proteinmpnn_ddg" ]] && git clone https://github.com/PeptoneLtd/proteinmpnn_ddg.git
 [[ ! -d "ThompsonSampling" ]] && git clone https://github.com/PatWalters/TS.git
 [[ ! -d "Free-Wilson" ]] && git clone https://github.com/PatWalters/Free-Wilson.git
+[[ ! -d "ColabDock" ]] && git clone https://github.com/JeffSHF/ColabDock
 
 echo "Repositories cloned successfully."
 
@@ -105,8 +107,45 @@ fi
 conda activate freewilson_env
 pip install -U pip
 pip install rdkit tqdm docopt pyfancy sklearn scipy joblib
-
 echo "Free-Wilson setup complete."
+
+####### ColabDock Setup ########
+echo "=========================="
+echo "Setting up ColabDock..."
+echo "=========================="
+cd $COLABDOCK_DIR
+if ! conda info --envs | grep -q "colabdock_env"; then
+    conda create --name colabdock_env python=3.10 -y
+fi
+conda activate colabdock_env
+pip install -U pip
+pip install -r requirements.txt
+
+pip install https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.8+cuda11.cudnn805-cp38-none-manylinux2014_x86_64.whl
+
+pip install jax==0.3.8
+
+# Ensure protein folder exists
+mkdir -p "$COLABDOCK_DIR/protein"
+
+echo "ColabDock setup complete."
+
+####### Download AlphaFold2 Parameters ########
+echo "=========================="
+echo "Downloading AlphaFold2 Parameters..."
+echo "=========================="
+mkdir -p $COLABDOCK_PARAMS_DIR
+cd $COLABDOCK_PARAMS_DIR
+
+# Check if parameters are already downloaded
+if [[ ! -f "alphafold_params_2022-12-06.tar" && ! -d "params" ]]; then
+    wget https://storage.googleapis.com/alphafold/alphafold_params_2022-12-06.tar
+    tar -xvf alphafold_params_2022-12-06.tar
+    rm alphafold_params_2022-12-06.tar  # Clean up after extraction
+    echo "AlphaFold2 parameters downloaded and extracted."
+else
+    echo "AlphaFold2 parameters already exist. Skipping download."
+fi
 
 echo "=========================="
 echo "All installations completed successfully!"
