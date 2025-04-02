@@ -1300,3 +1300,288 @@ Response headers:
     'x-ms-request-server-encrypted': 'REDACTED'
     'Date': 'Tue, 01 Apr 2025 18:59:54 GMT'
 2025-04-01 18:59:55,165 - INFO - 152.59.197.58 - - [01/Apr/2025 18:59:55] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+2025-04-01 19:33:08,446 - INFO -  * Detected change in '/home/texsols/BioTasks/backend/services/antifold_service.py', reloading
+2025-04-01 19:33:08,522 - INFO -  * Restarting with stat
+2025-04-01 19:33:09,098 - WARNING -  * Debugger is active!
+2025-04-01 19:33:09,098 - INFO -  * Debugger PIN: 468-140-023
+2025-04-01 19:33:13,866 - INFO - Starting AntiFold with task ID: 322c90ea-fa16-465d-8f37-e5907a60d3ef
+2025-04-01 19:33:13,868 - INFO - Executing AntiFold command:
+
+    source ~/miniconda3/etc/profile.d/conda.sh &&
+    conda activate antifold_cpu &&
+    python3 /home/texsols/BioTasks/tasks/AntiFold/antifold/main.py         --num_seq_per_target 10         --sampling_temp 0.2         --regions "CDR1,CDR2,CDR3"         --pdb_file "/home/texsols/BioTasks/uploads/322c90ea-fa16-465d-8f37-e5907a60d3ef_8ee8_imgt.pdb"         --heavy_chain "C"         --light_chain "D"         > "/home/texsols/BioTasks/outputs/antifold_output/322c90ea-fa16-465d-8f37-e5907a60d3ef/322c90ea-fa16-465d-8f37-e5907a60d3ef.log" 2>&1
+    
+2025-04-01 19:33:27,430 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/322c90ea-fa16-465d-8f37-e5907a60d3ef/322c90ea-fa16-465d-8f37-e5907a60d3ef.log'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '2744'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '2f43bdee-0f30-11f0-87f3-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-01 19:33:27,464 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 01 Apr 2025 19:33:27 GMT'
+    'ETag': '"0x8DD7154137C5DFF"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '3f8a133e-001e-0008-2f3c-a3b3b2000000'
+    'x-ms-client-request-id': '2f43bdee-0f30-11f0-87f3-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 01 Apr 2025 19:33:27 GMT'
+2025-04-01 19:33:27,465 - INFO - 152.59.197.58 - - [01/Apr/2025 19:33:27] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+2025-04-01 19:37:09,362 - INFO - Starting Thompson Sampling with task ID: 96e722b5-87f3-402f-98fa-0e29532be5ed
+2025-04-01 19:37:09,362 - INFO - Executing Thompson Sampling command:
+
+    cd /home/texsols/BioTasks/tasks/TS &&
+    source ~/miniconda3/etc/profile.d/conda.sh && conda activate ts_env &&
+    python3 /home/texsols/BioTasks/tasks/TS/ts_main.py /home/texsols/BioTasks/outputs/ts_output/96e722b5-87f3-402f-98fa-0e29532be5ed/96e722b5-87f3-402f-98fa-0e29532be5ed.json > "/home/texsols/BioTasks/outputs/ts_output/96e722b5-87f3-402f-98fa-0e29532be5ed/96e722b5-87f3-402f-98fa-0e29532be5ed.log" 2>&1
+    
+2025-04-01 19:38:18,321 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/96e722b5-87f3-402f-98fa-0e29532be5ed/96e722b5-87f3-402f-98fa-0e29532be5ed.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '142803'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'dca61f2c-0f30-11f0-b055-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-01 19:38:18,353 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 01 Apr 2025 19:38:18 GMT'
+    'ETag': '"0x8DD7154C0DE80F9"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'cdf89867-301e-0071-4b3d-a34f96000000'
+    'x-ms-client-request-id': 'dca61f2c-0f30-11f0-b055-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 01 Apr 2025 19:38:17 GMT'
+2025-04-01 19:38:18,354 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/96e722b5-87f3-402f-98fa-0e29532be5ed/96e722b5-87f3-402f-98fa-0e29532be5ed.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '779'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'dcab49b6-0f30-11f0-b055-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-01 19:38:18,367 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 01 Apr 2025 19:38:18 GMT'
+    'ETag': '"0x8DD7154C0E07A9A"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'cdf89878-301e-0071-593d-a34f96000000'
+    'x-ms-client-request-id': 'dcab49b6-0f30-11f0-b055-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 01 Apr 2025 19:38:17 GMT'
+2025-04-01 19:38:18,368 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/96e722b5-87f3-402f-98fa-0e29532be5ed/96e722b5-87f3-402f-98fa-0e29532be5ed.log'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '33498'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'dcad5cba-0f30-11f0-b055-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-01 19:38:18,380 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Tue, 01 Apr 2025 19:38:18 GMT'
+    'ETag': '"0x8DD7154C0E24D4B"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'cdf8988c-301e-0071-6b3d-a34f96000000'
+    'x-ms-client-request-id': 'dcad5cba-0f30-11f0-b055-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 01 Apr 2025 19:38:17 GMT'
+2025-04-01 19:38:18,381 - INFO - 152.59.197.58 - - [01/Apr/2025 19:38:18] "POST /v1/api/thompson_sampling/run_ts HTTP/1.1" 200 -
+2025-04-01 21:25:29,853 - INFO - 147.185.132.240 - - [01/Apr/2025 21:25:29] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-01 23:01:45,782 - INFO - 40.74.252.169 - - [01/Apr/2025 23:01:45] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-02 00:54:12,477 - INFO - 205.210.31.159 - - [02/Apr/2025 00:54:12] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-02 02:04:38,065 - INFO - 114.35.57.211 - - [02/Apr/2025 02:04:38] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-02 02:41:55,149 - INFO - 198.235.24.228 - - [02/Apr/2025 02:41:55] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-02 03:11:17,493 - ERROR - 206.168.34.200 - - [02/Apr/2025 03:11:17] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03.\x8bF>}N0p¤\x83Ä/ô\x80TÑ\x05\x9eE¤¹¯ë9')
+2025-04-02 03:11:17,494 - INFO - 206.168.34.200 - - [02/Apr/2025 03:11:17] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03.\x8bF>}N0p¤\x83Ä/ô\x80TÑ\x05\x9eE¤¹¯ë9[0m" 400 -
+2025-04-02 03:11:24,467 - INFO - 206.168.34.200 - - [02/Apr/2025 03:11:24] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-02 03:11:34,228 - INFO - 206.168.34.200 - - [02/Apr/2025 03:11:34] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-02 03:11:34,487 - ERROR - 206.168.34.200 - - [02/Apr/2025 03:11:34] code 505, message Invalid HTTP version (2.0)
+2025-04-02 03:11:34,487 - INFO - 206.168.34.200 - - [02/Apr/2025 03:11:34] "[35m[1mPRI * HTTP/2.0[0m" 505 -
+2025-04-02 03:11:47,833 - INFO - 206.168.34.200 - - [02/Apr/2025 03:11:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-02 03:11:47,989 - ERROR - 206.168.34.200 - - [02/Apr/2025 03:11:47] code 400, message Bad request version ('À\x14À')
+2025-04-02 03:11:47,990 - INFO - 206.168.34.200 - - [02/Apr/2025 03:11:47] "[31m[1m\x16\x03\x01\x00÷\x01\x00\x00ó\x03\x03u&?Jð\x8f1Á\x12Ñ¶·\x15a\x1d\x0bpñ¤\x91ÃS­üÃÓë\x17\x8c§Y3 \x94\x15F\x8ba\\\x8a¡\\V\x7f«¯E·sÌjÖÍU½Ó\\Íðeú\x14\x88/\x88\x00&Ì¨Ì©À/À0À+À,À\x13À\x09À\x14À[0m" 400 -
+2025-04-02 03:52:18,588 - INFO - 125.228.161.71 - - [02/Apr/2025 03:52:18] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-02 03:57:42,499 - INFO - 114.35.41.121 - - [02/Apr/2025 03:57:42] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-02 06:51:06,701 - ERROR - 96.126.104.20 - - [02/Apr/2025 06:51:06] code 400, message Bad request version ('À\x13À')
+2025-04-02 06:51:06,701 - INFO - 96.126.104.20 - - [02/Apr/2025 06:51:06] "[31m[1m\x16\x03\x01\x00ò\x01\x00\x00î\x03\x03>/jÔ£Ö\x84#Î\x13xh`Ê \x7f(\x8f\x1bi_)1\x90áB3¾\x9a9\x12Â ¿è\x06Ò@q#\x82ÿuKü-[oôÈ\x05HW7\\Ý);Øf\x08\\«\x87å\x00&À+À/À,À0Ì©Ì¨À\x09À\x13À[0m" 400 -
+2025-04-02 06:51:06,840 - INFO - 96.126.104.20 - - [02/Apr/2025 06:51:06] "[33mGET /signin HTTP/1.1[0m" 404 -
+2025-04-02 07:23:46,807 - INFO - 86.138.61.137 - - [02/Apr/2025 07:23:46] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-02 08:38:43,174 - INFO - 59.126.243.94 - - [02/Apr/2025 08:38:43] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-02 08:51:03,448 - INFO - 79.23.181.213 - - [02/Apr/2025 08:51:03] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-02 08:51:05,056 - INFO - 79.23.181.213 - - [02/Apr/2025 08:51:05] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-02 09:19:11,293 - INFO - Starting ProteinMPNN with task ID: 1545014f-6c05-4256-ae9b-63c82b3f3313
+2025-04-02 09:19:11,294 - INFO - Executing ProteinMPNN command:
+
+    docker run     -v /home/texsols/BioTasks/uploads:/workspace     -v /home/texsols/BioTasks/outputs/proteinmpnn_output/1545014f-6c05-4256-ae9b-63c82b3f3313:/outputs     --workdir /workspace     ghcr.io/peptoneltd/proteinmpnn_ddg:1.0.0_base_cpu     python3 /app/proteinmpnn_ddg/predict.py     --pdb_path /workspace/1545014f-6c05-4256-ae9b-63c82b3f3313_AF-A0A7L5GP87-F1-model_v4.pdb     --chains A     --outpath /outputs/1545014f-6c05-4256-ae9b-63c82b3f3313_predictions.csv     > "/home/texsols/BioTasks/outputs/proteinmpnn_output/1545014f-6c05-4256-ae9b-63c82b3f3313/1545014f-6c05-4256-ae9b-63c82b3f3313.log" 2>&1
+    
+2025-04-02 09:19:26,052 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/1545014f-6c05-4256-ae9b-63c82b3f3313/1545014f-6c05-4256-ae9b-63c82b3f3313.log'
+Request method: 'PUT'
+Request headers:
+    'x-ms-blob-type': 'REDACTED'
+    'Content-Length': '0'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '92815b6e-0fa3-11f0-b5c2-00224878029e'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-04-02 09:19:26,095 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Wed, 02 Apr 2025 09:19:26 GMT'
+    'ETag': '"0x8DD71C776B9872B"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '59aa8e46-201e-0030-01b0-a31772000000'
+    'x-ms-client-request-id': '92815b6e-0fa3-11f0-b5c2-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Wed, 02 Apr 2025 09:19:25 GMT'
+2025-04-02 09:19:26,096 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/1545014f-6c05-4256-ae9b-63c82b3f3313/1545014f-6c05-4256-ae9b-63c82b3f3313_predictions.csv'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '142428'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '92882336-0fa3-11f0-b5c2-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-02 09:19:26,111 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Wed, 02 Apr 2025 09:19:26 GMT'
+    'ETag': '"0x8DD71C776BC6A10"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '59aa8e83-201e-0030-3bb0-a31772000000'
+    'x-ms-client-request-id': '92882336-0fa3-11f0-b5c2-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Wed, 02 Apr 2025 09:19:25 GMT'
+2025-04-02 09:19:26,112 - INFO - 54.86.50.139 - - [02/Apr/2025 09:19:26] "POST /v1/api/proteinmpnn/ddg HTTP/1.1" 200 -
+2025-04-02 09:24:21,908 - INFO - 198.235.24.34 - - [02/Apr/2025 09:24:21] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-02 09:24:57,300 - ERROR - No PDB file uploaded
+2025-04-02 09:24:57,300 - INFO - 122.166.69.81 - - [02/Apr/2025 09:24:57] "[31m[1mPOST /v1/api/antifold/predict HTTP/1.1[0m" 400 -
+2025-04-02 09:25:14,699 - INFO - Starting AntiFold with task ID: f1fb302e-0c25-48b3-8174-1bca7b8c96af
+2025-04-02 09:25:14,700 - INFO - Executing AntiFold command:
+
+    source ~/miniconda3/etc/profile.d/conda.sh &&
+    conda activate antifold_cpu &&
+    python3 /home/texsols/BioTasks/tasks/AntiFold/antifold/main.py         --num_seq_per_target 10         --sampling_temp 0.2         --regions "CDR1,CDR2,CDR3"         --pdb_file "/home/texsols/BioTasks/uploads/f1fb302e-0c25-48b3-8174-1bca7b8c96af_8ee8_imgt.pdb"         --heavy_chain "C"         --light_chain "D"         > "/home/texsols/BioTasks/outputs/antifold_output/f1fb302e-0c25-48b3-8174-1bca7b8c96af/f1fb302e-0c25-48b3-8174-1bca7b8c96af.log" 2>&1
+    
+2025-04-02 09:25:27,649 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/f1fb302e-0c25-48b3-8174-1bca7b8c96af/f1fb302e-0c25-48b3-8174-1bca7b8c96af.log'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '2744'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '6a08bbc2-0fa4-11f0-9203-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-02 09:25:27,681 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Wed, 02 Apr 2025 09:25:27 GMT'
+    'ETag': '"0x8DD71C84E3EEDD0"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'ed18eff8-b01e-0022-31b1-a36ca2000000'
+    'x-ms-client-request-id': '6a08bbc2-0fa4-11f0-9203-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Wed, 02 Apr 2025 09:25:27 GMT'
+2025-04-02 09:25:27,682 - INFO - 122.166.69.81 - - [02/Apr/2025 09:25:27] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+2025-04-02 09:32:13,816 - ERROR - No PDB file uploaded
+2025-04-02 09:32:13,816 - INFO - 122.166.69.81 - - [02/Apr/2025 09:32:13] "[31m[1mPOST /v1/api/antifold/predict HTTP/1.1[0m" 400 -
+2025-04-02 09:32:30,391 - INFO - Starting AntiFold with task ID: 83f34ce3-c809-40bb-9d2f-c72c393184e4
+2025-04-02 09:32:30,393 - INFO - Executing AntiFold command:
+
+    source ~/miniconda3/etc/profile.d/conda.sh &&
+    conda activate antifold_cpu &&
+    python3 /home/texsols/BioTasks/tasks/AntiFold/antifold/main.py         --num_seq_per_target 10         --sampling_temp 0.2         --regions "CDR1,CDR2,CDR3"         --pdb_file "/home/texsols/BioTasks/uploads/83f34ce3-c809-40bb-9d2f-c72c393184e4_8ee8_imgt.pdb"         --heavy_chain "C"         --light_chain "D"         > "/home/texsols/BioTasks/outputs/antifold_output/83f34ce3-c809-40bb-9d2f-c72c393184e4/83f34ce3-c809-40bb-9d2f-c72c393184e4.log" 2>&1
+    
+2025-04-02 09:32:43,440 - INFO - Request URL: 'https://biotex.blob.core.windows.net/proteinfold/freewilson/83f34ce3-c809-40bb-9d2f-c72c393184e4/83f34ce3-c809-40bb-9d2f-c72c393184e4.log'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '2744'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.25.0 Python/3.12.2 (Linux-6.8.0-1021-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '6dc91c74-0fa5-11f0-ba59-00224878029e'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-04-02 09:32:43,470 - INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Wed, 02 Apr 2025 09:32:43 GMT'
+    'ETag': '"0x8DD71C952000B93"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '64d055d1-e01e-002f-4eb2-a3a476000000'
+    'x-ms-client-request-id': '6dc91c74-0fa5-11f0-ba59-00224878029e'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Wed, 02 Apr 2025 09:32:42 GMT'
+2025-04-02 09:32:43,470 - INFO - 122.166.69.81 - - [02/Apr/2025 09:32:43] "POST /v1/api/antifold/predict HTTP/1.1" 200 -
+2025-04-02 09:59:50,830 - ERROR - 91.238.181.92 - - [02/Apr/2025 09:59:50] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+2025-04-02 09:59:50,831 - INFO - 91.238.181.92 - - [02/Apr/2025 09:59:50] "[31m[1m\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie: mstshash=Administr[0m" 400 -
+2025-04-02 10:36:57,774 - INFO - 218.161.89.47 - - [02/Apr/2025 10:36:57] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-02 11:45:54,489 - INFO - 220.134.132.83 - - [02/Apr/2025 11:45:54] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-02 11:48:18,309 - INFO - 133.175.154.200 - - [02/Apr/2025 11:48:18] "[33mGET / HTTP/1.0[0m" 404 -
+2025-04-02 13:12:22,537 - INFO - 64.62.156.124 - - [02/Apr/2025 13:12:22] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-02 13:12:37,336 - INFO - 64.62.156.129 - - [02/Apr/2025 13:12:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
