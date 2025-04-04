@@ -1,8 +1,25 @@
 .env
 
+*.pyc
 __pycache__/
+# Python
+__pycache__/
+*.py[cod]
 
-*.pyc
-__pycache__/
-*.pyc
-*.pyc
+# Logs
+*.log
+outputs/
+output.log
+
+# Virtual environments
+biotaskvenv/
+.env/
+.venv/
+env/
+
+# VS Code
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db

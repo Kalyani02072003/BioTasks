@@ -1,6 +1,0 @@
-[2025-04-02 17:49:09,323] Running inverse folding on PDB/CIFs ...
-[2025-04-02 17:49:11,364] Loaded model to cpu.
-[2025-04-02 17:49:11,366] Reading in (1) PDBs from DataFrame
-[2025-04-02 17:49:11,467] Predicting batch 1/1: PDBs 1-1 out of 1 total
-[2025-04-02 17:49:17,207] Saving 1 CSVs to /home/texsols/BioTasks/outputs/antifold_output/ef206324-9dec-40ca-a741-685d6384bf47
-[2025-04-02 17:49:17,213] Writing ef206324-9dec-40ca-a741-685d6384bf47_8ee8_imgt_CD per-residue log probs CSV to /home/texsols/BioTasks/outputs/antifold_output/ef206324-9dec-40ca-a741-685d6384bf47/ef206324-9dec-40ca-a741-685d6384bf47_8ee8_imgt_CD.csv
