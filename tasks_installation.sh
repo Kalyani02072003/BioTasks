@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Set error handling
-set -e  # Exit on first error
-set -o pipefail  # Exit if any command in a pipeline fails
+set -e
+set -o pipefail
 
 # Define installation paths
 ROOT_DIR="$HOME/BioTasks"
@@ -11,7 +11,8 @@ LIGANDMPNN_DIR="$ROOT_DIR/LigandMPNN"
 PROTEINMPNN_DDG_DIR="$ROOT_DIR/proteinmpnn_ddg"
 TS_DIR="$ROOT_DIR/ThompsonSampling"
 FREEWILSON_DIR="$ROOT_DIR/Free-Wilson"
-COLABDOCK_DIR="$ROOT_DIR/ColabDock"  # ColabDock directory
+COLABDOCK_DIR="$ROOT_DIR/ColabDock"
+REINVENT_DIR="$ROOT_DIR/REINVENT4"
 
 # Ensure ROOT_DIR exists
 mkdir -p $ROOT_DIR
@@ -27,7 +28,6 @@ echo "=========================="
 echo "Cloning Repositories..."
 echo "=========================="
 
-# Clone repositories if they don't exist
 cd $ROOT_DIR
 [[ ! -d "AntiFold" ]] && git clone https://github.com/oxpig/AntiFold.git
 [[ ! -d "LigandMPNN" ]] && git clone https://github.com/dauparas/LigandMPNN.git
@@ -35,6 +35,7 @@ cd $ROOT_DIR
 [[ ! -d "ThompsonSampling" ]] && git clone https://github.com/PatWalters/TS.git
 [[ ! -d "Free-Wilson" ]] && git clone https://github.com/PatWalters/Free-Wilson.git
 [[ ! -d "ColabDock" ]] && git clone https://github.com/JeffSHF/ColabDock
+[[ ! -d "REINVENT4" ]] && git clone https://github.com/MolecularAI/REINVENT4.git REINVENT4
 
 echo "Repositories cloned successfully."
 
@@ -71,14 +72,10 @@ echo "=========================="
 echo "Setting up ProteinMPNN-ddG..."
 echo "=========================="
 cd $PROTEINMPNN_DDG_DIR
-
-# Check if Docker is installed
 if ! command -v docker &> /dev/null; then
     echo "Docker not found. Please install Docker before proceeding."
     exit 1
 fi
-
-# Pull the prebuilt Docker image
 docker pull ghcr.io/peptoneltd/proteinmpnn_ddg:1.0.0_base
 echo "ProteinMPNN-ddG setup complete."
 
@@ -120,28 +117,36 @@ fi
 conda activate colabdock_env
 pip install -U pip
 pip install -r requirements.txt
-
 pip install https://storage.googleapis.com/jax-releases/cuda11/jaxlib-0.3.8+cuda11.cudnn805-cp38-none-manylinux2014_x86_64.whl
-
 pip install jax==0.3.8
-
-# Ensure protein folder exists
 mkdir -p "$COLABDOCK_DIR/protein"
-
 echo "ColabDock setup complete."
+
+####### REINVENT Setup ########
+echo "=========================="
+echo "Setting up REINVENT4..."
+echo "=========================="
+cd $REINVENT_DIR
+if ! conda info --envs | grep -q "reinvent4"; then
+    conda create --name reinvent4 python=3.12 -y
+fi
+conda activate reinvent4
+pip install -U pip
+pip install -r requirements.txt
+pip install .
+echo "REINVENT4 setup complete."
 
 ####### Download AlphaFold2 Parameters ########
 echo "=========================="
 echo "Downloading AlphaFold2 Parameters..."
 echo "=========================="
+COLABDOCK_PARAMS_DIR="$COLABDOCK_DIR/params"
 mkdir -p $COLABDOCK_PARAMS_DIR
 cd $COLABDOCK_PARAMS_DIR
-
-# Check if parameters are already downloaded
 if [[ ! -f "alphafold_params_2022-12-06.tar" && ! -d "params" ]]; then
     wget https://storage.googleapis.com/alphafold/alphafold_params_2022-12-06.tar
     tar -xvf alphafold_params_2022-12-06.tar
-    rm alphafold_params_2022-12-06.tar  # Clean up after extraction
+    rm alphafold_params_2022-12-06.tar
     echo "AlphaFold2 parameters downloaded and extracted."
 else
     echo "AlphaFold2 parameters already exist. Skipping download."

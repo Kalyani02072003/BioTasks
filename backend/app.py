@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 
 from backend.routes.antifold import antifold_bp
 from backend.routes.protein_mpnn import proteinmpnn_bp
@@ -7,8 +8,10 @@ from backend.routes.ligand_mpnn import ligandmpnn_bp
 from backend.routes.thompson_sampling import ts_bp
 from backend.routes.freewilson import freewilson_bp
 from backend.routes.colabdock import colabdock_bp
-app = Flask(__name__)
+from backend.routes.reinvent import reinvent_bp
 
+app = Flask(__name__)
+CORS(app)
 
 
 # Register blueprints
@@ -19,6 +22,7 @@ app.register_blueprint(ligandmpnn_bp, url_prefix="/v1/api/ligandmpnn")
 app.register_blueprint(ts_bp, url_prefix="/v1/api/thompson_sampling")
 app.register_blueprint(freewilson_bp, url_prefix="/v1/api/freewilson")
 app.register_blueprint(colabdock_bp, url_prefix="/v1/api/colabdock")
+app.register_blueprint(reinvent_bp, url_prefix="/v1/api/reinvent")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
