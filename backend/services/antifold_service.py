@@ -46,7 +46,8 @@ def run_antifold(params):
 
     logging.info(f"Executing AntiFold command:\n{command}")
     subprocess.run(command, shell=True, executable="/bin/bash")
-
+    # subprocess.run(command,shell=True,executable="/bin/bash",cwd="/home/texsols/BioTasks/tasks/AntiFold")
+    
     # Upload task outputs to Azure
     azure_result = upload_task_outputs(task_id, task_output_folder)
 

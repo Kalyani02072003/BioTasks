@@ -8,10 +8,10 @@
     "parameters": {
         "model_file": "/home/texsols/BioTasks/tasks/REINVENT4/priors/reinvent.prior",
         "num_smiles": 157,
-        "smiles_file": "/home/texsols/BioTasks/outputs/reinvent_output/e3903ed4-29a7-4491-9414-3a893d12e0b8/e3903ed4-29a7-4491-9414-3a893d12e0b8.smi",
+        "smiles_file": "/home/texsols/BioTasks/outputs/reinvent_output/f763dd7d-b622-4f70-b337-dcf1bac6de05/f763dd7d-b622-4f70-b337-dcf1bac6de05.smi",
         "target_smiles_path": "",
         "sample_strategy": "multinomial",
-        "output_file": "/home/texsols/BioTasks/outputs/reinvent_output/e3903ed4-29a7-4491-9414-3a893d12e0b8/sampling.csv",
+        "output_file": "/home/texsols/BioTasks/outputs/reinvent_output/f763dd7d-b622-4f70-b337-dcf1bac6de05/sampling.csv",
         "target_nll_file": "target_nll.csv",
         "unique_molecules": true,
         "randomize_smiles": true,

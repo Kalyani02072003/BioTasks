@@ -1,6 +1,6 @@
-[2025-04-01 18:45:55,604] Running inverse folding on PDB/CIFs ...
-[2025-04-01 18:45:57,553] Loaded model to cpu.
-[2025-04-01 18:45:57,555] Reading in (1) PDBs from DataFrame
-[2025-04-01 18:45:57,635] Predicting batch 1/1: PDBs 1-1 out of 1 total
-[2025-04-01 18:46:03,403] Saving 1 CSVs to antifold_output
-[2025-04-01 18:46:03,407] Writing 597861a6-e99d-406b-824e-bf80f10a8a5f_8ee8_imgt_CD per-residue log probs CSV to antifold_output/597861a6-e99d-406b-824e-bf80f10a8a5f_8ee8_imgt_CD.csv
+[2025-04-10 17:18:26,016] Running inverse folding on PDB/CIFs ...
+[2025-04-10 17:18:26,016] Please choose one of:
+        1) PDB file (--pdb_file). We heavily recommend specifying --heavy_chain [letter] and --light_chain [letter]
+        2) PDB directory (--pdb_dir) and CSV file (--pdbs_csv) with columns for PDB names (pdb), H (Hchain) and L (Lchain) chains
+        3) PDB directory (--pdb_dir). Warning: Will assume 1st chain is heavy, 2nd chain is light
+        

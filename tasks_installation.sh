@@ -44,10 +44,10 @@ echo "=========================="
 echo "Setting up AntiFold..."
 echo "=========================="
 cd $ANTIFOLD_DIR
-if ! conda info --envs | grep -q "antifold"; then
-    conda create --name antifold python=3.10 -y
+if ! conda info --envs | grep -q "antifold_cpu"; then
+    conda create --name antifold_cpu python=3.10 -y
 fi
-conda activate antifold
+conda activate antifold_cpu
 pip install -U pip
 conda install -c conda-forge pytorch -y
 pip install .
@@ -151,6 +151,31 @@ if [[ ! -f "alphafold_params_2022-12-06.tar" && ! -d "params" ]]; then
 else
     echo "AlphaFold2 parameters already exist. Skipping download."
 fi
+
+
+####### ParaSurf Setup ########
+echo "=========================="
+echo "Setting up ParaSurf..."
+echo "=========================="
+PARASURF_DIR="$ROOT_DIR/ParaSurf"
+cd $ROOT_DIR
+if [[ ! -d "ParaSurf" ]]; then
+    git clone https://github.com/BeichenLi123/ParaSurf.git
+fi
+
+cd $PARASURF_DIR
+if ! conda info --envs | grep -q "parasurf_env"; then
+    conda create --name parasurf_env python=3.10 -y
+fi
+conda activate parasurf_env
+pip install -U pip
+pip install -r requirements.txt
+
+# Make sure model_weights dir exists
+mkdir -p "$PARASURF_DIR/model_weights"
+
+echo "ParaSurf setup complete."
+
 
 echo "=========================="
 echo "All installations completed successfully!"
