@@ -26,6 +26,7 @@ def run_parasurf(params):
         --receptor "{params['pdb_file']}" \
         --model_weights "{MODEL_WEIGHTS}" \
         --device "cpu" \
+        --output_dir "{task_output_folder}" \
         > "{output_log}" 2>&1
     """
 

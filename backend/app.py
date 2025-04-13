@@ -1,5 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
+from backend.config import Config
+from backend.celery_worker import make_celery
 
 from backend.routes.antifold import antifold_bp
 from backend.routes.protein_mpnn import proteinmpnn_bp
@@ -12,8 +14,11 @@ from backend.routes.reinvent import reinvent_bp
 from backend.routes.parasurf import parasurf_bp
 
 app = Flask(__name__)
+app.config.from_object(Config)
 CORS(app)
 
+
+celery = make_celery(app)
 
 # Register blueprints
 app.register_blueprint(antifold_bp, url_prefix="/v1/api/antifold")
@@ -25,5 +30,7 @@ app.register_blueprint(freewilson_bp, url_prefix="/v1/api/freewilson")
 app.register_blueprint(colabdock_bp, url_prefix="/v1/api/colabdock")
 app.register_blueprint(reinvent_bp, url_prefix="/v1/api/reinvent")
 app.register_blueprint(parasurf_bp, url_prefix="/v1/api/parasurf")
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
