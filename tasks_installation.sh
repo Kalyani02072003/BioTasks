@@ -13,6 +13,7 @@ TS_DIR="$ROOT_DIR/ThompsonSampling"
 FREEWILSON_DIR="$ROOT_DIR/Free-Wilson"
 COLABDOCK_DIR="$ROOT_DIR/ColabDock"
 REINVENT_DIR="$ROOT_DIR/REINVENT4"
+THERMOMPNN_DIR="$ROOT_DIR/ThermoMPNN-D"  # New path for ThermoMPNN-D
 
 # Ensure ROOT_DIR exists
 mkdir -p $ROOT_DIR
@@ -36,6 +37,7 @@ cd $ROOT_DIR
 [[ ! -d "Free-Wilson" ]] && git clone https://github.com/PatWalters/Free-Wilson.git
 [[ ! -d "ColabDock" ]] && git clone https://github.com/JeffSHF/ColabDock
 [[ ! -d "REINVENT4" ]] && git clone https://github.com/MolecularAI/REINVENT4.git REINVENT4
+[[ ! -d "ThermoMPNN-D" ]] && git clone https://github.com/your_repo/ThermoMPNN-D.git  # Clone ThermoMPNN-D
 
 echo "Repositories cloned successfully."
 
@@ -176,6 +178,18 @@ mkdir -p "$PARASURF_DIR/model_weights"
 
 echo "ParaSurf setup complete."
 
+####### ThermoMPNN-D Setup ########
+echo "=========================="
+echo "Setting up ThermoMPNN-D..."
+echo "=========================="
+cd $THERMOMPNN_DIR
+if ! conda info --envs | grep -q "ThermoMPNN-D"; then
+    conda create --name ThermoMPNN-D python=3.10 -y
+fi
+conda activate ThermoMPNN-D
+pip install -U pip
+pip install -r requirements.txt
+echo "ThermoMPNN-D setup complete."
 
 echo "=========================="
 echo "All installations completed successfully!"
