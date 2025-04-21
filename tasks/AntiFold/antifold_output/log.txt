@@ -1,6 +1,0 @@
-[2025-04-10 17:18:26,016] Running inverse folding on PDB/CIFs ...
-[2025-04-10 17:18:26,016] Please choose one of:
-        1) PDB file (--pdb_file). We heavily recommend specifying --heavy_chain [letter] and --light_chain [letter]
-        2) PDB directory (--pdb_dir) and CSV file (--pdbs_csv) with columns for PDB names (pdb), H (Hchain) and L (Lchain) chains
-        3) PDB directory (--pdb_dir). Warning: Will assume 1st chain is heavy, 2nd chain is light
-        

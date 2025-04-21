@@ -1,6 +1,8 @@
 import os
 import logging
 import uuid
+import requests
+import urllib.parse
 from flask import Blueprint, request, jsonify
 from backend.services.ligand_mpnn_service import run_ligandmpnn
 from backend.database.azure_upload import upload_task_outputs  # Azure upload function
@@ -20,27 +22,57 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 
+def download_file(url, save_path):
+    """Download file from a URL to the specified path."""
+    try:
+        response = requests.get(url, stream=True, timeout=10)
+        response.raise_for_status()
+        with open(save_path, 'wb') as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                if chunk:
+                    f.write(chunk)
+        logging.info(f"Successfully downloaded file from URL to {save_path}")
+        return save_path
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Failed to download file from URL: {url} - {e}")
+        raise Exception(f"Failed to download file from URL: {url} - {e}")
+
+
 @ligandmpnn_bp.route("/design", methods=["POST"])
 def design():
     """Starts LigandMPNN and returns a task ID with Azure Blob Storage links."""
     try:
         pdb_file = request.files.get("pdb_file")
+        pdb_url = request.form.get("pdb_file_url")  # Could be URL if no upload
         chains_to_design = request.form.get("chains_to_design")
         fixed_residues = request.form.get("fixed_residues", "")
         residues_to_design = request.form.get("residues_to_design", "")  # Ensure default value
         temperature = request.form.get("temperature", 0.1, type=float)
         number_of_batches = request.form.get("number_of_batches", 8, type=int)  # Ensure correct key
 
-        if not pdb_file or not chains_to_design:
-            logging.error("PDB file and Chains to Design are required.")
-            return jsonify({"error": "PDB file and Chains to Design are required."}), 400
+        if not pdb_file and not pdb_url:
+            logging.error("No PDB file provided (upload or URL).")
+            return jsonify({"error": "No PDB file provided (upload or URL)."}), 400
+
+        if not chains_to_design:
+            logging.error("Chains to design are required.")
+            return jsonify({"error": "Chains to design are required."}), 400
 
         # Generate unique task ID
         task_id = str(uuid.uuid4())
 
-        # Save uploaded file
-        pdb_filepath = os.path.join(UPLOAD_FOLDER, f"{task_id}_{pdb_file.filename}")
-        pdb_file.save(pdb_filepath)
+        # Handle PDB file from upload or URL
+        if pdb_file:
+            pdb_filename = f"{task_id}_{pdb_file.filename}"
+            pdb_filepath = os.path.join(UPLOAD_FOLDER, pdb_filename)
+            pdb_file.save(pdb_filepath)
+            logging.info(f"PDB file uploaded: {pdb_filepath}")
+        else:
+            parsed_url = urllib.parse.urlparse(pdb_url)
+            filename = os.path.basename(parsed_url.path)
+            pdb_filepath = os.path.join(UPLOAD_FOLDER, f"{task_id}_{filename}")
+            logging.info(f"Downloading PDB file from URL: {pdb_url}")
+            download_file(pdb_url, pdb_filepath)
 
         # Prepare parameters
         params = {

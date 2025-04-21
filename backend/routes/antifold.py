@@ -1,6 +1,7 @@
 import os
 import logging
 import uuid
+import requests
 from flask import Blueprint, request, jsonify
 from backend.services.antifold_service import run_antifold
 from backend.database.azure_upload import upload_task_outputs  # Azure upload function
@@ -20,6 +21,22 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 
+def download_file(url, save_path):
+    """Download file from a URL to the specified path."""
+    try:
+        response = requests.get(url, stream=True, timeout=10)
+        response.raise_for_status()
+        with open(save_path, 'wb') as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                if chunk:
+                    f.write(chunk)
+        logging.info(f"Successfully downloaded file from URL to {save_path}")
+        return save_path
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Failed to download file from URL: {url} - {e}")
+        raise Exception(f"Failed to download file from URL: {url} - {e}")
+
+
 @antifold_bp.route("/predict", methods=["POST"])
 def predict():
     """Starts AntiFold and returns a task ID with Azure Blob Storage links."""
@@ -28,18 +45,29 @@ def predict():
         heavy_chain = request.form.get("heavy_chain")
         light_chain = request.form.get("light_chain")
 
-        # Handle file upload
-        pdb_file = request.files.get("pdb_file")
-        if not pdb_file:
-            logging.error("No PDB file uploaded")
-            return jsonify({"error": "No PDB file uploaded"}), 400
-
         # Generate unique task ID
         task_id = str(uuid.uuid4())
 
-        # Save uploaded file
-        pdb_filepath = os.path.join(UPLOAD_FOLDER, f"{task_id}_{pdb_file.filename}")
-        pdb_file.save(pdb_filepath)
+        # Handle PDB input from URL or file
+        pdb_file = request.files.get("pdb_file")
+        pdb_url = request.form.get("pdb_file_url")  # could be URL if no upload
+
+        if not pdb_file and not pdb_url:
+            logging.error("No PDB file provided (upload or URL).")
+            return jsonify({"error": "No PDB file provided (upload or URL)."}), 400
+
+        # Handle PDB file from upload or URL
+        if pdb_file:
+            pdb_filename = f"{task_id}_{pdb_file.filename}"
+            pdb_filepath = os.path.join(UPLOAD_FOLDER, pdb_filename)
+            pdb_file.save(pdb_filepath)
+            logging.info(f"PDB file uploaded: {pdb_filepath}")
+        else:
+            parsed_url = urllib.parse.urlparse(pdb_url)
+            filename = os.path.basename(parsed_url.path)
+            pdb_filepath = os.path.join(UPLOAD_FOLDER, f"{task_id}_{filename}")
+            logging.info(f"Downloading PDB file from URL: {pdb_url}")
+            download_file(pdb_url, pdb_filepath)
 
         # Prepare parameters
         params = {

@@ -1,9 +1,10 @@
 import os
 import logging
 import uuid
+import requests
 from flask import Blueprint, request, jsonify
 from backend.services.freewilson_service import run_freewilson
-from backend.database.azure_upload import upload_task_outputs
+from backend.database.azure_upload import upload_task_outputs  # Azure upload function
 
 # Define Blueprint
 freewilson_bp = Blueprint("freewilson", __name__)
@@ -20,6 +21,20 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 
+def download_file(url, save_path):
+    """Download file from a URL to the specified path."""
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        with open(save_path, "wb") as f:
+            f.write(response.content)
+        logging.info(f"Successfully downloaded file from URL: {url}")
+        return save_path
+    except Exception as e:
+        logging.error(f"Failed to download file from URL: {url} - {e}")
+        raise Exception(f"Failed to download file from URL: {url} - {e}")
+
+
 @freewilson_bp.route("/run_analysis", methods=["POST"])
 def run_analysis():
     """Runs Free-Wilson analysis and returns a task ID with Azure Blob Storage links."""
@@ -27,27 +42,59 @@ def run_analysis():
         scaffold_file = request.files.get("scaffold_file")
         input_smiles_file = request.files.get("input_smiles_file")
         activity_file = request.files.get("activity_file")
+
+        scaffold_url = request.form.get("scaffold_url")
+        input_smiles_url = request.form.get("input_smiles_url")
+        activity_url = request.form.get("activity_url")
+
         job_prefix = request.form.get("prefix", str(uuid.uuid4()))  # Default: random UUID
 
-        # Validate Required Files
-        if not scaffold_file or not input_smiles_file or not activity_file:
-            logging.error("Missing required files: scaffold, SMILES, or activity")
-            return jsonify({"error": "Missing required files (scaffold, SMILES, activity)"}), 400
+        # Validate Required Files or URLs
+        if not scaffold_file and not scaffold_url:
+            logging.error("Missing scaffold file or scaffold URL")
+            return jsonify({"error": "Missing scaffold file or scaffold URL"}), 400
+        if not input_smiles_file and not input_smiles_url:
+            logging.error("Missing SMILES file or SMILES URL")
+            return jsonify({"error": "Missing SMILES file or SMILES URL"}), 400
+        if not activity_file and not activity_url:
+            logging.error("Missing activity file or activity URL")
+            return jsonify({"error": "Missing activity file or activity URL"}), 400
 
-        # Save Uploaded Files in `uploads/`
-        scaffold_path = os.path.join(UPLOAD_FOLDER, scaffold_file.filename)
-        input_smiles_path = os.path.join(UPLOAD_FOLDER, input_smiles_file.filename)
-        activity_path = os.path.join(UPLOAD_FOLDER, activity_file.filename)
+        # Generate unique task ID
+        task_id = str(uuid.uuid4())
 
-        scaffold_file.save(scaffold_path)
-        input_smiles_file.save(input_smiles_path)
-        activity_file.save(activity_path)
+        # Handle Scaffold File
+        if scaffold_file:
+            scaffold_filepath = os.path.join(UPLOAD_FOLDER, f"{task_id}_{scaffold_file.filename}")
+            scaffold_file.save(scaffold_filepath)
+        elif scaffold_url:
+            scaffold_filename = f"{task_id}_scaffold_from_url"
+            scaffold_filepath = os.path.join(UPLOAD_FOLDER, scaffold_filename)
+            download_file(scaffold_url, scaffold_filepath)
+
+        # Handle SMILES File
+        if input_smiles_file:
+            input_smiles_filepath = os.path.join(UPLOAD_FOLDER, f"{task_id}_{input_smiles_file.filename}")
+            input_smiles_file.save(input_smiles_filepath)
+        elif input_smiles_url:
+            input_smiles_filename = f"{task_id}_smiles_from_url"
+            input_smiles_filepath = os.path.join(UPLOAD_FOLDER, input_smiles_filename)
+            download_file(input_smiles_url, input_smiles_filepath)
+
+        # Handle Activity File
+        if activity_file:
+            activity_filepath = os.path.join(UPLOAD_FOLDER, f"{task_id}_{activity_file.filename}")
+            activity_file.save(activity_filepath)
+        elif activity_url:
+            activity_filename = f"{task_id}_activity_from_url"
+            activity_filepath = os.path.join(UPLOAD_FOLDER, activity_filename)
+            download_file(activity_url, activity_filepath)
 
         # Prepare Parameters
         params = {
-            "scaffold": scaffold_path,
-            "input_smiles": input_smiles_path,
-            "activity": activity_path,
+            "scaffold": scaffold_filepath,
+            "input_smiles": input_smiles_filepath,
+            "activity": activity_filepath,
             "prefix": job_prefix,
             "smarts": request.form.get("smarts", ""),
             "max_spec": request.form.get("max", ""),

@@ -1,5 +1,6 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_cors import CORS
+from werkzeug.exceptions import RequestEntityTooLarge
 from backend.config import Config
 from backend.celery_worker import make_celery
 
@@ -14,13 +15,19 @@ from backend.routes.reinvent import reinvent_bp
 from backend.routes.parasurf import parasurf_bp
 from backend.routes.thermompnn import thermompnn_bp
 
-
 app = Flask(__name__)
 app.config.from_object(Config)
+
+# Set max file upload size to 100MB
+app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # 100 MB
+
 CORS(app)
-
-
 celery = make_celery(app)
+
+# Handle large file error with custom response
+@app.errorhandler(RequestEntityTooLarge)
+def handle_file_too_large(e):
+    return jsonify({"error": "Uploaded file is too large. Limit is 100MB."}), 413
 
 # Register blueprints
 app.register_blueprint(antifold_bp, url_prefix="/v1/api/antifold")
