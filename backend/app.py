@@ -14,6 +14,8 @@ from backend.routes.colabdock import colabdock_bp
 from backend.routes.reinvent import reinvent_bp
 from backend.routes.parasurf import parasurf_bp
 from backend.routes.thermompnn import thermompnn_bp
+from backend.routes.admet_ai import admet_bp
+
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -40,6 +42,9 @@ app.register_blueprint(colabdock_bp, url_prefix="/v1/api/colabdock")
 app.register_blueprint(reinvent_bp, url_prefix="/v1/api/reinvent")
 app.register_blueprint(parasurf_bp, url_prefix="/v1/api/parasurf")
 app.register_blueprint(thermompnn_bp, url_prefix="/v1/api/thermompnn")
+app.register_blueprint(admet_bp, url_prefix="/v1/api/admet")
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+
