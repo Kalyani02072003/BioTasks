@@ -1,28 +1,22 @@
 import os
 import logging
 import uuid
+import urllib.parse
 import requests
 from flask import Blueprint, request, jsonify
 from backend.services.antifold_service import run_antifold
-from backend.database.azure_upload import upload_task_outputs  # Azure upload function
+from backend.database.azure_upload import upload_task_outputs
 
-# Define Blueprint
 antifold_bp = Blueprint("antifold", __name__)
 
-# Define Directories
 UPLOAD_FOLDER = "/home/texsols/BioTasks/uploads"
 OUTPUT_FOLDER = "/home/texsols/BioTasks/outputs/antifold_output"
-
-# Ensure Directories Exist
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
-# Configure Logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-
 def download_file(url, save_path):
-    """Download file from a URL to the specified path."""
     try:
         response = requests.get(url, stream=True, timeout=10)
         response.raise_for_status()
@@ -30,46 +24,41 @@ def download_file(url, save_path):
             for chunk in response.iter_content(chunk_size=8192):
                 if chunk:
                     f.write(chunk)
-        logging.info(f"Successfully downloaded file from URL to {save_path}")
+        logging.info(f"Downloaded file from URL to {save_path}")
         return save_path
     except requests.exceptions.RequestException as e:
-        logging.error(f"Failed to download file from URL: {url} - {e}")
-        raise Exception(f"Failed to download file from URL: {url} - {e}")
-
+        logging.error(f"Download failed from URL: {url} - {e}")
+        raise Exception(f"Download failed from URL: {url} - {e}")
 
 @antifold_bp.route("/predict", methods=["POST"])
 def predict():
-    """Starts AntiFold and returns a task ID with Azure Blob Storage links."""
     try:
         task_type = request.form.get("task_type")
         heavy_chain = request.form.get("heavy_chain")
         light_chain = request.form.get("light_chain")
-
-        # Generate unique task ID
         task_id = str(uuid.uuid4())
 
-        # Handle PDB input from URL or file
         pdb_file = request.files.get("pdb_file")
-        pdb_url = request.form.get("pdb_file_url")  # could be URL if no upload
+        pdb_url = request.form.get("pdb_file_url")
 
         if not pdb_file and not pdb_url:
             logging.error("No PDB file provided (upload or URL).")
             return jsonify({"error": "No PDB file provided (upload or URL)."}), 400
 
-        # Handle PDB file from upload or URL
         if pdb_file:
             pdb_filename = f"{task_id}_{pdb_file.filename}"
             pdb_filepath = os.path.join(UPLOAD_FOLDER, pdb_filename)
             pdb_file.save(pdb_filepath)
-            logging.info(f"PDB file uploaded: {pdb_filepath}")
+            logging.info(f"PDB file uploaded and saved to {pdb_filepath}")
         else:
             parsed_url = urllib.parse.urlparse(pdb_url)
             filename = os.path.basename(parsed_url.path)
-            pdb_filepath = os.path.join(UPLOAD_FOLDER, f"{task_id}_{filename}")
-            logging.info(f"Downloading PDB file from URL: {pdb_url}")
+            filename = filename if filename.endswith(".pdb") else f"{filename}.pdb"
+            pdb_filename = f"{task_id}_{filename}"
+            pdb_filepath = os.path.join(UPLOAD_FOLDER, pdb_filename)
+            logging.info(f"Downloading PDB file from signed URL: {pdb_url}")
             download_file(pdb_url, pdb_filepath)
 
-        # Prepare parameters
         params = {
             "task_type": task_type,
             "pdb_file": pdb_filepath,
@@ -78,20 +67,16 @@ def predict():
             "task_id": task_id
         }
 
-        # Log and Run AntiFold
-        logging.info(f"Starting AntiFold with task ID: {task_id}")
+        logging.info(f"Running AntiFold with task ID: {task_id}")
         result = run_antifold(params)
-
         return jsonify(result)
 
     except Exception as e:
         logging.error(f"Error in predict: {e}", exc_info=True)
         return jsonify({"error": str(e)}), 500
 
-
 @antifold_bp.route("/check_status/<task_id>", methods=["GET"])
 def check_status(task_id):
-    """Check if AntiFold has finished running and return Azure storage links."""
     try:
         task_folder = os.path.join(OUTPUT_FOLDER, task_id)
         log_file = os.path.join(task_folder, f"{task_id}.log")
@@ -100,11 +85,9 @@ def check_status(task_id):
             logging.warning(f"Task ID {task_id} not found.")
             return jsonify({"error": "Task ID not found"}), 404
 
-        # Read log file (Optional)
         with open(log_file, "r") as f:
             logs = f.readlines()
 
-        # Upload task outputs to Azure and get SAS URLs
         azure_result = upload_task_outputs(task_id, task_folder)
 
         return jsonify({

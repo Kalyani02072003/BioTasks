@@ -7,22 +7,22 @@ from azure.storage.blob import BlobServiceClient, generate_blob_sas, BlobSasPerm
 connection_string = os.getenv("AZURE_CONNECTION_STRING")  # Ensure this is set in your environment
 container_name = "proteinfold"
 
+
 def generate_sas_url(blob_service_client, container_name, blob_path, expiry_hours=1):
-    now = datetime.utcnow()
-    expiry = now + timedelta(hours=expiry_hours)
-    print(f"🕒 SAS Start: {now.isoformat()} | SAS Expiry: {expiry.isoformat()}")  # Debug
+    """
+    Returns a pre-generated SAS URL using a static SAS token (from Azure Portal).
+    """
+    static_sas_token = os.getenv("AZURE_STATIC_SAS_TOKEN")  # Store this token in your .env
 
-    sas_token = generate_blob_sas(
-        account_name=blob_service_client.account_name,
-        container_name=container_name,
-        blob_name=blob_path,
-        account_key=blob_service_client.credential.account_key,
-        permission=BlobSasPermissions(read=True),
-        start=now - timedelta(minutes=5),
-        expiry=expiry
-    )
+    if not static_sas_token:
+        raise Exception("AZURE_STATIC_SAS_TOKEN not found in environment variables")
 
-    return f"https://{blob_service_client.account_name}.blob.core.windows.net/{container_name}/{blob_path}?{sas_token}"
+    # Optional debug info
+    print(f"Generating SAS URL for: {blob_path}")
+
+
+    return f"https://{blob_service_client.account_name}.blob.core.windows.net/{container_name}/{blob_path}?{static_sas_token}"
+
 
 def get_task_type(task_output_folder):
     """
