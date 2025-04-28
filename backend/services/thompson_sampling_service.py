@@ -122,3 +122,4 @@ def run_thompson_sampling(params):
         "output_log": azure_result.get("uploaded_files", [])[0] if azure_result.get("uploaded_files") else None,
         "output_file_details": file_info  # List of file names, types, and Azure links
     }
+

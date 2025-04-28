@@ -15,12 +15,12 @@ os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 # Configure Logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-
 @ts_bp.route("/run_ts", methods=["POST"])
 def run_ts():
     """Starts Thompson Sampling and returns a task ID with Azure Blob Storage links."""
     try:
-        data = request.get_json()
+        # Retrieve form data
+        data = request.form.to_dict()  # Convert ImmutableMultiDict to a regular dictionary
 
         required_params = [
             "reaction_smarts", "num_warmup_trials", "num_ts_iterations",
@@ -37,6 +37,14 @@ def run_ts():
             logging.error(f"Invalid evaluator selected: {data['evaluator']}")
             return jsonify({"error": "Invalid evaluator selected"}), 400
 
+        # Convert numeric fields to integers
+        try:
+            data["num_warmup_trials"] = int(data["num_warmup_trials"])
+            data["num_ts_iterations"] = int(data["num_ts_iterations"])
+        except ValueError:
+            logging.error(f"Invalid number format for warmup or iterations: {data['num_warmup_trials']}, {data['num_ts_iterations']}")
+            return jsonify({"error": "Invalid number format for warmup or iterations"}), 400
+
         # Generate unique task ID
         task_id = str(uuid.uuid4())
         data["task_id"] = task_id  # Add task ID to data
@@ -50,6 +58,7 @@ def run_ts():
     except Exception as e:
         logging.error(f"Error in run_ts: {e}", exc_info=True)
         return jsonify({"error": str(e)}), 500
+
 
 
 @ts_bp.route("/check_status/<task_id>", methods=["GET"])
